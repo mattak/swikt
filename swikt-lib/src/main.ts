@@ -2,8 +2,8 @@ import antlr4 from "antlr4";
 import Swift5Lexer from "./generated/swift/Swift5Lexer";
 import Swift5Parser from "./generated/swift/Swift5Parser";
 import {GrammarVisitor} from "./visitor/GrammarVisitor";
-import KotlinLexer from "./generated/kotlin/KotlinLexer";
 import KotlinParser from "./generated/kotlin/KotlinParser";
+import KotlinLexer from "./generated/kotlin/KotlinLexer";
 
 export function parseSwift(input: string): any {
   const chars = new antlr4.InputStream(input, undefined);

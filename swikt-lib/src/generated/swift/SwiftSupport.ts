@@ -1,4 +1,3 @@
-import Swift5Parser from "./Swift5Parser";
 import Swift5Lexer from "./Swift5Lexer";
 import {BitSet} from "../util/BitSet";
 import {Swift5ParserCompat} from "./Swift5ParserCompat";
@@ -36,12 +35,12 @@ export default class SwiftSupport {
    */
 
   static operatorHead = new BitSet(0x10000);
-  static operatorCharacter;//: BitSet;
+  static operatorCharacter: BitSet;
 
   static leftWS = new BitSet(255);
   static rightWS = new BitSet(255);
 
-  static {
+  static initialize() {
     // operator-head → /  =­  -­  +­  !­  *­  %­  <­  >­  &­  |­  ^­  ~­  ?­
     this.operatorHead.set('/'.charCodeAt(0));
     this.operatorHead.set('='.charCodeAt(0));
@@ -190,14 +189,14 @@ export default class SwiftSupport {
 
     tokens.getText(undefined); // Ensures that tokens can be read
     // operator → dot-operator-head­ dot-operator-characters
-    if (currentToken.type == Swift5Parser.DOT && tokens.get(currentTokenIndex + 1).type == Swift5Parser.DOT) {
+    if (currentToken.type == Swift5ParserCompat.DOT && tokens.get(currentTokenIndex + 1).type == Swift5ParserCompat.DOT) {
 
       // dot-operator
       currentTokenIndex += 2; // point at token after ".."
       currentToken = tokens.get(currentTokenIndex);
 
       // dot-operator-character → .­ | operator-character­
-      while (currentToken.type == Swift5Parser.DOT || this.isOperatorCharacter(currentToken)) {
+      while (currentToken.type == Swift5ParserCompat.DOT || this.isOperatorCharacter(currentToken)) {
         currentTokenIndex++;
         currentToken = tokens.get(currentTokenIndex);
       }
@@ -284,7 +283,7 @@ export default class SwiftSupport {
     const prevIsWS: boolean = this.isLeftOperatorWS(prevToken);
     const nextIsWS: boolean = this.isRightOperatorWS(nextToken);
     return !prevIsWS && nextIsWS ||
-      !prevIsWS && nextToken.type == Swift5Parser.DOT;
+      !prevIsWS && nextToken.type == Swift5ParserCompat.DOT;
   }
 
   public static isOperator(tokens: BufferedTokenStream, op: string): boolean {
@@ -328,3 +327,5 @@ export default class SwiftSupport {
     }
   }
 }
+
+SwiftSupport.initialize();
