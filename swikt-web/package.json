@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "export": "next build && next export",
-    "open": "cd out && open http://[::]:8000 && python -m http.server 8000",
+    "open": "cd out && open http://localhost:3000",
     "start": "next start",
     "lint": "next lint"
   },

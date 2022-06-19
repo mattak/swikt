@@ -13,3 +13,4 @@ set -ue
 )
 
 yarn clean && yarn install && yarn export && yarn open
+yarn start
