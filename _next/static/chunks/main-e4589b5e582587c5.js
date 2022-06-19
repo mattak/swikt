@@ -942,7 +942,7 @@ function AppContainer(param) {
     }, /*#__PURE__*/ _react.default.createElement(_headManagerContext.HeadManagerContext.Provider, {
         value: headManager
     }, /*#__PURE__*/ _react.default.createElement(_imageConfigContext.ImageConfigContext.Provider, {
-        value: {"deviceSizes":[640,750,828,1080,1200,1920,2048,3840],"imageSizes":[16,32,48,64,96,128,256,384],"path":"/_next/image","loader":"default","experimentalLayoutRaw":false}
+        value: {"deviceSizes":[640,750,828,1080,1200,1920,2048,3840],"imageSizes":[16,32,48,64,96,128,256,384],"path":"/swikt/_next/image","loader":"default","experimentalLayoutRaw":false}
     }, children))));
 }
 function renderApp(App, appProps) {
@@ -3566,7 +3566,7 @@ function _interopRequireWildcard(obj) {
 }
 var detectDomainLocale;
 if (false) {}
-var basePath =  false || "";
+var basePath = "/swikt" || 0;
 function buildCancellationError() {
     return Object.assign(new Error("Route Cancelled"), {
         cancelled: true
