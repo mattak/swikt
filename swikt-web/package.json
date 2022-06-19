@@ -2,7 +2,9 @@
   "name": "swikt",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
+    "clean": "rm -rf node_modules",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

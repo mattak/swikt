@@ -1,0 +1,3 @@
+[submodule "submodules/antlr4"]
+	path = submodules/antlr4
+	url = git@github.com:mattak/antlr4.git

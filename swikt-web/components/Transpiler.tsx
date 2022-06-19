@@ -3,7 +3,7 @@ import {useState} from "react";
 import styles from "./Transpiler.module.css";
 import dynamic from "next/dynamic";
 import "@uiw/react-textarea-code-editor/dist/editor.css";
-import {Calculator} from "swikt-lib";
+import {parseSwift} from 'swikt-lib';
 
 const CodeEditor = dynamic(
   () => import("@uiw/react-textarea-code-editor/dist/editor").then((mod) => mod.default),
@@ -16,8 +16,7 @@ const Transpiler: NextPage = () => {
 struct Sample {
 }`);
   const [kotlinCode, setKotlinCode] = useState('');
-  const a = new Calculator();
-  console.log('calc', a.add(1,2));
+  console.log("parseSwift", parseSwift(swiftCode));
 
   return (
     <div className={styles.container}>

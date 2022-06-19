@@ -294,6 +294,9 @@ ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
+antlr4@../submodules/antlr4/runtime/Typescript/dist:
+  version "4.10.1"
+
 argparse@^2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/argparse/-/argparse-2.0.1.tgz"
@@ -1883,6 +1886,8 @@ supports-preserve-symlinks-flag@^1.0.0:
 
 swikt-lib@../swikt-lib/dist/src:
   version "0.0.0"
+  dependencies:
+    antlr4 "../submodules/antlr4/runtime/Typescript/dist"
 
 text-table@^0.2.0:
   version "0.2.0"
