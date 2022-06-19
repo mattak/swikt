@@ -16,7 +16,19 @@ const Transpiler: NextPage = () => {
 struct Sample {
 }`);
   const [kotlinCode, setKotlinCode] = useState('');
-  console.log("parseSwift", parseSwift(swiftCode));
+  function transpileCode(value: string): string {
+    const swiftTree = parseSwift(value);
+    return JSON.stringify(swiftTree, null, 2);
+  }
+
+  function updateCode(value: string) {
+    setSwiftCode(value);
+    setKotlinCode(value);
+    // const result = transpileCode(value);
+    // console.log(result);
+  }
+
+  console.log(transpileCode(swiftCode));
 
   return (
     <div className={styles.container}>
@@ -26,7 +38,7 @@ struct Sample {
           value={swiftCode}
           language="swift"
           placeholder="Please enter Swift code."
-          onChange={(e: any) => setSwiftCode(e.target.value)}
+          onChange={(e: any) => updateCode(e.target.value)}
           padding={15}
           style={{
             fontSize: 12,
