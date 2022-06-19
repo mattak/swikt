@@ -3,7 +3,7 @@ import {useState} from "react";
 import styles from "./Transpiler.module.css";
 import dynamic from "next/dynamic";
 import "@uiw/react-textarea-code-editor/dist/editor.css";
-import {parseKotlin, parseSwift} from 'swikt-lib';
+import {parseKotlin, parseSwift} from "swikt-lib";
 
 const CodeEditor = dynamic(
   // @ts-ignore
