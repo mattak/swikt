@@ -36,6 +36,8 @@ jobs:
 
     - name: build & export nextjs 
       run: ./script/clean_build.sh
+      env:
+        APP_ENV: 'gh-pages'
 
     # GitHub Pagesの仕様として_から始まるディレクトリが見えず404
     # HTMLからJSを読み込めない
