@@ -1,0 +1,50 @@
+name: github pages
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: recursive
+
+    - name: setup node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '17.x'
+
+    - name: get yarn cache directory path
+      id: yarn-cache-dir-path
+      run: echo "::set-output name=dir::$(yarn cache dir)"
+
+    - name: install
+      run: yarn --check-files --frozen-lockfile --non-interactive
+
+    - name: cache yarn dependencies
+      uses: actions/cache@v3
+      id: yarn-cache
+      with:
+        path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: build & export nextjs 
+      run: ./script/clean_build.sh
+
+    # GitHub Pagesの仕様として_から始まるディレクトリが見えず404
+    # HTMLからJSを読み込めない
+    # 回避するために.nojekyllファイルをoutディレクトリに作成
+    - name: add nojekyll
+      run: touch ./swikt-web/out/.nojekyll
+
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./swift-web/out
