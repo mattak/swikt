@@ -43,6 +43,9 @@ jobs:
     - name: add nojekyll
       run: touch ./swikt-web/out/.nojekyll
 
+    - name: check exported files
+      run: find ./swikt-web/out -type f
+
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
