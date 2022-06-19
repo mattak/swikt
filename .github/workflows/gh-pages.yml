@@ -43,11 +43,15 @@ jobs:
     - name: add nojekyll
       run: touch ./swikt-web/out/.nojekyll
 
+    - name: force copy to root dir
+      run: cp -r ./swikt-web/out ./out
+
     - name: check exported files
-      run: find ./swikt-web/out -type f
+      run: find ./out -type f
 
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
+      if: ${{ github.ref == 'refs/heads/main' }}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./swift-web/out
+        publish_dir: ./out
