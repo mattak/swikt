@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "antlr4": "https://raw.githubusercontent.com/mattak/antlr4/typescript/runtime/Typescript/src/antlr4/index.js",
+    "antlr4/": "https://raw.githubusercontent.com/mattak/antlr4/typescript/runtime/Typescript/src/antlr4/"
+  }
+}
