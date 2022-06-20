@@ -3,8 +3,8 @@
  * Licensed under the BSD-3-Clause license. See LICENSE file in the project root for license information.
  */
 
-import * as util from "util";
-import { MurmurHash } from "./MurmurHash";
+// import * as util from "util";
+import { MurmurHash } from "./MurmurHash.ts";
 
 /**
  * Private empty array used to construct empty BitSets
@@ -829,10 +829,11 @@ export class BitSet implements Iterable<number>{
 		return new BitSetIterator(this.data);
 	}
 
+	// NOTE: comment out for deno
 	// Overrides formatting for nodejs assert etc.
-	public [(util.inspect as any).custom](): string {
-		return "BitSet " + this.toString();
-	}
+	// public [(util.inspect as any).custom](): string {
+	// 	return "BitSet " + this.toString();
+	// }
 }
 
 class BitSetIterator implements IterableIterator<number>{

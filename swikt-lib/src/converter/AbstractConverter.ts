@@ -1,5 +1,5 @@
-import {Converter} from "./Converter";
-import {TArray, TObject} from "../util/Tree";
+import {Converter} from "./Converter.ts";
+import {TArray, TObject} from "../util/Tree.ts";
 
 export class AbstractConverter<TConverter extends Converter<any>> {
   getConverter(key: string): TConverter | null {

@@ -6,7 +6,7 @@
   "types": "index.d.ts",
   "scripts": {
     "clean": "rm -rf node_modules/ dist/",
-    "build": "tsc && cp package.json dist/src/"
+    "build": "./script/deno2tsc.sh src out && tsc && cp package.json dist/out/"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +20,7 @@
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "declaration-bundler-webpack-plugin": "^1.0.3",
+    "deno-module-extension-resolver": "^0.3.0",
     "ts-loader": "^9.3.0",
     "typescript": "^4.7.4",
     "webpack": "^5.73.0",

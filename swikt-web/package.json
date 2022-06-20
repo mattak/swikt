@@ -16,7 +16,7 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "swikt-lib": "../swikt-lib/dist/src"
+    "swikt-lib": "../swikt-lib/dist/out"
   },
   "devDependencies": {
     "@types/node": "17.0.42",

@@ -1,7 +1,7 @@
-import {AbstractConverter} from "./AbstractConverter";
-import {Converter} from "./Converter";
-import {TArray, TObject} from "../util/Tree";
-import {TreeWalk} from "../util/TreeWalk";
+import {AbstractConverter} from "./AbstractConverter.ts";
+import {Converter} from "./Converter.ts";
+import {TArray, TObject} from "../util/Tree.ts";
+import {TreeWalk} from "../util/TreeWalk.ts";
 
 export interface KotlinInfoTable {
   package: string, // e.g. com.example.sample

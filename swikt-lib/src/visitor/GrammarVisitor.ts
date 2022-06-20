@@ -1,5 +1,5 @@
-import ANTLRv4ParserVisitor from "../generated/antlr/ANTLRv4ParserVisitor";
-import RuleContext from "antlr4/context/RuleContext";
+import ANTLRv4ParserVisitor from "../generated/antlr/ANTLRv4ParserVisitor.js";
+import RuleContext from "antlr4/context/RuleContext.js";
 
 export class GrammarVisitor extends ANTLRv4ParserVisitor {
   visitChildren(ctx: RuleContext): object | [] | null | string {

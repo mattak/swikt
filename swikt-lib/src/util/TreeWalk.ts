@@ -1,4 +1,4 @@
-import {TArray, TArrayElement, TObject} from "./Tree";
+import {TArray, TArrayElement, TObject} from "./Tree.ts";
 
 export class TreeWalk {
   public static isEmptyObject(input: TObject): boolean {

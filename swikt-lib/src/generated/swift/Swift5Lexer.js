@@ -3,7 +3,7 @@
 import antlr4 from 'antlr4';
 
 
-import {Stack} from "../util/Stack";
+import {Stack} from "../util/Stack.ts";
 
 
 const serializedATN = [4,0,193,1946,6,-1,6,-1,6,-1,6,-1,6,-1,2,0,7,0,2,1,

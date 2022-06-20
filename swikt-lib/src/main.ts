@@ -1,13 +1,13 @@
-import antlr4 from "antlr4";
-import Swift5Lexer from "./generated/swift/Swift5Lexer";
-import Swift5Parser from "./generated/swift/Swift5Parser";
-import {GrammarVisitor} from "./visitor/GrammarVisitor";
-import KotlinParser from "./generated/kotlin/KotlinParser";
-import KotlinLexer from "./generated/kotlin/KotlinLexer";
-import {TObject} from "./util/Tree";
-import {KotlinPrinter} from "./printer/KotlinPrinter";
-import {KotlinInfoTable, SwiftKotlinConverter} from "./converter/SwiftKotlinConverter";
-import {KotlinPreprocessor} from "./preprocessor/KotlinPreprocessor";
+import antlr4 from "antlr4/index.js";
+import Swift5Lexer from "./generated/swift/Swift5Lexer.js";
+import Swift5Parser from "./generated/swift/Swift5Parser.js";
+import {GrammarVisitor} from "./visitor/GrammarVisitor.ts";
+import KotlinParser from "./generated/kotlin/KotlinParser.js";
+import KotlinLexer from "./generated/kotlin/KotlinLexer.js";
+import {TObject} from "./util/Tree.ts";
+import {KotlinPrinter} from "./printer/KotlinPrinter.ts";
+import {KotlinInfoTable, SwiftKotlinConverter} from "./converter/SwiftKotlinConverter.ts";
+import {KotlinPreprocessor} from "./preprocessor/KotlinPreprocessor.ts";
 
 // parser
 export function parseSwift(input: string): TObject {

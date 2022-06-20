@@ -1,4 +1,4 @@
-import {AbstractPrinter, CustomPrinter} from "./AbstractPrinter";
+import {AbstractPrinter, CustomPrinter} from "./AbstractPrinter.ts";
 
 export class KotlinPrinter extends AbstractPrinter {
   private blockKeysList: string[][] = [];

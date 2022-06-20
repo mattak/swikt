@@ -5,7 +5,7 @@ import Swift5ParserListener from './Swift5ParserListener.js';
 import Swift5ParserVisitor from './Swift5ParserVisitor.js';
 
 
-import SwiftSupport from "./SwiftSupport";
+import SwiftSupport from "./SwiftSupport.ts";
 
 const serializedATN = [4,1,193,2872,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,
 7,4,2,5,7,5,2,6,7,6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,

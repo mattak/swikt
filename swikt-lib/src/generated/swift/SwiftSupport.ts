@@ -1,9 +1,9 @@
-import Swift5Lexer from "./Swift5Lexer";
-import {BitSet} from "../util/BitSet";
-import {Swift5ParserCompat} from "./Swift5ParserCompat";
-import Token from "antlr4/Token";
-import Interval from "antlr4/misc/Interval";
-import BufferedTokenStream from "antlr4/BufferedTokenStream";
+import Swift5Lexer from "./Swift5Lexer.js";
+import {BitSet} from "../util/BitSet.ts";
+import {Swift5ParserCompat} from "./Swift5ParserCompat.ts";
+import Token from "antlr4/Token.js";
+import Interval from "antlr4/misc/Interval.js";
+import BufferedTokenStream from "antlr4/BufferedTokenStream.js";
 
 export default class SwiftSupport {
   /* TODO
