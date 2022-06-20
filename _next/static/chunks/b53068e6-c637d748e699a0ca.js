@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 // Generated from ./assets/swift/Swift5Parser.g4 by ANTLR 4.10.1
 // jshint ignore: start
 const antlr4_1 = __importDefault(__webpack_require__(7228));
-const Swift5ParserListener_js_1 = __importDefault(__webpack_require__(2118));
-const Swift5ParserVisitor_js_1 = __importDefault(__webpack_require__(4310));
+const Swift5ParserListener_1 = __importDefault(__webpack_require__(2118));
+const Swift5ParserVisitor_1 = __importDefault(__webpack_require__(4310));
 const SwiftSupport_1 = __importDefault(__webpack_require__(4667));
 const serializedATN = [4, 1, 193, 2872, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4,
     7, 4, 2, 5, 7, 5, 2, 6, 7, 6, 2, 7, 7, 7, 2, 8, 7, 8, 2, 9, 7, 9, 2, 10, 7, 10, 2, 11, 7, 11, 2, 12, 7, 12,
@@ -15140,17 +15140,17 @@ class Top_levelContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTop_level(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTop_level(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTop_level(this);
         }
         else {
@@ -15211,17 +15211,17 @@ class StatementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterStatement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitStatement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitStatement(this);
         }
         else {
@@ -15254,17 +15254,17 @@ class StatementsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterStatements(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitStatements(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitStatements(this);
         }
         else {
@@ -15297,17 +15297,17 @@ class Loop_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLoop_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLoop_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLoop_statement(this);
         }
         else {
@@ -15356,17 +15356,17 @@ class For_in_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFor_in_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFor_in_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFor_in_statement(this);
         }
         else {
@@ -15399,17 +15399,17 @@ class While_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterWhile_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitWhile_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitWhile_statement(this);
         }
         else {
@@ -15452,17 +15452,17 @@ class Condition_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCondition_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCondition_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCondition_list(this);
         }
         else {
@@ -15499,17 +15499,17 @@ class ConditionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCondition(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCondition(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCondition(this);
         }
         else {
@@ -15542,17 +15542,17 @@ class Case_conditionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCase_condition(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCase_condition(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCase_condition(this);
         }
         else {
@@ -15589,17 +15589,17 @@ class Optional_binding_conditionContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOptional_binding_condition(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOptional_binding_condition(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOptional_binding_condition(this);
         }
         else {
@@ -15636,17 +15636,17 @@ class Repeat_while_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRepeat_while_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRepeat_while_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRepeat_while_statement(this);
         }
         else {
@@ -15679,17 +15679,17 @@ class Branch_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterBranch_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitBranch_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitBranch_statement(this);
         }
         else {
@@ -15726,17 +15726,17 @@ class If_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterIf_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitIf_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitIf_statement(this);
         }
         else {
@@ -15769,17 +15769,17 @@ class Else_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterElse_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitElse_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitElse_clause(this);
         }
         else {
@@ -15816,17 +15816,17 @@ class Guard_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGuard_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGuard_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGuard_statement(this);
         }
         else {
@@ -15867,17 +15867,17 @@ class Switch_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSwitch_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSwitch_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSwitch_statement(this);
         }
         else {
@@ -15906,17 +15906,17 @@ class Switch_casesContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSwitch_cases(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSwitch_cases(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSwitch_cases(this);
         }
         else {
@@ -15953,17 +15953,17 @@ class Switch_caseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSwitch_case(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSwitch_case(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSwitch_case(this);
         }
         else {
@@ -16000,17 +16000,17 @@ class Case_labelContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCase_label(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCase_label(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCase_label(this);
         }
         else {
@@ -16064,17 +16064,17 @@ class Case_item_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCase_item_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCase_item_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCase_item_list(this);
         }
         else {
@@ -16107,17 +16107,17 @@ class Default_labelContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDefault_label(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDefault_label(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDefault_label(this);
         }
         else {
@@ -16146,17 +16146,17 @@ class Where_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterWhere_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitWhere_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitWhere_clause(this);
         }
         else {
@@ -16181,17 +16181,17 @@ class Where_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterWhere_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitWhere_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitWhere_expression(this);
         }
         else {
@@ -16228,17 +16228,17 @@ class Conditional_switch_caseContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterConditional_switch_case(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitConditional_switch_case(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitConditional_switch_case(this);
         }
         else {
@@ -16271,17 +16271,17 @@ class Switch_if_directive_clauseContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSwitch_if_directive_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSwitch_if_directive_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSwitch_if_directive_clause(this);
         }
         else {
@@ -16310,17 +16310,17 @@ class Switch_elseif_directive_clausesContext extends antlr4_1.default.ParserRule
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSwitch_elseif_directive_clauses(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSwitch_elseif_directive_clauses(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSwitch_elseif_directive_clauses(this);
         }
         else {
@@ -16353,17 +16353,17 @@ class Switch_elseif_directive_clauseContext extends antlr4_1.default.ParserRuleC
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSwitch_elseif_directive_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSwitch_elseif_directive_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSwitch_elseif_directive_clause(this);
         }
         else {
@@ -16392,17 +16392,17 @@ class Switch_else_directive_clauseContext extends antlr4_1.default.ParserRuleCon
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSwitch_else_directive_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSwitch_else_directive_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSwitch_else_directive_clause(this);
         }
         else {
@@ -16443,17 +16443,17 @@ class Labeled_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLabeled_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLabeled_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLabeled_statement(this);
         }
         else {
@@ -16482,17 +16482,17 @@ class Statement_labelContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterStatement_label(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitStatement_label(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitStatement_label(this);
         }
         else {
@@ -16517,17 +16517,17 @@ class Label_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLabel_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLabel_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLabel_name(this);
         }
         else {
@@ -16568,17 +16568,17 @@ class Control_transfer_statementContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterControl_transfer_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitControl_transfer_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitControl_transfer_statement(this);
         }
         else {
@@ -16607,17 +16607,17 @@ class Break_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterBreak_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitBreak_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitBreak_statement(this);
         }
         else {
@@ -16646,17 +16646,17 @@ class Continue_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterContinue_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitContinue_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitContinue_statement(this);
         }
         else {
@@ -16681,17 +16681,17 @@ class Fallthrough_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFallthrough_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFallthrough_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFallthrough_statement(this);
         }
         else {
@@ -16720,17 +16720,17 @@ class Return_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterReturn_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitReturn_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitReturn_statement(this);
         }
         else {
@@ -16759,17 +16759,17 @@ class Throw_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterThrow_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitThrow_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitThrow_statement(this);
         }
         else {
@@ -16798,17 +16798,17 @@ class Defer_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDefer_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDefer_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDefer_statement(this);
         }
         else {
@@ -16841,17 +16841,17 @@ class Do_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDo_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDo_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDo_statement(this);
         }
         else {
@@ -16883,17 +16883,17 @@ class Catch_clausesContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCatch_clauses(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCatch_clauses(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCatch_clauses(this);
         }
         else {
@@ -16926,17 +16926,17 @@ class Catch_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCatch_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCatch_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCatch_clause(this);
         }
         else {
@@ -16979,17 +16979,17 @@ class Catch_pattern_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCatch_pattern_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCatch_pattern_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCatch_pattern_list(this);
         }
         else {
@@ -17018,17 +17018,17 @@ class Catch_patternContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCatch_pattern(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCatch_pattern(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCatch_pattern(this);
         }
         else {
@@ -17061,17 +17061,17 @@ class Compiler_control_statementContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCompiler_control_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCompiler_control_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCompiler_control_statement(this);
         }
         else {
@@ -17108,17 +17108,17 @@ class Conditional_compilation_blockContext extends antlr4_1.default.ParserRuleCo
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterConditional_compilation_block(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitConditional_compilation_block(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitConditional_compilation_block(this);
         }
         else {
@@ -17151,17 +17151,17 @@ class If_directive_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterIf_directive_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitIf_directive_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitIf_directive_clause(this);
         }
         else {
@@ -17193,17 +17193,17 @@ class Elseif_directive_clausesContext extends antlr4_1.default.ParserRuleContext
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterElseif_directive_clauses(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitElseif_directive_clauses(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitElseif_directive_clauses(this);
         }
         else {
@@ -17236,17 +17236,17 @@ class Elseif_directive_clauseContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterElseif_directive_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitElseif_directive_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitElseif_directive_clause(this);
         }
         else {
@@ -17275,17 +17275,17 @@ class Else_directive_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterElse_directive_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitElse_directive_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitElse_directive_clause(this);
         }
         else {
@@ -17349,17 +17349,17 @@ class Compilation_conditionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCompilation_condition(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCompilation_condition(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCompilation_condition(this);
         }
         else {
@@ -17440,17 +17440,17 @@ class Platform_conditionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPlatform_condition(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPlatform_condition(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPlatform_condition(this);
         }
         else {
@@ -17479,17 +17479,17 @@ class Swift_versionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSwift_version(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSwift_version(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSwift_version(this);
         }
         else {
@@ -17522,17 +17522,17 @@ class Swift_version_continuationContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSwift_version_continuation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSwift_version_continuation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSwift_version_continuation(this);
         }
         else {
@@ -17581,17 +17581,17 @@ class Operating_systemContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOperating_system(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOperating_system(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOperating_system(this);
         }
         else {
@@ -17628,17 +17628,17 @@ class ArchitectureContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterArchitecture(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitArchitecture(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitArchitecture(this);
         }
         else {
@@ -17681,17 +17681,17 @@ class Module_nameContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterModule_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitModule_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitModule_name(this);
         }
         else {
@@ -17720,17 +17720,17 @@ class EnvironmentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterEnvironment(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitEnvironment(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitEnvironment(this);
         }
         else {
@@ -17794,17 +17794,17 @@ class Line_control_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLine_control_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLine_control_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLine_control_statement(this);
         }
         else {
@@ -17829,17 +17829,17 @@ class Line_numberContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLine_number(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLine_number(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLine_number(this);
         }
         else {
@@ -17864,17 +17864,17 @@ class File_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFile_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFile_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFile_name(this);
         }
         else {
@@ -17915,17 +17915,17 @@ class Diagnostic_statementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDiagnostic_statement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDiagnostic_statement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDiagnostic_statement(this);
         }
         else {
@@ -17950,17 +17950,17 @@ class Diagnostic_messageContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDiagnostic_message(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDiagnostic_message(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDiagnostic_message(this);
         }
         else {
@@ -17997,17 +17997,17 @@ class Availability_conditionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAvailability_condition(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAvailability_condition(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAvailability_condition(this);
         }
         else {
@@ -18050,17 +18050,17 @@ class Availability_argumentsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAvailability_arguments(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAvailability_arguments(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAvailability_arguments(this);
         }
         else {
@@ -18093,17 +18093,17 @@ class Availability_argumentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAvailability_argument(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAvailability_argument(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAvailability_argument(this);
         }
         else {
@@ -18160,17 +18160,17 @@ class Platform_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPlatform_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPlatform_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPlatform_name(this);
         }
         else {
@@ -18207,17 +18207,17 @@ class Platform_versionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPlatform_version(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPlatform_version(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPlatform_version(this);
         }
         else {
@@ -18250,17 +18250,17 @@ class Generic_parameter_clauseContext extends antlr4_1.default.ParserRuleContext
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGeneric_parameter_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGeneric_parameter_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGeneric_parameter_clause(this);
         }
         else {
@@ -18303,17 +18303,17 @@ class Generic_parameter_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGeneric_parameter_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGeneric_parameter_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGeneric_parameter_list(this);
         }
         else {
@@ -18350,17 +18350,17 @@ class Generic_parameterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGeneric_parameter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGeneric_parameter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGeneric_parameter(this);
         }
         else {
@@ -18389,17 +18389,17 @@ class Generic_where_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGeneric_where_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGeneric_where_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGeneric_where_clause(this);
         }
         else {
@@ -18442,17 +18442,17 @@ class Requirement_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRequirement_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRequirement_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRequirement_list(this);
         }
         else {
@@ -18481,17 +18481,17 @@ class RequirementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRequirement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRequirement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRequirement(this);
         }
         else {
@@ -18531,17 +18531,17 @@ class Conformance_requirementContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterConformance_requirement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitConformance_requirement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitConformance_requirement(this);
         }
         else {
@@ -18581,17 +18581,17 @@ class Same_type_requirementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSame_type_requirement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSame_type_requirement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSame_type_requirement(this);
         }
         else {
@@ -18624,17 +18624,17 @@ class Generic_argument_clauseContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGeneric_argument_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGeneric_argument_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGeneric_argument_clause(this);
         }
         else {
@@ -18677,17 +18677,17 @@ class Generic_argument_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGeneric_argument_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGeneric_argument_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGeneric_argument_list(this);
         }
         else {
@@ -18712,17 +18712,17 @@ class Generic_argumentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGeneric_argument(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGeneric_argument(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGeneric_argument(this);
         }
         else {
@@ -18807,17 +18807,17 @@ class DeclarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDeclaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDeclaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDeclaration(this);
         }
         else {
@@ -18849,17 +18849,17 @@ class DeclarationsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDeclarations(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDeclarations(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDeclarations(this);
         }
         else {
@@ -18884,17 +18884,17 @@ class Top_level_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTop_level_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTop_level_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTop_level_declaration(this);
         }
         else {
@@ -18927,17 +18927,17 @@ class Code_blockContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCode_block(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCode_block(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCode_block(this);
         }
         else {
@@ -18974,17 +18974,17 @@ class Import_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterImport_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitImport_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitImport_declaration(this);
         }
         else {
@@ -19037,17 +19037,17 @@ class Import_kindContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterImport_kind(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitImport_kind(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitImport_kind(this);
         }
         else {
@@ -19090,17 +19090,17 @@ class Import_pathContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterImport_path(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitImport_path(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitImport_path(this);
         }
         else {
@@ -19129,17 +19129,17 @@ class Import_path_identifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterImport_path_identifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitImport_path_identifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitImport_path_identifier(this);
         }
         else {
@@ -19176,17 +19176,17 @@ class Constant_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterConstant_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitConstant_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitConstant_declaration(this);
         }
         else {
@@ -19229,17 +19229,17 @@ class Pattern_initializer_listContext extends antlr4_1.default.ParserRuleContext
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPattern_initializer_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPattern_initializer_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPattern_initializer_list(this);
         }
         else {
@@ -19268,17 +19268,17 @@ class Pattern_initializerContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPattern_initializer(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPattern_initializer(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPattern_initializer(this);
         }
         else {
@@ -19307,17 +19307,17 @@ class InitializerContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterInitializer(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitInitializer(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitInitializer(this);
         }
         else {
@@ -19370,17 +19370,17 @@ class Variable_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterVariable_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitVariable_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitVariable_declaration(this);
         }
         else {
@@ -19413,17 +19413,17 @@ class Variable_declaration_headContext extends antlr4_1.default.ParserRuleContex
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterVariable_declaration_head(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitVariable_declaration_head(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitVariable_declaration_head(this);
         }
         else {
@@ -19448,17 +19448,17 @@ class Variable_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterVariable_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitVariable_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitVariable_name(this);
         }
         else {
@@ -19499,17 +19499,17 @@ class Getter_setter_blockContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGetter_setter_block(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGetter_setter_block(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGetter_setter_block(this);
         }
         else {
@@ -19546,17 +19546,17 @@ class Getter_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGetter_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGetter_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGetter_clause(this);
         }
         else {
@@ -19597,17 +19597,17 @@ class Setter_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSetter_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSetter_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSetter_clause(this);
         }
         else {
@@ -19640,17 +19640,17 @@ class Setter_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSetter_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSetter_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSetter_name(this);
         }
         else {
@@ -19687,17 +19687,17 @@ class Getter_setter_keyword_blockContext extends antlr4_1.default.ParserRuleCont
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGetter_setter_keyword_block(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGetter_setter_keyword_block(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGetter_setter_keyword_block(this);
         }
         else {
@@ -19730,17 +19730,17 @@ class Getter_keyword_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterGetter_keyword_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitGetter_keyword_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitGetter_keyword_clause(this);
         }
         else {
@@ -19773,17 +19773,17 @@ class Setter_keyword_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSetter_keyword_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSetter_keyword_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSetter_keyword_clause(this);
         }
         else {
@@ -19820,17 +19820,17 @@ class WillSet_didSet_blockContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterWillSet_didSet_block(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitWillSet_didSet_block(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitWillSet_didSet_block(this);
         }
         else {
@@ -19867,17 +19867,17 @@ class WillSet_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterWillSet_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitWillSet_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitWillSet_clause(this);
         }
         else {
@@ -19914,17 +19914,17 @@ class DidSet_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDidSet_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDidSet_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDidSet_clause(this);
         }
         else {
@@ -19969,17 +19969,17 @@ class Typealias_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTypealias_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTypealias_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTypealias_declaration(this);
         }
         else {
@@ -20004,17 +20004,17 @@ class Typealias_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTypealias_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTypealias_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTypealias_name(this);
         }
         else {
@@ -20043,17 +20043,17 @@ class Typealias_assignmentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTypealias_assignment(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTypealias_assignment(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTypealias_assignment(this);
         }
         else {
@@ -20098,17 +20098,17 @@ class Function_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_declaration(this);
         }
         else {
@@ -20141,17 +20141,17 @@ class Function_headContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_head(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_head(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_head(this);
         }
         else {
@@ -20180,17 +20180,17 @@ class Function_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_name(this);
         }
         else {
@@ -20227,17 +20227,17 @@ class Function_signatureContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_signature(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_signature(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_signature(this);
         }
         else {
@@ -20270,17 +20270,17 @@ class Function_resultContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_result(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_result(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_result(this);
         }
         else {
@@ -20305,17 +20305,17 @@ class Function_bodyContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_body(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_body(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_body(this);
         }
         else {
@@ -20348,17 +20348,17 @@ class Parameter_clauseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterParameter_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitParameter_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitParameter_clause(this);
         }
         else {
@@ -20401,17 +20401,17 @@ class Parameter_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterParameter_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitParameter_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitParameter_list(this);
         }
         else {
@@ -20456,17 +20456,17 @@ class ParameterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterParameter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitParameter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitParameter(this);
         }
         else {
@@ -20491,17 +20491,17 @@ class External_parameter_nameContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExternal_parameter_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExternal_parameter_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExternal_parameter_name(this);
         }
         else {
@@ -20526,17 +20526,17 @@ class Local_parameter_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLocal_parameter_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLocal_parameter_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLocal_parameter_name(this);
         }
         else {
@@ -20565,17 +20565,17 @@ class Default_argument_clauseContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDefault_argument_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDefault_argument_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDefault_argument_clause(this);
         }
         else {
@@ -20612,17 +20612,17 @@ class Enum_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterEnum_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitEnum_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitEnum_declaration(this);
         }
         else {
@@ -20679,17 +20679,17 @@ class Union_style_enumContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterUnion_style_enum(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitUnion_style_enum(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitUnion_style_enum(this);
         }
         else {
@@ -20721,17 +20721,17 @@ class Union_style_enum_membersContext extends antlr4_1.default.ParserRuleContext
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterUnion_style_enum_members(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitUnion_style_enum_members(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitUnion_style_enum_members(this);
         }
         else {
@@ -20764,17 +20764,17 @@ class Union_style_enum_memberContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterUnion_style_enum_member(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitUnion_style_enum_member(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitUnion_style_enum_member(this);
         }
         else {
@@ -20811,17 +20811,17 @@ class Union_style_enum_case_clauseContext extends antlr4_1.default.ParserRuleCon
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterUnion_style_enum_case_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitUnion_style_enum_case_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitUnion_style_enum_case_clause(this);
         }
         else {
@@ -20864,17 +20864,17 @@ class Union_style_enum_case_listContext extends antlr4_1.default.ParserRuleConte
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterUnion_style_enum_case_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitUnion_style_enum_case_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitUnion_style_enum_case_list(this);
         }
         else {
@@ -20919,17 +20919,17 @@ class Union_style_enum_caseContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterUnion_style_enum_case(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitUnion_style_enum_case(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitUnion_style_enum_case(this);
         }
         else {
@@ -20954,17 +20954,17 @@ class Enum_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterEnum_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitEnum_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitEnum_name(this);
         }
         else {
@@ -20989,17 +20989,17 @@ class Enum_case_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterEnum_case_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitEnum_case_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitEnum_case_name(this);
         }
         else {
@@ -21052,17 +21052,17 @@ class Raw_value_style_enumContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRaw_value_style_enum(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRaw_value_style_enum(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRaw_value_style_enum(this);
         }
         else {
@@ -21094,17 +21094,17 @@ class Raw_value_style_enum_membersContext extends antlr4_1.default.ParserRuleCon
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRaw_value_style_enum_members(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRaw_value_style_enum_members(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRaw_value_style_enum_members(this);
         }
         else {
@@ -21137,17 +21137,17 @@ class Raw_value_style_enum_memberContext extends antlr4_1.default.ParserRuleCont
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRaw_value_style_enum_member(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRaw_value_style_enum_member(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRaw_value_style_enum_member(this);
         }
         else {
@@ -21180,17 +21180,17 @@ class Raw_value_style_enum_case_clauseContext extends antlr4_1.default.ParserRul
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRaw_value_style_enum_case_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRaw_value_style_enum_case_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRaw_value_style_enum_case_clause(this);
         }
         else {
@@ -21233,17 +21233,17 @@ class Raw_value_style_enum_case_listContext extends antlr4_1.default.ParserRuleC
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRaw_value_style_enum_case_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRaw_value_style_enum_case_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRaw_value_style_enum_case_list(this);
         }
         else {
@@ -21272,17 +21272,17 @@ class Raw_value_style_enum_caseContext extends antlr4_1.default.ParserRuleContex
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRaw_value_style_enum_case(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRaw_value_style_enum_case(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRaw_value_style_enum_case(this);
         }
         else {
@@ -21311,17 +21311,17 @@ class Raw_value_assignmentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRaw_value_assignment(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRaw_value_assignment(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRaw_value_assignment(this);
         }
         else {
@@ -21354,17 +21354,17 @@ class Raw_value_literalContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRaw_value_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRaw_value_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRaw_value_literal(this);
         }
         else {
@@ -21417,17 +21417,17 @@ class Struct_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterStruct_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitStruct_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitStruct_declaration(this);
         }
         else {
@@ -21452,17 +21452,17 @@ class Struct_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterStruct_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitStruct_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitStruct_name(this);
         }
         else {
@@ -21495,17 +21495,17 @@ class Struct_bodyContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterStruct_body(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitStruct_body(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitStruct_body(this);
         }
         else {
@@ -21537,17 +21537,17 @@ class Struct_membersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterStruct_members(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitStruct_members(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitStruct_members(this);
         }
         else {
@@ -21576,17 +21576,17 @@ class Struct_memberContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterStruct_member(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitStruct_member(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitStruct_member(this);
         }
         else {
@@ -21643,17 +21643,17 @@ class Class_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClass_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClass_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClass_declaration(this);
         }
         else {
@@ -21678,17 +21678,17 @@ class Class_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClass_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClass_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClass_name(this);
         }
         else {
@@ -21721,17 +21721,17 @@ class Class_bodyContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClass_body(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClass_body(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClass_body(this);
         }
         else {
@@ -21763,17 +21763,17 @@ class Class_membersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClass_members(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClass_members(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClass_members(this);
         }
         else {
@@ -21802,17 +21802,17 @@ class Class_memberContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClass_member(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClass_member(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClass_member(this);
         }
         else {
@@ -21869,17 +21869,17 @@ class Protocol_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_declaration(this);
         }
         else {
@@ -21904,17 +21904,17 @@ class Protocol_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_name(this);
         }
         else {
@@ -21947,17 +21947,17 @@ class Protocol_bodyContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_body(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_body(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_body(this);
         }
         else {
@@ -21989,17 +21989,17 @@ class Protocol_membersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_members(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_members(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_members(this);
         }
         else {
@@ -22028,17 +22028,17 @@ class Protocol_memberContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_member(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_member(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_member(this);
         }
         else {
@@ -22083,17 +22083,17 @@ class Protocol_member_declarationContext extends antlr4_1.default.ParserRuleCont
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_member_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_member_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_member_declaration(this);
         }
         else {
@@ -22130,17 +22130,17 @@ class Protocol_property_declarationContext extends antlr4_1.default.ParserRuleCo
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_property_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_property_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_property_declaration(this);
         }
         else {
@@ -22181,17 +22181,17 @@ class Protocol_method_declarationContext extends antlr4_1.default.ParserRuleCont
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_method_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_method_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_method_declaration(this);
         }
         else {
@@ -22236,17 +22236,17 @@ class Protocol_initializer_declarationContext extends antlr4_1.default.ParserRul
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_initializer_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_initializer_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_initializer_declaration(this);
         }
         else {
@@ -22283,17 +22283,17 @@ class Protocol_subscript_declarationContext extends antlr4_1.default.ParserRuleC
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_subscript_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_subscript_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_subscript_declaration(this);
         }
         else {
@@ -22342,17 +22342,17 @@ class Protocol_associated_type_declarationContext extends antlr4_1.default.Parse
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_associated_type_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_associated_type_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_associated_type_declaration(this);
         }
         else {
@@ -22401,17 +22401,17 @@ class Initializer_declarationContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterInitializer_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitInitializer_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitInitializer_declaration(this);
         }
         else {
@@ -22452,17 +22452,17 @@ class Initializer_headContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterInitializer_head(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitInitializer_head(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitInitializer_head(this);
         }
         else {
@@ -22487,17 +22487,17 @@ class Initializer_bodyContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterInitializer_body(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitInitializer_body(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitInitializer_body(this);
         }
         else {
@@ -22530,17 +22530,17 @@ class Deinitializer_declarationContext extends antlr4_1.default.ParserRuleContex
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDeinitializer_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDeinitializer_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDeinitializer_declaration(this);
         }
         else {
@@ -22589,17 +22589,17 @@ class Extension_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExtension_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExtension_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExtension_declaration(this);
         }
         else {
@@ -22632,17 +22632,17 @@ class Extension_bodyContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExtension_body(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExtension_body(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExtension_body(this);
         }
         else {
@@ -22674,17 +22674,17 @@ class Extension_membersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExtension_members(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExtension_members(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExtension_members(this);
         }
         else {
@@ -22713,17 +22713,17 @@ class Extension_memberContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExtension_member(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExtension_member(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExtension_member(this);
         }
         else {
@@ -22768,17 +22768,17 @@ class Subscript_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSubscript_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSubscript_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSubscript_declaration(this);
         }
         else {
@@ -22819,17 +22819,17 @@ class Subscript_headContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSubscript_head(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSubscript_head(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSubscript_head(this);
         }
         else {
@@ -22862,17 +22862,17 @@ class Subscript_resultContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSubscript_result(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSubscript_result(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSubscript_result(this);
         }
         else {
@@ -22905,17 +22905,17 @@ class Operator_declarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOperator_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOperator_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOperator_declaration(this);
         }
         else {
@@ -22948,17 +22948,17 @@ class Prefix_operator_declarationContext extends antlr4_1.default.ParserRuleCont
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrefix_operator_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrefix_operator_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrefix_operator_declaration(this);
         }
         else {
@@ -22991,17 +22991,17 @@ class Postfix_operator_declarationContext extends antlr4_1.default.ParserRuleCon
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPostfix_operator_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPostfix_operator_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPostfix_operator_declaration(this);
         }
         else {
@@ -23038,17 +23038,17 @@ class Infix_operator_declarationContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterInfix_operator_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitInfix_operator_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitInfix_operator_declaration(this);
         }
         else {
@@ -23077,17 +23077,17 @@ class Infix_operator_groupContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterInfix_operator_group(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitInfix_operator_group(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitInfix_operator_group(this);
         }
         else {
@@ -23128,17 +23128,17 @@ class Precedence_group_declarationContext extends antlr4_1.default.ParserRuleCon
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrecedence_group_declaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrecedence_group_declaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrecedence_group_declaration(this);
         }
         else {
@@ -23170,17 +23170,17 @@ class Precedence_group_attributesContext extends antlr4_1.default.ParserRuleCont
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrecedence_group_attributes(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrecedence_group_attributes(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrecedence_group_attributes(this);
         }
         else {
@@ -23213,17 +23213,17 @@ class Precedence_group_attributeContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrecedence_group_attribute(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrecedence_group_attribute(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrecedence_group_attribute(this);
         }
         else {
@@ -23260,17 +23260,17 @@ class Precedence_group_relationContext extends antlr4_1.default.ParserRuleContex
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrecedence_group_relation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrecedence_group_relation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrecedence_group_relation(this);
         }
         else {
@@ -23303,17 +23303,17 @@ class Precedence_group_assignmentContext extends antlr4_1.default.ParserRuleCont
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrecedence_group_assignment(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrecedence_group_assignment(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrecedence_group_assignment(this);
         }
         else {
@@ -23354,17 +23354,17 @@ class Precedence_group_associativityContext extends antlr4_1.default.ParserRuleC
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrecedence_group_associativity(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrecedence_group_associativity(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrecedence_group_associativity(this);
         }
         else {
@@ -23407,17 +23407,17 @@ class Precedence_group_namesContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrecedence_group_names(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrecedence_group_names(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrecedence_group_names(this);
         }
         else {
@@ -23460,17 +23460,17 @@ class Precedence_group_nameContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrecedence_group_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrecedence_group_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrecedence_group_name(this);
         }
         else {
@@ -23571,17 +23571,17 @@ class Declaration_modifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDeclaration_modifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDeclaration_modifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDeclaration_modifier(this);
         }
         else {
@@ -23613,17 +23613,17 @@ class Declaration_modifiersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDeclaration_modifiers(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDeclaration_modifiers(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDeclaration_modifiers(this);
         }
         else {
@@ -23676,17 +23676,17 @@ class Access_level_modifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAccess_level_modifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAccess_level_modifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAccess_level_modifier(this);
         }
         else {
@@ -23715,17 +23715,17 @@ class Mutation_modifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterMutation_modifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitMutation_modifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitMutation_modifier(this);
         }
         else {
@@ -23794,17 +23794,17 @@ class PatternContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPattern(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPattern(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPattern(this);
         }
         else {
@@ -23829,17 +23829,17 @@ class Wildcard_patternContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterWildcard_pattern(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitWildcard_pattern(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitWildcard_pattern(this);
         }
         else {
@@ -23864,17 +23864,17 @@ class Identifier_patternContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterIdentifier_pattern(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitIdentifier_pattern(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitIdentifier_pattern(this);
         }
         else {
@@ -23907,17 +23907,17 @@ class Value_binding_patternContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterValue_binding_pattern(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitValue_binding_pattern(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitValue_binding_pattern(this);
         }
         else {
@@ -23950,17 +23950,17 @@ class Tuple_patternContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTuple_pattern(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTuple_pattern(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTuple_pattern(this);
         }
         else {
@@ -24003,17 +24003,17 @@ class Tuple_pattern_element_listContext extends antlr4_1.default.ParserRuleConte
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTuple_pattern_element_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTuple_pattern_element_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTuple_pattern_element_list(this);
         }
         else {
@@ -24046,17 +24046,17 @@ class Tuple_pattern_elementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTuple_pattern_element(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTuple_pattern_element(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTuple_pattern_element(this);
         }
         else {
@@ -24093,17 +24093,17 @@ class Enum_case_patternContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterEnum_case_pattern(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitEnum_case_pattern(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitEnum_case_pattern(this);
         }
         else {
@@ -24132,17 +24132,17 @@ class Optional_patternContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOptional_pattern(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOptional_pattern(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOptional_pattern(this);
         }
         else {
@@ -24167,17 +24167,17 @@ class Expression_patternContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExpression_pattern(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExpression_pattern(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExpression_pattern(this);
         }
         else {
@@ -24210,17 +24210,17 @@ class AttributeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAttribute(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAttribute(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAttribute(this);
         }
         else {
@@ -24263,17 +24263,17 @@ class Attribute_nameContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAttribute_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAttribute_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAttribute_name(this);
         }
         else {
@@ -24306,17 +24306,17 @@ class Attribute_argument_clauseContext extends antlr4_1.default.ParserRuleContex
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAttribute_argument_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAttribute_argument_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAttribute_argument_clause(this);
         }
         else {
@@ -24348,17 +24348,17 @@ class AttributesContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAttributes(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAttributes(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAttributes(this);
         }
         else {
@@ -24390,17 +24390,17 @@ class Balanced_tokensContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterBalanced_tokens(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitBalanced_tokens(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitBalanced_tokens(this);
         }
         else {
@@ -24469,17 +24469,17 @@ class Balanced_tokenContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterBalanced_token(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitBalanced_token(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitBalanced_token(this);
         }
         else {
@@ -24548,17 +24548,17 @@ class Balanced_token_punctuationContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterBalanced_token_punctuation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitBalanced_token_punctuation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitBalanced_token_punctuation(this);
         }
         else {
@@ -24591,17 +24591,17 @@ class ExpressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExpression(this);
         }
         else {
@@ -24644,17 +24644,17 @@ class Expression_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExpression_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExpression_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExpression_list(this);
         }
         else {
@@ -24687,17 +24687,17 @@ class Prefix_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrefix_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrefix_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrefix_expression(this);
         }
         else {
@@ -24726,17 +24726,17 @@ class In_out_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterIn_out_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitIn_out_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitIn_out_expression(this);
         }
         else {
@@ -24769,17 +24769,17 @@ class Try_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTry_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTry_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTry_operator(this);
         }
         else {
@@ -24824,17 +24824,17 @@ class Binary_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterBinary_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitBinary_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitBinary_expression(this);
         }
         else {
@@ -24866,17 +24866,17 @@ class Binary_expressionsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterBinary_expressions(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitBinary_expressions(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitBinary_expressions(this);
         }
         else {
@@ -24909,17 +24909,17 @@ class Conditional_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterConditional_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitConditional_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitConditional_operator(this);
         }
         else {
@@ -24960,17 +24960,17 @@ class Type_casting_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterType_casting_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitType_casting_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitType_casting_operator(this);
         }
         else {
@@ -25055,17 +25055,17 @@ class Primary_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrimary_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrimary_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrimary_expression(this);
         }
         else {
@@ -25102,17 +25102,17 @@ class Unqualified_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterUnqualified_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitUnqualified_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitUnqualified_name(this);
         }
         else {
@@ -25177,17 +25177,17 @@ class Literal_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLiteral_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLiteral_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLiteral_expression(this);
         }
         else {
@@ -25220,17 +25220,17 @@ class Array_literalContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterArray_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitArray_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitArray_literal(this);
         }
         else {
@@ -25273,17 +25273,17 @@ class Array_literal_itemsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterArray_literal_items(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitArray_literal_items(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitArray_literal_items(this);
         }
         else {
@@ -25308,17 +25308,17 @@ class Array_literal_itemContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterArray_literal_item(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitArray_literal_item(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitArray_literal_item(this);
         }
         else {
@@ -25355,17 +25355,17 @@ class Dictionary_literalContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDictionary_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDictionary_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDictionary_literal(this);
         }
         else {
@@ -25408,17 +25408,17 @@ class Dictionary_literal_itemsContext extends antlr4_1.default.ParserRuleContext
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDictionary_literal_items(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDictionary_literal_items(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDictionary_literal_items(this);
         }
         else {
@@ -25454,17 +25454,17 @@ class Dictionary_literal_itemContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDictionary_literal_item(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDictionary_literal_item(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDictionary_literal_item(this);
         }
         else {
@@ -25558,17 +25558,17 @@ class Playground_literalContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPlayground_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPlayground_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPlayground_literal(this);
         }
         else {
@@ -25610,17 +25610,17 @@ class Self_initializer_expressionContext extends Self_expressionContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSelf_initializer_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSelf_initializer_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSelf_initializer_expression(this);
         }
         else {
@@ -25639,17 +25639,17 @@ class Self_pure_expressionContext extends Self_expressionContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSelf_pure_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSelf_pure_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSelf_pure_expression(this);
         }
         else {
@@ -25680,17 +25680,17 @@ class Self_subscript_expressionContext extends Self_expressionContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSelf_subscript_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSelf_subscript_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSelf_subscript_expression(this);
         }
         else {
@@ -25717,17 +25717,17 @@ class Self_method_expressionContext extends Self_expressionContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSelf_method_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSelf_method_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSelf_method_expression(this);
         }
         else {
@@ -25774,17 +25774,17 @@ class Superclass_subscript_expressionContext extends Superclass_expressionContex
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSuperclass_subscript_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSuperclass_subscript_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSuperclass_subscript_expression(this);
         }
         else {
@@ -25811,17 +25811,17 @@ class Superclass_initializer_expressionContext extends Superclass_expressionCont
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSuperclass_initializer_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSuperclass_initializer_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSuperclass_initializer_expression(this);
         }
         else {
@@ -25848,17 +25848,17 @@ class Superclass_method_expressionContext extends Superclass_expressionContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSuperclass_method_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSuperclass_method_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSuperclass_method_expression(this);
         }
         else {
@@ -25896,17 +25896,17 @@ class Closure_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClosure_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClosure_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClosure_expression(this);
         }
         else {
@@ -25947,17 +25947,17 @@ class Closure_signatureContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClosure_signature(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClosure_signature(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClosure_signature(this);
         }
         else {
@@ -25994,17 +25994,17 @@ class Closure_parameter_clauseContext extends antlr4_1.default.ParserRuleContext
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClosure_parameter_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClosure_parameter_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClosure_parameter_clause(this);
         }
         else {
@@ -26047,17 +26047,17 @@ class Closure_parameter_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClosure_parameter_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClosure_parameter_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClosure_parameter_list(this);
         }
         else {
@@ -26091,17 +26091,17 @@ class Closure_parameterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterClosure_parameter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitClosure_parameter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitClosure_parameter(this);
         }
         else {
@@ -26134,17 +26134,17 @@ class Capture_listContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCapture_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCapture_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCapture_list(this);
         }
         else {
@@ -26187,17 +26187,17 @@ class Capture_list_itemsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCapture_list_items(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCapture_list_items(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCapture_list_items(this);
         }
         else {
@@ -26238,17 +26238,17 @@ class Capture_list_itemContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCapture_list_item(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCapture_list_item(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCapture_list_item(this);
         }
         else {
@@ -26293,17 +26293,17 @@ class Capture_specifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCapture_specifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCapture_specifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCapture_specifier(this);
         }
         else {
@@ -26347,17 +26347,17 @@ class Implicit_member_expressionContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterImplicit_member_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitImplicit_member_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitImplicit_member_expression(this);
         }
         else {
@@ -26390,17 +26390,17 @@ class Parenthesized_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterParenthesized_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitParenthesized_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitParenthesized_operator(this);
         }
         else {
@@ -26433,17 +26433,17 @@ class Parenthesized_expressionContext extends antlr4_1.default.ParserRuleContext
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterParenthesized_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitParenthesized_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitParenthesized_expression(this);
         }
         else {
@@ -26484,17 +26484,17 @@ class Tuple_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTuple_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTuple_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTuple_expression(this);
         }
         else {
@@ -26537,17 +26537,17 @@ class Tuple_element_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTuple_element_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTuple_element_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTuple_element_list(this);
         }
         else {
@@ -26580,17 +26580,17 @@ class Tuple_elementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTuple_element(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTuple_element(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTuple_element(this);
         }
         else {
@@ -26615,17 +26615,17 @@ class Wildcard_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterWildcard_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitWildcard_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitWildcard_expression(this);
         }
         else {
@@ -26662,17 +26662,17 @@ class Key_path_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterKey_path_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitKey_path_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitKey_path_expression(this);
         }
         else {
@@ -26715,17 +26715,17 @@ class Key_path_componentsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterKey_path_components(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitKey_path_components(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitKey_path_components(this);
         }
         else {
@@ -26754,17 +26754,17 @@ class Key_path_componentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterKey_path_component(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitKey_path_component(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitKey_path_component(this);
         }
         else {
@@ -26796,17 +26796,17 @@ class Key_path_postfixesContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterKey_path_postfixes(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitKey_path_postfixes(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitKey_path_postfixes(this);
         }
         else {
@@ -26851,17 +26851,17 @@ class Key_path_postfixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterKey_path_postfix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitKey_path_postfix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitKey_path_postfix(this);
         }
         else {
@@ -26910,17 +26910,17 @@ class Selector_expressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSelector_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSelector_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSelector_expression(this);
         }
         else {
@@ -26957,17 +26957,17 @@ class Key_path_string_expressionContext extends antlr4_1.default.ParserRuleConte
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterKey_path_string_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitKey_path_string_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitKey_path_string_expression(this);
         }
         else {
@@ -27080,17 +27080,17 @@ class Postfix_expressionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPostfix_expression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPostfix_expression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPostfix_expression(this);
         }
         else {
@@ -27119,17 +27119,17 @@ class Function_call_suffixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_call_suffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_call_suffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_call_suffix(this);
         }
         else {
@@ -27170,17 +27170,17 @@ class Initializer_suffixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterInitializer_suffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitInitializer_suffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitInitializer_suffix(this);
         }
         else {
@@ -27229,17 +27229,17 @@ class Explicit_member_suffixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExplicit_member_suffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExplicit_member_suffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExplicit_member_suffix(this);
         }
         else {
@@ -27268,17 +27268,17 @@ class Postfix_self_suffixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPostfix_self_suffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPostfix_self_suffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPostfix_self_suffix(this);
         }
         else {
@@ -27311,17 +27311,17 @@ class Subscript_suffixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSubscript_suffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSubscript_suffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSubscript_suffix(this);
         }
         else {
@@ -27346,17 +27346,17 @@ class Forced_value_suffixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterForced_value_suffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitForced_value_suffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitForced_value_suffix(this);
         }
         else {
@@ -27381,17 +27381,17 @@ class Optional_chaining_suffixContext extends antlr4_1.default.ParserRuleContext
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOptional_chaining_suffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOptional_chaining_suffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOptional_chaining_suffix(this);
         }
         else {
@@ -27424,17 +27424,17 @@ class Function_call_argument_clauseContext extends antlr4_1.default.ParserRuleCo
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_call_argument_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_call_argument_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_call_argument_clause(this);
         }
         else {
@@ -27477,17 +27477,17 @@ class Function_call_argument_listContext extends antlr4_1.default.ParserRuleCont
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_call_argument_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_call_argument_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_call_argument_list(this);
         }
         else {
@@ -27524,17 +27524,17 @@ class Function_call_argumentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_call_argument(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_call_argument(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_call_argument(this);
         }
         else {
@@ -27563,17 +27563,17 @@ class Trailing_closuresContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTrailing_closures(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTrailing_closures(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTrailing_closures(this);
         }
         else {
@@ -27605,17 +27605,17 @@ class Labeled_trailing_closuresContext extends antlr4_1.default.ParserRuleContex
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLabeled_trailing_closures(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLabeled_trailing_closures(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLabeled_trailing_closures(this);
         }
         else {
@@ -27648,17 +27648,17 @@ class Labeled_trailing_closureContext extends antlr4_1.default.ParserRuleContext
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLabeled_trailing_closure(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLabeled_trailing_closure(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLabeled_trailing_closure(this);
         }
         else {
@@ -27690,17 +27690,17 @@ class Argument_namesContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterArgument_names(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitArgument_names(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitArgument_names(this);
         }
         else {
@@ -27729,17 +27729,17 @@ class Argument_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterArgument_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitArgument_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitArgument_name(this);
         }
         else {
@@ -27828,17 +27828,17 @@ class TypeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterType(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitType(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitType(this);
         }
         else {
@@ -27875,17 +27875,17 @@ class Type_annotationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterType_annotation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitType_annotation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitType_annotation(this);
         }
         else {
@@ -27922,17 +27922,17 @@ class Type_identifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterType_identifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitType_identifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitType_identifier(this);
         }
         else {
@@ -27957,17 +27957,17 @@ class Type_nameContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterType_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitType_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitType_name(this);
         }
         else {
@@ -28000,17 +28000,17 @@ class Tuple_typeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTuple_type(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTuple_type(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTuple_type(this);
         }
         else {
@@ -28053,17 +28053,17 @@ class Tuple_type_element_listContext extends antlr4_1.default.ParserRuleContext 
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTuple_type_element_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTuple_type_element_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTuple_type_element_list(this);
         }
         else {
@@ -28104,17 +28104,17 @@ class Tuple_type_elementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTuple_type_element(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTuple_type_element(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTuple_type_element(this);
         }
         else {
@@ -28146,17 +28146,17 @@ class Element_nameContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterElement_name(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitElement_name(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitElement_name(this);
         }
         else {
@@ -28197,17 +28197,17 @@ class Function_typeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_type(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_type(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_type(this);
         }
         else {
@@ -28244,17 +28244,17 @@ class Function_type_argument_clauseContext extends antlr4_1.default.ParserRuleCo
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_type_argument_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_type_argument_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_type_argument_clause(this);
         }
         else {
@@ -28297,17 +28297,17 @@ class Function_type_argument_listContext extends antlr4_1.default.ParserRuleCont
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_type_argument_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_type_argument_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_type_argument_list(this);
         }
         else {
@@ -28348,17 +28348,17 @@ class Function_type_argumentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterFunction_type_argument(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitFunction_type_argument(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitFunction_type_argument(this);
         }
         else {
@@ -28390,17 +28390,17 @@ class Argument_labelContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterArgument_label(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitArgument_label(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitArgument_label(this);
         }
         else {
@@ -28433,17 +28433,17 @@ class Array_typeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterArray_type(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitArray_type(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitArray_type(this);
         }
         else {
@@ -28487,17 +28487,17 @@ class Dictionary_typeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDictionary_type(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDictionary_type(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDictionary_type(this);
         }
         else {
@@ -28544,17 +28544,17 @@ class Protocol_composition_typeContext extends antlr4_1.default.ParserRuleContex
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterProtocol_composition_type(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitProtocol_composition_type(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitProtocol_composition_type(this);
         }
         else {
@@ -28579,17 +28579,17 @@ class Trailing_composition_andContext extends antlr4_1.default.ParserRuleContext
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterTrailing_composition_and(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitTrailing_composition_and(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitTrailing_composition_and(this);
         }
         else {
@@ -28618,17 +28618,17 @@ class Opaque_typeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOpaque_type(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOpaque_type(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOpaque_type(this);
         }
         else {
@@ -28653,17 +28653,17 @@ class Any_typeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAny_type(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAny_type(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAny_type(this);
         }
         else {
@@ -28688,17 +28688,17 @@ class Self_typeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSelf_type(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSelf_type(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSelf_type(this);
         }
         else {
@@ -28727,17 +28727,17 @@ class Type_inheritance_clauseContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterType_inheritance_clause(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitType_inheritance_clause(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitType_inheritance_clause(this);
         }
         else {
@@ -28780,17 +28780,17 @@ class Type_inheritance_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterType_inheritance_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitType_inheritance_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitType_inheritance_list(this);
         }
         else {
@@ -29158,17 +29158,17 @@ class IdentifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterIdentifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitIdentifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitIdentifier(this);
         }
         else {
@@ -29211,17 +29211,17 @@ class Identifier_listContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterIdentifier_list(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitIdentifier_list(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitIdentifier_list(this);
         }
         else {
@@ -29530,17 +29530,17 @@ class KeywordContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterKeyword(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitKeyword(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitKeyword(this);
         }
         else {
@@ -29565,17 +29565,17 @@ class Assignment_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterAssignment_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitAssignment_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitAssignment_operator(this);
         }
         else {
@@ -29600,17 +29600,17 @@ class Negate_prefix_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterNegate_prefix_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitNegate_prefix_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitNegate_prefix_operator(this);
         }
         else {
@@ -29642,17 +29642,17 @@ class Compilation_condition_ANDContext extends antlr4_1.default.ParserRuleContex
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCompilation_condition_AND(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCompilation_condition_AND(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCompilation_condition_AND(this);
         }
         else {
@@ -29684,17 +29684,17 @@ class Compilation_condition_ORContext extends antlr4_1.default.ParserRuleContext
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCompilation_condition_OR(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCompilation_condition_OR(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCompilation_condition_OR(this);
         }
         else {
@@ -29723,17 +29723,17 @@ class Compilation_condition_GEContext extends antlr4_1.default.ParserRuleContext
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCompilation_condition_GE(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCompilation_condition_GE(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCompilation_condition_GE(this);
         }
         else {
@@ -29758,17 +29758,17 @@ class Compilation_condition_LContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterCompilation_condition_L(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitCompilation_condition_L(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitCompilation_condition_L(this);
         }
         else {
@@ -29797,17 +29797,17 @@ class Arrow_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterArrow_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitArrow_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitArrow_operator(this);
         }
         else {
@@ -29839,17 +29839,17 @@ class Range_operatorContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterRange_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitRange_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitRange_operator(this);
         }
         else {
@@ -29881,17 +29881,17 @@ class Same_type_equalsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterSame_type_equals(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitSame_type_equals(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitSame_type_equals(this);
         }
         else {
@@ -29916,17 +29916,17 @@ class Binary_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterBinary_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitBinary_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitBinary_operator(this);
         }
         else {
@@ -29951,17 +29951,17 @@ class Prefix_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPrefix_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPrefix_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPrefix_operator(this);
         }
         else {
@@ -29986,17 +29986,17 @@ class Postfix_operatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterPostfix_operator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitPostfix_operator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitPostfix_operator(this);
         }
         else {
@@ -30033,17 +30033,17 @@ class OperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOperator(this);
         }
         else {
@@ -30124,17 +30124,17 @@ class Operator_headContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOperator_head(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOperator_head(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOperator_head(this);
         }
         else {
@@ -30163,17 +30163,17 @@ class Operator_characterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOperator_character(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOperator_character(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOperator_character(this);
         }
         else {
@@ -30205,17 +30205,17 @@ class Operator_charactersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterOperator_characters(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitOperator_characters(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitOperator_characters(this);
         }
         else {
@@ -30240,17 +30240,17 @@ class Dot_operator_headContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDot_operator_head(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDot_operator_head(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDot_operator_head(this);
         }
         else {
@@ -30279,17 +30279,17 @@ class Dot_operator_characterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDot_operator_character(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDot_operator_character(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDot_operator_character(this);
         }
         else {
@@ -30321,17 +30321,17 @@ class Dot_operator_charactersContext extends antlr4_1.default.ParserRuleContext 
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterDot_operator_characters(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitDot_operator_characters(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitDot_operator_characters(this);
         }
         else {
@@ -30368,17 +30368,17 @@ class LiteralContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterLiteral(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitLiteral(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitLiteral(this);
         }
         else {
@@ -30411,17 +30411,17 @@ class Numeric_literalContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterNumeric_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitNumeric_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitNumeric_literal(this);
         }
         else {
@@ -30450,17 +30450,17 @@ class Boolean_literalContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterBoolean_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitBoolean_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitBoolean_literal(this);
         }
         else {
@@ -30485,17 +30485,17 @@ class Nil_literalContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterNil_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitNil_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitNil_literal(this);
         }
         else {
@@ -30536,17 +30536,17 @@ class Integer_literalContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterInteger_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitInteger_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitInteger_literal(this);
         }
         else {
@@ -30579,17 +30579,17 @@ class String_literalContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterString_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitString_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitString_literal(this);
         }
         else {
@@ -30648,17 +30648,17 @@ class Extended_string_literalContext extends antlr4_1.default.ParserRuleContext 
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterExtended_string_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitExtended_string_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitExtended_string_literal(this);
         }
         else {
@@ -30717,17 +30717,17 @@ class Static_string_literalContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterStatic_string_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitStatic_string_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitStatic_string_literal(this);
         }
         else {
@@ -30863,17 +30863,17 @@ class Interpolated_string_literalContext extends antlr4_1.default.ParserRuleCont
         }
     };
     enterRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.enterInterpolated_string_literal(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof Swift5ParserListener_js_1.default) {
+        if (listener instanceof Swift5ParserListener_1.default) {
             listener.exitInterpolated_string_literal(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof Swift5ParserVisitor_js_1.default) {
+        if (visitor instanceof Swift5ParserVisitor_1.default) {
             return visitor.visitInterpolated_string_literal(this);
         }
         else {

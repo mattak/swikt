@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 // Generated from KotlinParser.g4 by ANTLR 4.10.1
 // jshint ignore: start
 const antlr4_1 = __importDefault(__webpack_require__(7228));
-const KotlinParserListener_js_1 = __importDefault(__webpack_require__(9915));
-const KotlinParserVisitor_js_1 = __importDefault(__webpack_require__(3130));
+const KotlinParserListener_1 = __importDefault(__webpack_require__(9915));
+const KotlinParserVisitor_1 = __importDefault(__webpack_require__(3130));
 const serializedATN = [4, 1, 169, 3303, 2, 0, 7, 0, 2, 1, 7, 1, 2, 2, 7, 2, 2, 3, 7, 3, 2, 4,
     7, 4, 2, 5, 7, 5, 2, 6, 7, 6, 2, 7, 7, 7, 2, 8, 7, 8, 2, 9, 7, 9, 2, 10, 7, 10, 2, 11, 7, 11, 2, 12, 7, 12,
     2, 13, 7, 13, 2, 14, 7, 14, 2, 15, 7, 15, 2, 16, 7, 16, 2, 17, 7, 17, 2, 18, 7, 18, 2, 19, 7, 19, 2,
@@ -12477,17 +12477,17 @@ class KotlinFileContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterKotlinFile(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitKotlinFile(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitKotlinFile(this);
         }
         else {
@@ -12568,17 +12568,17 @@ class ScriptContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterScript(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitScript(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitScript(this);
         }
         else {
@@ -12637,17 +12637,17 @@ class FileAnnotationContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFileAnnotation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFileAnnotation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFileAnnotation(this);
         }
         else {
@@ -12680,17 +12680,17 @@ class PackageHeaderContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPackageHeader(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPackageHeader(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPackageHeader(this);
         }
         else {
@@ -12722,17 +12722,17 @@ class ImportListContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterImportList(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitImportList(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitImportList(this);
         }
         else {
@@ -12777,17 +12777,17 @@ class ImportHeaderContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterImportHeader(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitImportHeader(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitImportHeader(this);
         }
         else {
@@ -12816,17 +12816,17 @@ class ImportAliasContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterImportAlias(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitImportAlias(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitImportAlias(this);
         }
         else {
@@ -12855,17 +12855,17 @@ class TopLevelObjectContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTopLevelObject(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTopLevelObject(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTopLevelObject(this);
         }
         else {
@@ -12941,17 +12941,17 @@ class ClassDeclarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterClassDeclaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitClassDeclaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitClassDeclaration(this);
         }
         else {
@@ -12995,17 +12995,17 @@ class PrimaryConstructorContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPrimaryConstructor(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPrimaryConstructor(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPrimaryConstructor(this);
         }
         else {
@@ -13067,17 +13067,17 @@ class ClassParametersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterClassParameters(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitClassParameters(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitClassParameters(this);
         }
         else {
@@ -13141,17 +13141,17 @@ class ClassParameterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterClassParameter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitClassParameter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitClassParameter(this);
         }
         else {
@@ -13205,17 +13205,17 @@ class DelegationSpecifiersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterDelegationSpecifiers(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitDelegationSpecifiers(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitDelegationSpecifiers(this);
         }
         else {
@@ -13262,17 +13262,17 @@ class AnnotatedDelegationSpecifierContext extends antlr4_1.default.ParserRuleCon
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAnnotatedDelegationSpecifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAnnotatedDelegationSpecifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAnnotatedDelegationSpecifier(this);
         }
         else {
@@ -13309,17 +13309,17 @@ class DelegationSpecifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterDelegationSpecifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitDelegationSpecifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitDelegationSpecifier(this);
         }
         else {
@@ -13348,17 +13348,17 @@ class ConstructorInvocationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterConstructorInvocation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitConstructorInvocation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitConstructorInvocation(this);
         }
         else {
@@ -13406,17 +13406,17 @@ class ExplicitDelegationContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterExplicitDelegation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitExplicitDelegation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitExplicitDelegation(this);
         }
         else {
@@ -13460,17 +13460,17 @@ class ClassBodyContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterClassBody(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitClassBody(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitClassBody(this);
         }
         else {
@@ -13513,17 +13513,17 @@ class ClassMemberDeclarationsContext extends antlr4_1.default.ParserRuleContext 
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterClassMemberDeclarations(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitClassMemberDeclarations(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitClassMemberDeclarations(this);
         }
         else {
@@ -13560,17 +13560,17 @@ class ClassMemberDeclarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterClassMemberDeclaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitClassMemberDeclaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitClassMemberDeclaration(this);
         }
         else {
@@ -13610,17 +13610,17 @@ class AnonymousInitializerContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAnonymousInitializer(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAnonymousInitializer(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAnonymousInitializer(this);
         }
         else {
@@ -13676,17 +13676,17 @@ class SecondaryConstructorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSecondaryConstructor(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSecondaryConstructor(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSecondaryConstructor(this);
         }
         else {
@@ -13730,17 +13730,17 @@ class ConstructorDelegationCallContext extends antlr4_1.default.ParserRuleContex
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterConstructorDelegationCall(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitConstructorDelegationCall(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitConstructorDelegationCall(this);
         }
         else {
@@ -13792,17 +13792,17 @@ class EnumClassBodyContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterEnumClassBody(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitEnumClassBody(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitEnumClassBody(this);
         }
         else {
@@ -13856,17 +13856,17 @@ class EnumEntriesContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterEnumEntries(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitEnumEntries(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitEnumEntries(this);
         }
         else {
@@ -13914,17 +13914,17 @@ class EnumEntryContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterEnumEntry(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitEnumEntry(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitEnumEntry(this);
         }
         else {
@@ -14000,17 +14000,17 @@ class FunctionDeclarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFunctionDeclaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFunctionDeclaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFunctionDeclaration(this);
         }
         else {
@@ -14072,17 +14072,17 @@ class FunctionValueParametersContext extends antlr4_1.default.ParserRuleContext 
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFunctionValueParameters(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFunctionValueParameters(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFunctionValueParameters(this);
         }
         else {
@@ -14130,17 +14130,17 @@ class FunctionValueParameterContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFunctionValueParameter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFunctionValueParameter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFunctionValueParameter(this);
         }
         else {
@@ -14184,17 +14184,17 @@ class ParameterContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterParameter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitParameter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitParameter(this);
         }
         else {
@@ -14238,17 +14238,17 @@ class SetterParameterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSetterParameter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSetterParameter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSetterParameter(this);
         }
         else {
@@ -14292,17 +14292,17 @@ class FunctionBodyContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFunctionBody(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFunctionBody(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFunctionBody(this);
         }
         else {
@@ -14358,17 +14358,17 @@ class ObjectDeclarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterObjectDeclaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitObjectDeclaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitObjectDeclaration(this);
         }
         else {
@@ -14428,17 +14428,17 @@ class CompanionObjectContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterCompanionObject(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitCompanionObject(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitCompanionObject(this);
         }
         else {
@@ -14534,17 +14534,17 @@ class PropertyDeclarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPropertyDeclaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPropertyDeclaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPropertyDeclaration(this);
         }
         else {
@@ -14606,17 +14606,17 @@ class MultiVariableDeclarationContext extends antlr4_1.default.ParserRuleContext
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterMultiVariableDeclaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitMultiVariableDeclaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitMultiVariableDeclaration(this);
         }
         else {
@@ -14671,17 +14671,17 @@ class VariableDeclarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterVariableDeclaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitVariableDeclaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitVariableDeclaration(this);
         }
         else {
@@ -14721,17 +14721,17 @@ class PropertyDelegateContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPropertyDelegate(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPropertyDelegate(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPropertyDelegate(this);
         }
         else {
@@ -14791,17 +14791,17 @@ class GetterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterGetter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitGetter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitGetter(this);
         }
         else {
@@ -14887,17 +14887,17 @@ class SetterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSetter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSetter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSetter(this);
         }
         else {
@@ -14953,17 +14953,17 @@ class TypeAliasContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeAlias(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeAlias(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeAlias(this);
         }
         else {
@@ -15025,17 +15025,17 @@ class TypeParametersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeParameters(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeParameters(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeParameters(this);
         }
         else {
@@ -15083,17 +15083,17 @@ class TypeParameterContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeParameter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeParameter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeParameter(this);
         }
         else {
@@ -15125,17 +15125,17 @@ class TypeParameterModifiersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeParameterModifiers(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeParameterModifiers(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeParameterModifiers(this);
         }
         else {
@@ -15179,17 +15179,17 @@ class TypeParameterModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeParameterModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeParameterModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeParameterModifier(this);
         }
         else {
@@ -15230,17 +15230,17 @@ class Type_Context extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterType_(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitType_(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitType_(this);
         }
         else {
@@ -15272,17 +15272,17 @@ class TypeModifiersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeModifiers(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeModifiers(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeModifiers(this);
         }
         else {
@@ -15322,17 +15322,17 @@ class TypeModifierContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeModifier(this);
         }
         else {
@@ -15376,17 +15376,17 @@ class ParenthesizedTypeContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterParenthesizedType(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitParenthesizedType(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitParenthesizedType(this);
         }
         else {
@@ -15437,17 +15437,17 @@ class NullableTypeContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterNullableType(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitNullableType(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitNullableType(this);
         }
         else {
@@ -15476,17 +15476,17 @@ class TypeReferenceContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeReference(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeReference(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeReference(this);
         }
         else {
@@ -15538,17 +15538,17 @@ class FunctionTypeContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFunctionType(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFunctionType(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFunctionType(this);
         }
         else {
@@ -15585,17 +15585,17 @@ class ReceiverTypeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterReceiverType(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitReceiverType(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitReceiverType(this);
         }
         else {
@@ -15649,17 +15649,17 @@ class UserTypeContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterUserType(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitUserType(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitUserType(this);
         }
         else {
@@ -15707,17 +15707,17 @@ class ParenthesizedUserTypeContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterParenthesizedUserType(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitParenthesizedUserType(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitParenthesizedUserType(this);
         }
         else {
@@ -15757,17 +15757,17 @@ class SimpleUserTypeContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSimpleUserType(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSimpleUserType(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSimpleUserType(this);
         }
         else {
@@ -15840,17 +15840,17 @@ class FunctionTypeParametersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFunctionTypeParameters(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFunctionTypeParameters(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFunctionTypeParameters(this);
         }
         else {
@@ -15908,17 +15908,17 @@ class TypeConstraintsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeConstraints(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeConstraints(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeConstraints(this);
         }
         else {
@@ -15973,17 +15973,17 @@ class TypeConstraintContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeConstraint(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeConstraint(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeConstraint(this);
         }
         else {
@@ -16027,17 +16027,17 @@ class BlockContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterBlock(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitBlock(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitBlock(this);
         }
         else {
@@ -16095,17 +16095,17 @@ class StatementsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterStatements(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitStatements(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitStatements(this);
         }
         else {
@@ -16164,17 +16164,17 @@ class StatementContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterStatement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitStatement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitStatement(this);
         }
         else {
@@ -16215,17 +16215,17 @@ class DeclarationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterDeclaration(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitDeclaration(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitDeclaration(this);
         }
         else {
@@ -16277,17 +16277,17 @@ class AssignmentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAssignment(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAssignment(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAssignment(this);
         }
         else {
@@ -16312,17 +16312,17 @@ class ExpressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitExpression(this);
         }
         else {
@@ -16376,17 +16376,17 @@ class DisjunctionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterDisjunction(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitDisjunction(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitDisjunction(this);
         }
         else {
@@ -16440,17 +16440,17 @@ class ConjunctionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterConjunction(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitConjunction(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitConjunction(this);
         }
         else {
@@ -16504,17 +16504,17 @@ class EqualityContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterEquality(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitEquality(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitEquality(this);
         }
         else {
@@ -16561,17 +16561,17 @@ class ComparisonContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterComparison(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitComparison(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitComparison(this);
         }
         else {
@@ -16647,17 +16647,17 @@ class InfixOperationContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterInfixOperation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitInfixOperation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitInfixOperation(this);
         }
         else {
@@ -16711,17 +16711,17 @@ class ElvisExpressionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterElvisExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitElvisExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitElvisExpression(this);
         }
         else {
@@ -16775,17 +16775,17 @@ class InfixFunctionCallContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterInfixFunctionCall(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitInfixFunctionCall(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitInfixFunctionCall(this);
         }
         else {
@@ -16839,17 +16839,17 @@ class RangeExpressionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterRangeExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitRangeExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitRangeExpression(this);
         }
         else {
@@ -16903,17 +16903,17 @@ class AdditiveExpressionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAdditiveExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAdditiveExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAdditiveExpression(this);
         }
         else {
@@ -16967,17 +16967,17 @@ class MultiplicativeExpressionContext extends antlr4_1.default.ParserRuleContext
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterMultiplicativeExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitMultiplicativeExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitMultiplicativeExpression(this);
         }
         else {
@@ -17021,17 +17021,17 @@ class AsExpressionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAsExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAsExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAsExpression(this);
         }
         else {
@@ -17067,17 +17067,17 @@ class PrefixUnaryExpressionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPrefixUnaryExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPrefixUnaryExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPrefixUnaryExpression(this);
         }
         else {
@@ -17121,17 +17121,17 @@ class UnaryPrefixContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterUnaryPrefix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitUnaryPrefix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitUnaryPrefix(this);
         }
         else {
@@ -17167,17 +17167,17 @@ class PostfixUnaryExpressionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPostfixUnaryExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPostfixUnaryExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPostfixUnaryExpression(this);
         }
         else {
@@ -17218,17 +17218,17 @@ class PostfixUnarySuffixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPostfixUnarySuffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPostfixUnarySuffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPostfixUnarySuffix(this);
         }
         else {
@@ -17261,17 +17261,17 @@ class DirectlyAssignableExpressionContext extends antlr4_1.default.ParserRuleCon
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterDirectlyAssignableExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitDirectlyAssignableExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitDirectlyAssignableExpression(this);
         }
         else {
@@ -17296,17 +17296,17 @@ class AssignableExpressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAssignableExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAssignableExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAssignableExpression(this);
         }
         else {
@@ -17339,17 +17339,17 @@ class AssignableSuffixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAssignableSuffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAssignableSuffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAssignableSuffix(this);
         }
         else {
@@ -17411,17 +17411,17 @@ class IndexingSuffixContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterIndexingSuffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitIndexingSuffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitIndexingSuffix(this);
         }
         else {
@@ -17469,17 +17469,17 @@ class NavigationSuffixContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterNavigationSuffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitNavigationSuffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitNavigationSuffix(this);
         }
         else {
@@ -17512,17 +17512,17 @@ class CallSuffixContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterCallSuffix(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitCallSuffix(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitCallSuffix(this);
         }
         else {
@@ -17573,17 +17573,17 @@ class AnnotatedLambdaContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAnnotatedLambda(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAnnotatedLambda(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAnnotatedLambda(this);
         }
         else {
@@ -17645,17 +17645,17 @@ class ValueArgumentsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterValueArguments(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitValueArguments(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitValueArguments(this);
         }
         else {
@@ -17717,17 +17717,17 @@ class TypeArgumentsContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeArguments(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeArguments(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeArguments(this);
         }
         else {
@@ -17760,17 +17760,17 @@ class TypeProjectionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeProjection(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeProjection(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeProjection(this);
         }
         else {
@@ -17802,17 +17802,17 @@ class TypeProjectionModifiersContext extends antlr4_1.default.ParserRuleContext 
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeProjectionModifiers(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeProjectionModifiers(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeProjectionModifiers(this);
         }
         else {
@@ -17852,17 +17852,17 @@ class TypeProjectionModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeProjectionModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeProjectionModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeProjectionModifier(this);
         }
         else {
@@ -17914,17 +17914,17 @@ class ValueArgumentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterValueArgument(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitValueArgument(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitValueArgument(this);
         }
         else {
@@ -18001,17 +18001,17 @@ class PrimaryExpressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPrimaryExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPrimaryExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPrimaryExpression(this);
         }
         else {
@@ -18055,17 +18055,17 @@ class ParenthesizedExpressionContext extends antlr4_1.default.ParserRuleContext 
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterParenthesizedExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitParenthesizedExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitParenthesizedExpression(this);
         }
         else {
@@ -18127,17 +18127,17 @@ class CollectionLiteralContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterCollectionLiteral(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitCollectionLiteral(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitCollectionLiteral(this);
         }
         else {
@@ -18190,17 +18190,17 @@ class LiteralConstantContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterLiteralConstant(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitLiteralConstant(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitLiteralConstant(this);
         }
         else {
@@ -18229,17 +18229,17 @@ class StringLiteralContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterStringLiteral(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitStringLiteral(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitStringLiteral(this);
         }
         else {
@@ -18290,17 +18290,17 @@ class LineStringLiteralContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterLineStringLiteral(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitLineStringLiteral(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitLineStringLiteral(this);
         }
         else {
@@ -18362,17 +18362,17 @@ class MultiLineStringLiteralContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterMultiLineStringLiteral(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitMultiLineStringLiteral(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitMultiLineStringLiteral(this);
         }
         else {
@@ -18405,17 +18405,17 @@ class LineStringContentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterLineStringContent(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitLineStringContent(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitLineStringContent(this);
         }
         else {
@@ -18448,17 +18448,17 @@ class LineStringExpressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterLineStringExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitLineStringExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitLineStringExpression(this);
         }
         else {
@@ -18491,17 +18491,17 @@ class MultiLineStringContentContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterMultiLineStringContent(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitMultiLineStringContent(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitMultiLineStringContent(this);
         }
         else {
@@ -18545,17 +18545,17 @@ class MultiLineStringExpressionContext extends antlr4_1.default.ParserRuleContex
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterMultiLineStringExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitMultiLineStringExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitMultiLineStringExpression(this);
         }
         else {
@@ -18607,17 +18607,17 @@ class LambdaLiteralContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterLambdaLiteral(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitLambdaLiteral(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitLambdaLiteral(this);
         }
         else {
@@ -18671,17 +18671,17 @@ class LambdaParametersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterLambdaParameters(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitLambdaParameters(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitLambdaParameters(this);
         }
         else {
@@ -18729,17 +18729,17 @@ class LambdaParameterContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterLambdaParameter(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitLambdaParameter(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitLambdaParameter(this);
         }
         else {
@@ -18806,17 +18806,17 @@ class AnonymousFunctionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAnonymousFunction(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAnonymousFunction(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAnonymousFunction(this);
         }
         else {
@@ -18845,17 +18845,17 @@ class FunctionLiteralContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFunctionLiteral(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFunctionLiteral(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFunctionLiteral(this);
         }
         else {
@@ -18903,17 +18903,17 @@ class ObjectLiteralContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterObjectLiteral(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitObjectLiteral(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitObjectLiteral(this);
         }
         else {
@@ -18942,17 +18942,17 @@ class ThisExpressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterThisExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitThisExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitThisExpression(this);
         }
         else {
@@ -19012,17 +19012,17 @@ class SuperExpressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSuperExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSuperExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSuperExpression(this);
         }
         else {
@@ -19051,17 +19051,17 @@ class ControlStructureBodyContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterControlStructureBody(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitControlStructureBody(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitControlStructureBody(this);
         }
         else {
@@ -19128,17 +19128,17 @@ class IfExpressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterIfExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitIfExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitIfExpression(this);
         }
         else {
@@ -19205,17 +19205,17 @@ class WhenExpressionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterWhenExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitWhenExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitWhenExpression(this);
         }
         else {
@@ -19285,17 +19285,17 @@ class WhenEntryContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterWhenEntry(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitWhenEntry(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitWhenEntry(this);
         }
         else {
@@ -19328,17 +19328,17 @@ class WhenConditionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterWhenCondition(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitWhenCondition(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitWhenCondition(this);
         }
         else {
@@ -19378,17 +19378,17 @@ class RangeTestContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterRangeTest(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitRangeTest(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitRangeTest(this);
         }
         else {
@@ -19428,17 +19428,17 @@ class TypeTestContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTypeTest(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTypeTest(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTypeTest(this);
         }
         else {
@@ -19493,17 +19493,17 @@ class TryExpressionContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterTryExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitTryExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitTryExpression(this);
         }
         else {
@@ -19574,17 +19574,17 @@ class CatchBlockContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterCatchBlock(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitCatchBlock(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitCatchBlock(this);
         }
         else {
@@ -19624,17 +19624,17 @@ class FinallyBlockContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFinallyBlock(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFinallyBlock(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFinallyBlock(this);
         }
         else {
@@ -19667,17 +19667,17 @@ class LoopStatementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterLoopStatement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitLoopStatement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitLoopStatement(this);
         }
         else {
@@ -19752,17 +19752,17 @@ class ForStatementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterForStatement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitForStatement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitForStatement(this);
         }
         else {
@@ -19818,17 +19818,17 @@ class WhileStatementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterWhileStatement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitWhileStatement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitWhileStatement(this);
         }
         else {
@@ -19884,17 +19884,17 @@ class DoWhileStatementContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterDoWhileStatement(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitDoWhileStatement(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitDoWhileStatement(this);
         }
         else {
@@ -19958,17 +19958,17 @@ class JumpExpressionContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterJumpExpression(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitJumpExpression(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitJumpExpression(this);
         }
         else {
@@ -20016,17 +20016,17 @@ class CallableReferenceContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterCallableReference(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitCallableReference(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitCallableReference(this);
         }
         else {
@@ -20067,17 +20067,17 @@ class AssignmentAndOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAssignmentAndOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAssignmentAndOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAssignmentAndOperator(this);
         }
         else {
@@ -20114,17 +20114,17 @@ class EqualityOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterEqualityOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitEqualityOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitEqualityOperator(this);
         }
         else {
@@ -20161,17 +20161,17 @@ class ComparisonOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterComparisonOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitComparisonOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitComparisonOperator(this);
         }
         else {
@@ -20200,17 +20200,17 @@ class InOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterInOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitInOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitInOperator(this);
         }
         else {
@@ -20239,17 +20239,17 @@ class IsOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterIsOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitIsOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitIsOperator(this);
         }
         else {
@@ -20278,17 +20278,17 @@ class AdditiveOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAdditiveOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAdditiveOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAdditiveOperator(this);
         }
         else {
@@ -20321,17 +20321,17 @@ class MultiplicativeOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterMultiplicativeOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitMultiplicativeOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitMultiplicativeOperator(this);
         }
         else {
@@ -20360,17 +20360,17 @@ class AsOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAsOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAsOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAsOperator(this);
         }
         else {
@@ -20411,17 +20411,17 @@ class PrefixUnaryOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPrefixUnaryOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPrefixUnaryOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPrefixUnaryOperator(this);
         }
         else {
@@ -20458,17 +20458,17 @@ class PostfixUnaryOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPostfixUnaryOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPostfixUnaryOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPostfixUnaryOperator(this);
         }
         else {
@@ -20501,17 +20501,17 @@ class MemberAccessOperatorContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterMemberAccessOperator(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitMemberAccessOperator(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitMemberAccessOperator(this);
         }
         else {
@@ -20554,17 +20554,17 @@ class ModifiersContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterModifiers(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitModifiers(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitModifiers(this);
         }
         else {
@@ -20628,17 +20628,17 @@ class ModifierContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitModifier(this);
         }
         else {
@@ -20679,17 +20679,17 @@ class ClassModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterClassModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitClassModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitClassModifier(this);
         }
         else {
@@ -20718,17 +20718,17 @@ class MemberModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterMemberModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitMemberModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitMemberModifier(this);
         }
         else {
@@ -20765,17 +20765,17 @@ class VisibilityModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterVisibilityModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitVisibilityModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitVisibilityModifier(this);
         }
         else {
@@ -20804,17 +20804,17 @@ class VarianceModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterVarianceModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitVarianceModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitVarianceModifier(this);
         }
         else {
@@ -20859,17 +20859,17 @@ class FunctionModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterFunctionModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitFunctionModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitFunctionModifier(this);
         }
         else {
@@ -20894,17 +20894,17 @@ class PropertyModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPropertyModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPropertyModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPropertyModifier(this);
         }
         else {
@@ -20937,17 +20937,17 @@ class InheritanceModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterInheritanceModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitInheritanceModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitInheritanceModifier(this);
         }
         else {
@@ -20980,17 +20980,17 @@ class ParameterModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterParameterModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitParameterModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitParameterModifier(this);
         }
         else {
@@ -21015,17 +21015,17 @@ class ReificationModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterReificationModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitReificationModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitReificationModifier(this);
         }
         else {
@@ -21054,17 +21054,17 @@ class PlatformModifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterPlatformModifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitPlatformModifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitPlatformModifier(this);
         }
         else {
@@ -21100,17 +21100,17 @@ class LabelContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterLabel(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitLabel(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitLabel(this);
         }
         else {
@@ -21150,17 +21150,17 @@ class AnnotationContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAnnotation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAnnotation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAnnotation(this);
         }
         else {
@@ -21208,17 +21208,17 @@ class SingleAnnotationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSingleAnnotation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSingleAnnotation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSingleAnnotation(this);
         }
         else {
@@ -21281,17 +21281,17 @@ class MultiAnnotationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterMultiAnnotation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitMultiAnnotation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitMultiAnnotation(this);
         }
         else {
@@ -21344,17 +21344,17 @@ class AnnotationUseSiteTargetContext extends antlr4_1.default.ParserRuleContext 
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterAnnotationUseSiteTarget(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitAnnotationUseSiteTarget(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitAnnotationUseSiteTarget(this);
         }
         else {
@@ -21383,17 +21383,17 @@ class UnescapedAnnotationContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterUnescapedAnnotation(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitUnescapedAnnotation(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitUnescapedAnnotation(this);
         }
         else {
@@ -21574,17 +21574,17 @@ class SimpleIdentifierContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSimpleIdentifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSimpleIdentifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSimpleIdentifier(this);
         }
         else {
@@ -21638,17 +21638,17 @@ class IdentifierContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterIdentifier(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitIdentifier(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitIdentifier(this);
         }
         else {
@@ -21684,17 +21684,17 @@ class ShebangLineContext extends antlr4_1.default.ParserRuleContext {
         }
     };
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterShebangLine(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitShebangLine(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitShebangLine(this);
         }
         else {
@@ -21723,17 +21723,17 @@ class QuestContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterQuest(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitQuest(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitQuest(this);
         }
         else {
@@ -21762,17 +21762,17 @@ class ElvisContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterElvis(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitElvis(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitElvis(this);
         }
         else {
@@ -21801,17 +21801,17 @@ class SafeNavContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSafeNav(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSafeNav(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSafeNav(this);
         }
         else {
@@ -21840,17 +21840,17 @@ class ExclContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterExcl(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitExcl(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitExcl(this);
         }
         else {
@@ -21890,17 +21890,17 @@ class SemiContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSemi(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSemi(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSemi(this);
         }
         else {
@@ -21947,17 +21947,17 @@ class SemisContext extends antlr4_1.default.ParserRuleContext {
     }
     ;
     enterRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.enterSemis(this);
         }
     }
     exitRule(listener) {
-        if (listener instanceof KotlinParserListener_js_1.default) {
+        if (listener instanceof KotlinParserListener_1.default) {
             listener.exitSemis(this);
         }
     }
     accept(visitor) {
-        if (visitor instanceof KotlinParserVisitor_js_1.default) {
+        if (visitor instanceof KotlinParserVisitor_1.default) {
             return visitor.visitSemis(this);
         }
         else {
