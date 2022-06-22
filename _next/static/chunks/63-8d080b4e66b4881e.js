@@ -13830,16 +13830,22 @@ exports.AbstractConverter = AbstractConverter;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SwiftKotlinConverter = void 0;
 const AbstractConverter_1 = __webpack_require__(7412);
-const TreeWalk_1 = __webpack_require__(2648);
+const declaration_1 = __webpack_require__(5649);
+const structDeclaration_1 = __webpack_require__(7475);
+const statements_1 = __webpack_require__(9740);
+const topLevelDeclaration_1 = __webpack_require__(1500);
 class SwiftKotlinConverter extends AbstractConverter_1.AbstractConverter {
     swiftTable = {
         'top_level': this.convert_topLevel__kotlinFile,
         'struct_declaration': this.convert_structDeclaration__objectDeclaration,
         'statement': this.convert_statement__topLevelObject,
     };
-    kotlinTable = {};
-    setKotlinTable(table) {
-        this.kotlinTable = table;
+    _kotlinTable = {};
+    get kotlinTable() {
+        return this._kotlinTable;
+    }
+    set kotlinTable(table) {
+        this._kotlinTable = table;
     }
     getConverter(key) {
         if (key in this.swiftTable)
@@ -13847,159 +13853,264 @@ class SwiftKotlinConverter extends AbstractConverter_1.AbstractConverter {
         return super.getConverter(key);
     }
     convert_topLevel__kotlinFile(self, path, input) {
-        // package
-        const results = [];
-        results.push(self.convert___packageHeader(self, path, input));
-        const statements = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['statements'], input);
-        if (statements) {
-            // imports
-            const kotlinImportList = self.convert_statements__importList(self, [...path, 'statements'], statements);
-            if (Object.keys(kotlinImportList).length > 0) {
-                results.push(kotlinImportList);
-            }
-            // topLevelObjects
-            const topLevelObjects = self.convert_statements__topLevelObjectList(self, [...path, 'statements'], statements);
-            results.push(...topLevelObjects);
-        }
-        return {
-            kotlinFile: results,
-        };
+        return (0, topLevelDeclaration_1.convert_topLevel__kotlinFile)(self, path, input);
     }
     convert___packageHeader(self, path, input) {
-        return {
-            packageHeader: [
-                'package',
-                this.createIdentifier(self.kotlinTable['package']),
-            ]
-        };
+        return (0, topLevelDeclaration_1.convert___packageHeader)(self, path, input);
     }
     convert__importList(self, path, input) {
-        const importList = self.kotlinTable['importList'];
-        if (importList) {
-            const imports = importList.map(x => ({ importHeader: ['import', this.createIdentifier(x)] }));
-            return { importList: imports };
-        }
-        return {};
+        return (0, topLevelDeclaration_1.convert__importList)(self, path, input);
     }
     convert_statements__importList(self, path, input) {
-        const importDeclaration = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['statement', 'declaration', 'import_declaration'], input);
-        if (importDeclaration) {
-            return self.convert__importList(self, [
-                ...path, 'statement', 'declaration', 'import_declaration'
-            ], importDeclaration);
-        }
-        else {
-            return self.convert__importList(self, path, input);
-        }
+        return (0, statements_1.convert_statements__importList)(self, path, input);
     }
     convert_statements__topLevelObjectList(self, path, input) {
-        return input.flatMap(x => {
-            const statement = TreeWalk_1.TreeWalk.getArrayOrNull('statement', x);
-            if (!statement)
-                return [];
-            const result = self.convert_statement__topLevelObject(self, [...path, 'statement'], statement);
-            if (TreeWalk_1.TreeWalk.isEmptyObject(result))
-                return [];
-            return [result];
-        });
+        return (0, statements_1.convert_statements__topLevelObjectList)(self, path, input);
     }
     convert_statement__topLevelObject(self, path, input) {
-        const declaration = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['declaration'], input);
-        if (!declaration)
-            return {};
-        const result = self.convert_declaration__declaration(self, [...path, 'declaration'], declaration);
-        if (TreeWalk_1.TreeWalk.isEmptyObject(result))
-            return {};
-        return {
-            topLevelObject: [
-                result
-            ]
-        };
+        return (0, statements_1.convert_statement__topLevelObject)(self, path, input);
     }
     convert_declaration__declaration(self, path, input) {
-        const array = input.flatMap(x => {
-            const [key, elements] = TreeWalk_1.TreeWalk.getFirstOrNull(x);
-            if (TreeWalk_1.TreeWalk.isEmptyArray(elements))
-                return [];
-            switch (key) {
-                case 'struct_declaration': {
-                    const result = self.convert_structDeclaration__objectDeclaration(self, [...path, 'struct_declaration'], elements);
-                    if (TreeWalk_1.TreeWalk.isEmptyObject(result))
-                        return [];
-                    return [result];
-                }
-                default: {
-                    return [];
-                }
-            }
-        });
-        if (TreeWalk_1.TreeWalk.isEmptyArray(array))
-            return {};
-        return {
-            declaration: array
-        };
+        return (0, declaration_1.convert_declaration__declaration)(self, path, input);
     }
     convert_structDeclaration__objectDeclaration(self, path, input) {
-        const matched = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['struct_name', 'identifier'], input);
-        const name = matched ? matched[0] : '';
-        const structBody = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['struct_body'], input);
-        return {
-            objectDeclaration: [
-                'object',
-                { simpleIdentifier: [name] },
-                ...(structBody ? [self.convert_structBody__classBody(self, [...path, 'struct_body'], structBody)] : []),
-            ]
-        };
+        return (0, structDeclaration_1.convert_structDeclaration__objectDeclaration)(self, path, input);
     }
     convert_structBody__classBody(self, path, input) {
-        // convert to struct member
-        const structMembers = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['struct_members'], input);
-        return {
-            classBody: [
-                '{',
-                ...(structMembers
-                    ? [self.convert_structMembers__classMemberDeclarations(self, [...path, 'struct_members'], structMembers)]
-                    : []),
-                '}'
-            ]
-        };
+        return (0, structDeclaration_1.convert_structBody__classBody)(self, path, input);
     }
     convert_structMembers__classMemberDeclarations(self, path, input) {
-        const classMemberDeclarations = input.flatMap(x => (typeof x === 'object' && 'struct_member' in x)
-            ? [self.convert_structMember__classMemberDeclaration(self, [...path, 'struct_member'], input)]
-            : []);
-        return {
-            classMemberDeclarations: [
-                ...classMemberDeclarations,
-            ],
-        };
+        return (0, structDeclaration_1.convert_structMembers__classMemberDeclarations)(self, path, input);
     }
     convert_structMember__classMemberDeclaration(self, path, input) {
-        const declarations = input.flatMap(x => (typeof x === 'object' && 'declaration' in x)
-            ? [self.convert_declaration__declaration(self, [...path, 'declaration'], input)]
-            : []);
-        return {
-            classMemberDeclaration: [
-                ...declarations,
-            ]
-        };
-    }
-    createIdentifier(name) {
-        const simpleIdentifiers = name.split('.').map(x => ({ simpleIdentifier: [x] }));
-        const identifiers = [];
-        for (let i = 0; i < simpleIdentifiers.length; i++) {
-            identifiers.push(simpleIdentifiers[i]);
-            if (i < simpleIdentifiers.length - 1) {
-                identifiers.push('.');
-            }
-        }
-        return {
-            identifier: identifiers,
-        };
+        return (0, structDeclaration_1.convert_structMember__classMemberDeclaration)(self, path, input);
     }
 }
 exports.SwiftKotlinConverter = SwiftKotlinConverter;
 //# sourceMappingURL=SwiftKotlinConverter.js.map
+
+/***/ }),
+
+/***/ 5649:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_declaration__declaration = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+function convert_declaration__declaration(self, path, input) {
+    const array = input.flatMap(x => {
+        const [key, elements] = TreeWalk_1.TreeWalk.getFirstOrNull(x);
+        if (TreeWalk_1.TreeWalk.isEmptyArray(elements))
+            return [];
+        switch (key) {
+            case 'struct_declaration': {
+                const result = self.convert_structDeclaration__objectDeclaration(self, [...path, 'struct_declaration'], elements);
+                if (TreeWalk_1.TreeWalk.isEmptyObject(result))
+                    return [];
+                return [result];
+            }
+            default: {
+                return [];
+            }
+        }
+    });
+    if (TreeWalk_1.TreeWalk.isEmptyArray(array))
+        return {};
+    return {
+        declaration: array
+    };
+}
+exports.convert_declaration__declaration = convert_declaration__declaration;
+//# sourceMappingURL=declaration.js.map
+
+/***/ }),
+
+/***/ 7475:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_structMember__classMemberDeclaration = exports.convert_structMembers__classMemberDeclarations = exports.convert_structBody__classBody = exports.convert_structDeclaration__objectDeclaration = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+function convert_structDeclaration__objectDeclaration(self, path, input) {
+    const matched = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['struct_name', 'identifier'], input);
+    const name = matched ? matched[0] : '';
+    const structBody = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['struct_body'], input);
+    return {
+        objectDeclaration: [
+            'object',
+            { simpleIdentifier: [name] },
+            ...(structBody ? [self.convert_structBody__classBody(self, [...path, 'struct_body'], structBody)] : []),
+        ]
+    };
+}
+exports.convert_structDeclaration__objectDeclaration = convert_structDeclaration__objectDeclaration;
+function convert_structBody__classBody(self, path, input) {
+    // convert to struct member
+    const structMembers = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['struct_members'], input);
+    return {
+        classBody: [
+            '{',
+            ...(structMembers
+                ? [self.convert_structMembers__classMemberDeclarations(self, [...path, 'struct_members'], structMembers)]
+                : []),
+            '}'
+        ]
+    };
+}
+exports.convert_structBody__classBody = convert_structBody__classBody;
+function convert_structMembers__classMemberDeclarations(self, path, input) {
+    const classMemberDeclarations = input.flatMap(x => (typeof x === 'object' && 'struct_member' in x)
+        ? [self.convert_structMember__classMemberDeclaration(self, [...path, 'struct_member'], input)]
+        : []);
+    return {
+        classMemberDeclarations: [
+            ...classMemberDeclarations,
+        ],
+    };
+}
+exports.convert_structMembers__classMemberDeclarations = convert_structMembers__classMemberDeclarations;
+function convert_structMember__classMemberDeclaration(self, path, input) {
+    const declarations = input.flatMap(x => (typeof x === 'object' && 'declaration' in x)
+        ? [self.convert_declaration__declaration(self, [...path, 'declaration'], input)]
+        : []);
+    return {
+        classMemberDeclaration: [
+            ...declarations,
+        ]
+    };
+}
+exports.convert_structMember__classMemberDeclaration = convert_structMember__classMemberDeclaration;
+//# sourceMappingURL=structDeclaration.js.map
+
+/***/ }),
+
+/***/ 1500:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert__importList = exports.convert___packageHeader = exports.convert_topLevel__kotlinFile = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+const identifier_1 = __webpack_require__(1825);
+function convert_topLevel__kotlinFile(self, path, input) {
+    // package
+    const results = [];
+    results.push(self.convert___packageHeader(self, path, input));
+    const statements = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['statements'], input);
+    if (statements) {
+        // imports
+        const kotlinImportList = self.convert_statements__importList(self, [...path, 'statements'], statements);
+        if (Object.keys(kotlinImportList).length > 0) {
+            results.push(kotlinImportList);
+        }
+        // topLevelObjects
+        const topLevelObjects = self.convert_statements__topLevelObjectList(self, [...path, 'statements'], statements);
+        results.push(...topLevelObjects);
+    }
+    return {
+        kotlinFile: results,
+    };
+}
+exports.convert_topLevel__kotlinFile = convert_topLevel__kotlinFile;
+function convert___packageHeader(self, path, input) {
+    return {
+        packageHeader: [
+            'package',
+            (0, identifier_1.createIdentifier)(self.kotlinTable['package']),
+        ]
+    };
+}
+exports.convert___packageHeader = convert___packageHeader;
+function convert__importList(self, path, input) {
+    const importList = self.kotlinTable['importList'];
+    if (importList) {
+        const imports = importList.map(x => ({ importHeader: ['import', (0, identifier_1.createIdentifier)(x)] }));
+        return { importList: imports };
+    }
+    return {};
+}
+exports.convert__importList = convert__importList;
+//# sourceMappingURL=topLevelDeclaration.js.map
+
+/***/ }),
+
+/***/ 9740:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_statement__topLevelObject = exports.convert_statements__topLevelObjectList = exports.convert_statements__importList = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+function convert_statements__importList(self, path, input) {
+    const importDeclaration = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['statement', 'declaration', 'import_declaration'], input);
+    if (importDeclaration) {
+        return self.convert__importList(self, [
+            ...path, 'statement', 'declaration', 'import_declaration'
+        ], importDeclaration);
+    }
+    else {
+        return self.convert__importList(self, path, input);
+    }
+}
+exports.convert_statements__importList = convert_statements__importList;
+function convert_statements__topLevelObjectList(self, path, input) {
+    return input.flatMap(x => {
+        const statement = TreeWalk_1.TreeWalk.getArrayOrNull('statement', x);
+        if (!statement)
+            return [];
+        const result = self.convert_statement__topLevelObject(self, [...path, 'statement'], statement);
+        if (TreeWalk_1.TreeWalk.isEmptyObject(result))
+            return [];
+        return [result];
+    });
+}
+exports.convert_statements__topLevelObjectList = convert_statements__topLevelObjectList;
+function convert_statement__topLevelObject(self, path, input) {
+    const declaration = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['declaration'], input);
+    if (!declaration)
+        return {};
+    const result = self.convert_declaration__declaration(self, [...path, 'declaration'], declaration);
+    if (TreeWalk_1.TreeWalk.isEmptyObject(result))
+        return {};
+    return {
+        topLevelObject: [
+            result
+        ]
+    };
+}
+exports.convert_statement__topLevelObject = convert_statement__topLevelObject;
+//# sourceMappingURL=statements.js.map
+
+/***/ }),
+
+/***/ 1825:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createIdentifier = void 0;
+function createIdentifier(name) {
+    const simpleIdentifiers = name.split('.').map(x => ({ simpleIdentifier: [x] }));
+    const identifiers = [];
+    for (let i = 0; i < simpleIdentifiers.length; i++) {
+        identifiers.push(simpleIdentifiers[i]);
+        if (i < simpleIdentifiers.length - 1) {
+            identifiers.push('.');
+        }
+    }
+    return {
+        identifier: identifiers,
+    };
+}
+exports.createIdentifier = createIdentifier;
+//# sourceMappingURL=identifier.js.map
 
 /***/ }),
 
@@ -23082,7 +23193,7 @@ exports.printKotlin = printKotlin;
 // converter
 function convertSwiftTreeToKotlinTree(swiftTree, info) {
     const converter = new SwiftKotlinConverter_1.SwiftKotlinConverter();
-    converter.setKotlinTable(info);
+    converter.kotlinTable = info;
     return converter.visitObject([], swiftTree);
 }
 exports.convertSwiftTreeToKotlinTree = convertSwiftTreeToKotlinTree;
