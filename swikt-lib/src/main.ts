@@ -40,7 +40,7 @@ export function printKotlin(tree: TObject): string {
 // converter
 export function convertSwiftTreeToKotlinTree(swiftTree: TObject, info: KotlinInfoTable): TObject {
   const converter = new SwiftKotlinConverter();
-  converter.setKotlinTable(info);
+  converter.kotlinTable = info;
   return converter.visitObject([], swiftTree);
 }
 
