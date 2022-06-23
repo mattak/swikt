@@ -16,6 +16,8 @@ const Transpiler: NextPage = () => {
   const [swiftCode, setSwiftCode] = useState(`import Foundation
 
 struct Sample {
+  static func build(args: [String], count: Int) {
+  }
 }`);
   const [kotlinCode, setKotlinCode] = useState(`package com.example.test
 
