@@ -13,3 +13,11 @@ export function createIdentifier(name: string): TObject {
     identifier: identifiers,
   };
 }
+
+export function createSimpleIdentifier(name: string): TObject {
+  return {
+    "simpleIdentifier": [
+      name,
+    ],
+  };
+}
