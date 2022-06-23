@@ -1,4 +1,4 @@
-import {TArray, TObject} from "../../util/Tree.ts";
+import {TArray, TArrayElement, TObject} from "../../util/Tree.ts";
 import {TreeWalk} from "../../util/TreeWalk.ts";
 import {SwiftKotlinConverter} from "../SwiftKotlinConverter.ts";
 
@@ -10,7 +10,7 @@ export function convert_structDeclaration__objectDeclaration(self: SwiftKotlinCo
     objectDeclaration: [
       'object',
       {simpleIdentifier: [name]},
-      ...(structBody ? [self.convert_structBody__classBody(self, [...path, 'struct_body'], structBody)] : []),
+      ...(structBody ? [convert_structBody__classBody(self, [...path, 'struct_body'], structBody)] : []),
     ]
   };
 }
@@ -23,7 +23,7 @@ export function convert_structBody__classBody(self: SwiftKotlinConverter, path: 
       '{',
       ...(
         structMembers
-          ? [self.convert_structMembers__classMemberDeclarations(self, [...path, 'struct_members'], structMembers)]
+          ? [convert_structMembers__classMemberDeclarations(self, [...path, 'struct_members'], structMembers)]
           : []
       ),
       '}'
@@ -32,10 +32,11 @@ export function convert_structBody__classBody(self: SwiftKotlinConverter, path: 
 }
 
 export function convert_structMembers__classMemberDeclarations(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-  const classMemberDeclarations: TObject[] = input.flatMap(x => (typeof x === 'object' && 'struct_member' in x)
-    ? [self.convert_structMember__classMemberDeclaration(self, [...path, 'struct_member'], input)]
-    : []
-  );
+  const classMemberDeclarations: TObject[] = input.flatMap((x: TArrayElement) => {
+    const array = TreeWalk.getArrayOrNull('struct_member', x);
+    if (array) return [convert_structMember__classMemberDeclaration(self, [...path, 'struct_member'], array)];
+    return [];
+  });
   return {
     classMemberDeclarations: [
       ...classMemberDeclarations,
@@ -44,10 +45,11 @@ export function convert_structMembers__classMemberDeclarations(self: SwiftKotlin
 }
 
 export function convert_structMember__classMemberDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-  const declarations: TObject[] = input.flatMap(x => (typeof x === 'object' && 'declaration' in x)
-    ? [self.convert_declaration__declaration(self, [...path, 'declaration'], input)]
-    : []
-  );
+  const declarations: TObject[] = input.flatMap((x: TArrayElement) => {
+    const array = TreeWalk.getArrayOrNull('declaration', x);
+    if (array) return [self.visit([...path, 'declaration'], array)];
+    return [];
+  });
   return {
     classMemberDeclaration: [
       ...declarations,

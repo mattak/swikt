@@ -12,6 +12,12 @@ Deno.test('TreeWalk.isEmptyObject', () => {
   assertEquals(TreeWalk.isEmptyObject({'a': []}), false);
   assertEquals(TreeWalk.isEmptyObject({'a': [], 'b': []}), false);
 });
+
+Deno.test('TreeWalk.hasKey', () => {
+  assertEquals(TreeWalk.hasKey('a',{'a': []}), true);
+  assertEquals(TreeWalk.hasKey('a',{'b': []}), false);
+});
+
 Deno.test('TreeWalk.getArrayOrNull', () => {
   assertEquals(TreeWalk.getArrayOrNull('a', {}), null);
   assertEquals(TreeWalk.getArrayOrNull('a', {'a': [{'b': []}]}), [{'b': []}]);

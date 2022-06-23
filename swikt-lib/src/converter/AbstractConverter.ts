@@ -6,36 +6,51 @@ export class AbstractConverter<TConverter extends Converter<any>> {
     return null;
   }
 
-  visitObject(tree: string[], input: TObject): TObject {
+  visit(path: string[], input: TArray): TObject {
+    if (path.length <= 0) return {};
+    const key = path[path.length - 1];
+    const converter = this.getConverter(key);
+    if (!converter) return {};
+    return converter(this, path, input);
+  }
+
+  visitObject(path: string[], input: TObject): TObject {
     let result: TObject = {};
     for (let key of Object.keys(input)) {
-      tree.push(key);
+      path.push(key);
       const element = input[key];
       if (Array.isArray(element)) {
-        const converter = this.getConverter(key) ?? this.visitArray;
-        result = {
-          ...result,
-          ...converter(this, tree, element),
-        };
+        const converter = this.getConverter(key);
+        if (converter) {
+          result = {
+            ...result,
+            ...converter(this, path, element),
+          };
+        } else {
+          result = {
+            ...result,
+            ...this.visitArray(path, element),
+          };
+        }
       }
-      tree.pop();
+      path.pop();
     }
     return result;
   }
 
-  visitArray(tree: string[], input: TArray): TObject {
-    if (tree.length < 1) return {}
-    const key = tree[tree.length - 1];
+  visitArray(path: string[], input: TArray): TObject {
+    if (path.length < 1) return {}
+    const key = path[path.length - 1];
     const result: TArray = [];
     for (let element of input) {
       if (typeof element === "string") {
         result.push(element);
       } else if (typeof element === 'object') {
-        result.push(this.visitObject(tree, element));
+        result.push(this.visitObject(path, element));
       }
     }
-    return {
-      key: result
-    };
+    const obj: TObject = {};
+    obj[key] = result;
+    return obj;
   }
 }

@@ -2,12 +2,7 @@ import {AbstractConverter} from "./AbstractConverter.ts";
 import {Converter} from "./Converter.ts";
 import {TArray, TObject} from "../util/Tree.ts";
 import {convert_declaration__declaration} from "./declarations/declaration.ts";
-import {
-  convert_structBody__classBody,
-  convert_structDeclaration__objectDeclaration,
-  convert_structMember__classMemberDeclaration,
-  convert_structMembers__classMemberDeclarations,
-} from "./declarations/structDeclaration.ts";
+import {convert_structDeclaration__objectDeclaration,} from "./declarations/structDeclaration.ts";
 import {
   convert_statement__topLevelObject,
   convert_statements__importList,
@@ -25,13 +20,28 @@ export interface KotlinInfoTable {
   importList?: string[], // e.g. ['io.github.Token', 'com.example.Test']
 }
 
+export interface SwiftKotlinConvertTable {
+  declaration?: Converter<SwiftKotlinConverter>,
+}
+
 export class SwiftKotlinConverter extends AbstractConverter<Converter<SwiftKotlinConverter>> {
   private swiftTable: { [key: string]: Converter<SwiftKotlinConverter> } = {
     'top_level': this.convert_topLevel__kotlinFile,
     'struct_declaration': this.convert_structDeclaration__objectDeclaration,
     'statement': this.convert_statement__topLevelObject,
+    'declaration': this.convert_declaration__declaration,
   };
   private _kotlinTable: KotlinInfoTable = <KotlinInfoTable>{};
+
+  constructor(convertTable?: SwiftKotlinConvertTable) {
+    super();
+    if (convertTable) {
+      this.swiftTable = {
+        ...this.swiftTable,
+        ...convertTable,
+      }
+    }
+  }
 
   get kotlinTable(): KotlinInfoTable {
     return this._kotlinTable;
@@ -76,18 +86,6 @@ export class SwiftKotlinConverter extends AbstractConverter<Converter<SwiftKotli
 
   convert_structDeclaration__objectDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
     return convert_structDeclaration__objectDeclaration(self, path, input);
-  }
-
-  convert_structBody__classBody(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-    return convert_structBody__classBody(self, path, input);
-  }
-
-  convert_structMembers__classMemberDeclarations(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-    return convert_structMembers__classMemberDeclarations(self, path, input);
-  }
-
-  convert_structMember__classMemberDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-    return convert_structMember__classMemberDeclaration(self, path, input);
   }
 
   convert_functionDeclaration__functionDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {

@@ -9,7 +9,7 @@ export class TreeWalk {
     return input.length < 1
   }
 
-  public static isTargetKey(key: string, target: any): boolean {
+  public static hasKey(key: string, target: any): boolean {
     return typeof target === 'object' && key in target;
   }
 
