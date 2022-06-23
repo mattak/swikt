@@ -13,4 +13,10 @@ set -ue
 )
 
 yarn clean && yarn install && yarn export && yarn open
+
+(
+  cd ../swikt-lib/
+  rm -rf out/
+)
+
 yarn start
