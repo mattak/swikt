@@ -13783,38 +13783,55 @@ class AbstractConverter {
     getConverter(key) {
         return null;
     }
-    visitObject(tree, input) {
+    visit(path, input) {
+        if (path.length <= 0)
+            return {};
+        const key = path[path.length - 1];
+        const converter = this.getConverter(key);
+        if (!converter)
+            return {};
+        return converter(this, path, input);
+    }
+    visitObject(path, input) {
         let result = {};
         for (let key of Object.keys(input)) {
-            tree.push(key);
+            path.push(key);
             const element = input[key];
             if (Array.isArray(element)) {
-                const converter = this.getConverter(key) ?? this.visitArray;
-                result = {
-                    ...result,
-                    ...converter(this, tree, element),
-                };
+                const converter = this.getConverter(key);
+                if (converter) {
+                    result = {
+                        ...result,
+                        ...converter(this, path, element),
+                    };
+                }
+                else {
+                    result = {
+                        ...result,
+                        ...this.visitArray(path, element),
+                    };
+                }
             }
-            tree.pop();
+            path.pop();
         }
         return result;
     }
-    visitArray(tree, input) {
-        if (tree.length < 1)
+    visitArray(path, input) {
+        if (path.length < 1)
             return {};
-        const key = tree[tree.length - 1];
+        const key = path[path.length - 1];
         const result = [];
         for (let element of input) {
             if (typeof element === "string") {
                 result.push(element);
             }
             else if (typeof element === 'object') {
-                result.push(this.visitObject(tree, element));
+                result.push(this.visitObject(path, element));
             }
         }
-        return {
-            key: result
-        };
+        const obj = {};
+        obj[key] = result;
+        return obj;
     }
 }
 exports.AbstractConverter = AbstractConverter;
@@ -13834,13 +13851,24 @@ const declaration_1 = __webpack_require__(5649);
 const structDeclaration_1 = __webpack_require__(7475);
 const statements_1 = __webpack_require__(9740);
 const topLevelDeclaration_1 = __webpack_require__(1500);
+const functionDeclaration_1 = __webpack_require__(1403);
 class SwiftKotlinConverter extends AbstractConverter_1.AbstractConverter {
     swiftTable = {
         'top_level': this.convert_topLevel__kotlinFile,
         'struct_declaration': this.convert_structDeclaration__objectDeclaration,
         'statement': this.convert_statement__topLevelObject,
+        'declaration': this.convert_declaration__declaration,
     };
     _kotlinTable = {};
+    constructor(convertTable) {
+        super();
+        if (convertTable) {
+            this.swiftTable = {
+                ...this.swiftTable,
+                ...convertTable,
+            };
+        }
+    }
     get kotlinTable() {
         return this._kotlinTable;
     }
@@ -13876,14 +13904,8 @@ class SwiftKotlinConverter extends AbstractConverter_1.AbstractConverter {
     convert_structDeclaration__objectDeclaration(self, path, input) {
         return (0, structDeclaration_1.convert_structDeclaration__objectDeclaration)(self, path, input);
     }
-    convert_structBody__classBody(self, path, input) {
-        return (0, structDeclaration_1.convert_structBody__classBody)(self, path, input);
-    }
-    convert_structMembers__classMemberDeclarations(self, path, input) {
-        return (0, structDeclaration_1.convert_structMembers__classMemberDeclarations)(self, path, input);
-    }
-    convert_structMember__classMemberDeclaration(self, path, input) {
-        return (0, structDeclaration_1.convert_structMember__classMemberDeclaration)(self, path, input);
+    convert_functionDeclaration__functionDeclaration(self, path, input) {
+        return (0, functionDeclaration_1.convert_functionDeclaration__functionDeclaration)(self, path, input);
     }
 }
 exports.SwiftKotlinConverter = SwiftKotlinConverter;
@@ -13901,12 +13923,18 @@ exports.convert_declaration__declaration = void 0;
 const TreeWalk_1 = __webpack_require__(2648);
 function convert_declaration__declaration(self, path, input) {
     const array = input.flatMap(x => {
-        const [key, elements] = TreeWalk_1.TreeWalk.getFirstOrNull(x);
+        const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(x);
         if (TreeWalk_1.TreeWalk.isEmptyArray(elements))
             return [];
         switch (key) {
             case 'struct_declaration': {
                 const result = self.convert_structDeclaration__objectDeclaration(self, [...path, 'struct_declaration'], elements);
+                if (TreeWalk_1.TreeWalk.isEmptyObject(result))
+                    return [];
+                return [result];
+            }
+            case 'function_declaration': {
+                const result = self.convert_functionDeclaration__functionDeclaration(self, [...path, 'function_declaration'], elements);
                 if (TreeWalk_1.TreeWalk.isEmptyObject(result))
                     return [];
                 return [result];
@@ -13927,6 +13955,112 @@ exports.convert_declaration__declaration = convert_declaration__declaration;
 
 /***/ }),
 
+/***/ 1403:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_functionBody__functionBody = exports.convert_parameter__functionValueParameter = exports.convert_parameterClause__functionValueParameters = exports.convert_functionDeclaration__functionDeclaration = void 0;
+const identifier_1 = __webpack_require__(1825);
+const TreeWalk_1 = __webpack_require__(2648);
+const parameter_1 = __webpack_require__(1903);
+const join_1 = __webpack_require__(3063);
+function convert_functionDeclaration__functionDeclaration(self, path, input) {
+    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(["function_name", "identifier"], input);
+    const parameterClause = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['function_signature', 'parameter_clause'], input);
+    const functionValueParameters = parameterClause ? convert_parameterClause__functionValueParameters(self, [...path, 'function_signature', 'parameter_clause'], parameterClause) : {};
+    const functionBody = convert_functionBody__functionBody(self, path, input);
+    return {
+        "functionDeclaration": [
+            "fun",
+            (0, identifier_1.createSimpleIdentifier)(name ?? ''),
+            functionValueParameters,
+            functionBody,
+        ]
+    };
+}
+exports.convert_functionDeclaration__functionDeclaration = convert_functionDeclaration__functionDeclaration;
+function convert_parameterClause__functionValueParameters(self, path, input) {
+    const parameters = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['parameter_list'], input);
+    if (!parameters)
+        return {
+            "functionValueParameters": [
+                "(",
+                ")"
+            ]
+        };
+    const functionValueParameterList = parameters.flatMap((x) => {
+        const element = TreeWalk_1.TreeWalk.getArrayOrNull('parameter', x);
+        if (element)
+            return [convert_parameter__functionValueParameter(self, [...path, 'parameter_list', 'parameter'], element)];
+        return [];
+    });
+    const functionValueParameterListWithComma = (0, join_1.joinObjectsWithComma)(functionValueParameterList);
+    return {
+        "functionValueParameters": [
+            "(",
+            ...functionValueParameterListWithComma,
+            ")"
+        ]
+    };
+}
+exports.convert_parameterClause__functionValueParameters = convert_parameterClause__functionValueParameters;
+function convert_parameter__functionValueParameter(self, path, input) {
+    return {
+        "functionValueParameter": [
+            (0, parameter_1.convert_parameter_parameter)(self, path, input),
+        ]
+    };
+}
+exports.convert_parameter__functionValueParameter = convert_parameter__functionValueParameter;
+function convert_functionBody__functionBody(self, path, input) {
+    return {
+        "functionBody": [
+            {
+                "block": [
+                    "{",
+                    "",
+                    {
+                        "statements": []
+                    },
+                    "}"
+                ]
+            }
+        ]
+    };
+}
+exports.convert_functionBody__functionBody = convert_functionBody__functionBody;
+//# sourceMappingURL=functionDeclaration.js.map
+
+/***/ }),
+
+/***/ 1903:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_parameter_parameter = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+const type_1 = __webpack_require__(5393);
+const identifier_1 = __webpack_require__(1825);
+function convert_parameter_parameter(self, path, input) {
+    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['local_parameter_name', 'identifier'], input) ?? '__UNDEFINED__';
+    const type = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['type_annotation', 'type'], input) ?? [];
+    return {
+        "parameter": [
+            (0, identifier_1.createSimpleIdentifier)(name),
+            ":",
+            (0, type_1.convert_type__type_)(self, [...path, 'type_annotation', 'type'], type),
+        ]
+    };
+}
+exports.convert_parameter_parameter = convert_parameter_parameter;
+//# sourceMappingURL=parameter.js.map
+
+/***/ }),
+
 /***/ 7475:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
@@ -13936,26 +14070,26 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.convert_structMember__classMemberDeclaration = exports.convert_structMembers__classMemberDeclarations = exports.convert_structBody__classBody = exports.convert_structDeclaration__objectDeclaration = void 0;
 const TreeWalk_1 = __webpack_require__(2648);
 function convert_structDeclaration__objectDeclaration(self, path, input) {
-    const matched = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['struct_name', 'identifier'], input);
+    const matched = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['struct_name', 'identifier'], input);
     const name = matched ? matched[0] : '';
-    const structBody = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['struct_body'], input);
+    const structBody = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['struct_body'], input);
     return {
         objectDeclaration: [
             'object',
             { simpleIdentifier: [name] },
-            ...(structBody ? [self.convert_structBody__classBody(self, [...path, 'struct_body'], structBody)] : []),
+            ...(structBody ? [convert_structBody__classBody(self, [...path, 'struct_body'], structBody)] : []),
         ]
     };
 }
 exports.convert_structDeclaration__objectDeclaration = convert_structDeclaration__objectDeclaration;
 function convert_structBody__classBody(self, path, input) {
     // convert to struct member
-    const structMembers = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['struct_members'], input);
+    const structMembers = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['struct_members'], input);
     return {
         classBody: [
             '{',
             ...(structMembers
-                ? [self.convert_structMembers__classMemberDeclarations(self, [...path, 'struct_members'], structMembers)]
+                ? [convert_structMembers__classMemberDeclarations(self, [...path, 'struct_members'], structMembers)]
                 : []),
             '}'
         ]
@@ -13963,9 +14097,12 @@ function convert_structBody__classBody(self, path, input) {
 }
 exports.convert_structBody__classBody = convert_structBody__classBody;
 function convert_structMembers__classMemberDeclarations(self, path, input) {
-    const classMemberDeclarations = input.flatMap(x => (typeof x === 'object' && 'struct_member' in x)
-        ? [self.convert_structMember__classMemberDeclaration(self, [...path, 'struct_member'], input)]
-        : []);
+    const classMemberDeclarations = input.flatMap((x) => {
+        const array = TreeWalk_1.TreeWalk.getArrayOrNull('struct_member', x);
+        if (array)
+            return [convert_structMember__classMemberDeclaration(self, [...path, 'struct_member'], array)];
+        return [];
+    });
     return {
         classMemberDeclarations: [
             ...classMemberDeclarations,
@@ -13974,9 +14111,12 @@ function convert_structMembers__classMemberDeclarations(self, path, input) {
 }
 exports.convert_structMembers__classMemberDeclarations = convert_structMembers__classMemberDeclarations;
 function convert_structMember__classMemberDeclaration(self, path, input) {
-    const declarations = input.flatMap(x => (typeof x === 'object' && 'declaration' in x)
-        ? [self.convert_declaration__declaration(self, [...path, 'declaration'], input)]
-        : []);
+    const declarations = input.flatMap((x) => {
+        const array = TreeWalk_1.TreeWalk.getArrayOrNull('declaration', x);
+        if (array)
+            return [self.visit([...path, 'declaration'], array)];
+        return [];
+    });
     return {
         classMemberDeclaration: [
             ...declarations,
@@ -14001,7 +14141,7 @@ function convert_topLevel__kotlinFile(self, path, input) {
     // package
     const results = [];
     results.push(self.convert___packageHeader(self, path, input));
-    const statements = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['statements'], input);
+    const statements = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['statements'], input);
     if (statements) {
         // imports
         const kotlinImportList = self.convert_statements__importList(self, [...path, 'statements'], statements);
@@ -14048,7 +14188,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.convert_statement__topLevelObject = exports.convert_statements__topLevelObjectList = exports.convert_statements__importList = void 0;
 const TreeWalk_1 = __webpack_require__(2648);
 function convert_statements__importList(self, path, input) {
-    const importDeclaration = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['statement', 'declaration', 'import_declaration'], input);
+    const importDeclaration = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['statement', 'declaration', 'import_declaration'], input);
     if (importDeclaration) {
         return self.convert__importList(self, [
             ...path, 'statement', 'declaration', 'import_declaration'
@@ -14072,7 +14212,7 @@ function convert_statements__topLevelObjectList(self, path, input) {
 }
 exports.convert_statements__topLevelObjectList = convert_statements__topLevelObjectList;
 function convert_statement__topLevelObject(self, path, input) {
-    const declaration = TreeWalk_1.TreeWalk.getArrayOrNullByKeys(['declaration'], input);
+    const declaration = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['declaration'], input);
     if (!declaration)
         return {};
     const result = self.convert_declaration__declaration(self, [...path, 'declaration'], declaration);
@@ -14089,13 +14229,54 @@ exports.convert_statement__topLevelObject = convert_statement__topLevelObject;
 
 /***/ }),
 
+/***/ 5393:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_arrayType__type_ = exports.convert_protocolCompositionType__type_ = exports.convert_type__type_ = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+const type_1 = __webpack_require__(2507);
+function convert_type__type_(self, path, input) {
+    if (input.length < 0)
+        return {};
+    const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(input[0]);
+    switch (key) {
+        case 'array_type': {
+            return convert_arrayType__type_(self, [...path, 'array_type'], elements);
+        }
+        // normal type
+        case 'protocol_composition_type': {
+            return convert_protocolCompositionType__type_(self, [...path, 'protocol_composition_type'], elements);
+        }
+        default: {
+            return {};
+        }
+    }
+}
+exports.convert_type__type_ = convert_type__type_;
+function convert_protocolCompositionType__type_(self, path, input) {
+    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['type_identifier', 'type_name', 'identifier'], input);
+    return (0, type_1.createPlainUserType)(name ?? '__UNDEFINED__');
+}
+exports.convert_protocolCompositionType__type_ = convert_protocolCompositionType__type_;
+function convert_arrayType__type_(self, path, input) {
+    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['type', 'protocol_composition_type', 'type_identifier', 'type_name', 'identifier'], input);
+    return (0, type_1.createGenericUserType)('List', (0, type_1.createPlainUserType)(name ?? ''));
+}
+exports.convert_arrayType__type_ = convert_arrayType__type_;
+//# sourceMappingURL=type.js.map
+
+/***/ }),
+
 /***/ 1825:
 /***/ (function(__unused_webpack_module, exports) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.createIdentifier = void 0;
+exports.createSimpleIdentifier = exports.createIdentifier = void 0;
 function createIdentifier(name) {
     const simpleIdentifiers = name.split('.').map(x => ({ simpleIdentifier: [x] }));
     const identifiers = [];
@@ -14110,7 +14291,106 @@ function createIdentifier(name) {
     };
 }
 exports.createIdentifier = createIdentifier;
+function createSimpleIdentifier(name) {
+    return {
+        "simpleIdentifier": [
+            name,
+        ],
+    };
+}
+exports.createSimpleIdentifier = createSimpleIdentifier;
 //# sourceMappingURL=identifier.js.map
+
+/***/ }),
+
+/***/ 3063:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.joinObjectsWithComma = void 0;
+function joinObjectsWithComma(objs) {
+    if (objs.length < 1)
+        return [];
+    if (objs.length === 1)
+        return objs;
+    const results = [objs[0]];
+    for (let i = 1; i < objs.length; i++) {
+        results.push(",");
+        results.push(objs[i]);
+    }
+    return results;
+}
+exports.joinObjectsWithComma = joinObjectsWithComma;
+//# sourceMappingURL=join.js.map
+
+/***/ }),
+
+/***/ 2507:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createGenericUserType = exports.createPlainUserType = void 0;
+const identifier_1 = __webpack_require__(1825);
+function createPlainUserType(name) {
+    return {
+        "type_": [
+            {
+                "typeReference": [
+                    {
+                        "userType": [
+                            {
+                                "simpleUserType": [
+                                    (0, identifier_1.createSimpleIdentifier)(name),
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    };
+}
+exports.createPlainUserType = createPlainUserType;
+function createGenericUserType(genericName, innerType) {
+    return {
+        "type_": [
+            {
+                "typeReference": [
+                    {
+                        "userType": [
+                            {
+                                "simpleUserType": [
+                                    {
+                                        "simpleIdentifier": [
+                                            genericName,
+                                        ]
+                                    },
+                                    {
+                                        "typeArguments": [
+                                            "<",
+                                            {
+                                                "typeProjection": [
+                                                    innerType,
+                                                ]
+                                            },
+                                            ">"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    };
+}
+exports.createGenericUserType = createGenericUserType;
+//# sourceMappingURL=type.js.map
 
 /***/ }),
 
@@ -23767,9 +24047,12 @@ class TreeWalk {
     static isEmptyArray(input) {
         return input.length < 1;
     }
-    static isTargetKey(key, target) {
+    static hasKey(key, target) {
         return typeof target === 'object' && key in target;
     }
+    // key: 'a'
+    // target: {a: [ {b: []} ]}
+    // output: {b: []}
     static getArrayOrNull(key, target) {
         if (typeof target === 'object' && key in target)
             return target[key];
@@ -23778,7 +24061,7 @@ class TreeWalk {
     // keys: ['a','b']
     // input: [ { a: [ { b: [ 'c' ] } ] } ]
     // return: ['c']
-    static getArrayOrNullByKeys(keys, input) {
+    static firstArrayOrNullByKeys(keys, input) {
         if (keys.length < 1)
             return input;
         const key = keys[0];
@@ -23786,13 +24069,31 @@ class TreeWalk {
             const value = this.getArrayOrNull(key, input[i]);
             if (!value)
                 continue;
-            const result = this.getArrayOrNullByKeys(keys.slice(1), value);
+            const result = this.firstArrayOrNullByKeys(keys.slice(1), value);
             if (result)
                 return result;
         }
         return null;
     }
-    static getFirstOrNull(target) {
+    // keys: [key1, key2]
+    // input:
+    //   [
+    //     { key1: [ {key2: "ok" } ] },
+    //     { key2: [ {b: 1 } ] },
+    //   ]
+    // output: "ok"
+    static firstElementOrNullByKeys(keys, input) {
+        const array = this.firstArrayOrNullByKeys(keys, input);
+        if (!array || array.length < 1)
+            return null;
+        const element = array[0];
+        if (typeof element === 'string')
+            return element;
+        return null;
+    }
+    // target: {a: [], b: []}
+    // output: [a: []]
+    static firstKeyValueOrNull(target) {
         if (typeof target === 'object') {
             const keys = Object.keys(target);
             if (keys.length < 1)
