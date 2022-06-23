@@ -82,7 +82,7 @@ var Transpiler = function() {
         var kotlinTree = (0,swikt_lib.parseKotlin)(kotlinCode);
         setKotlinTreeCode(JSON.stringify(kotlinTree, null, 2));
     };
-    var ref = (0,react.useState)("import Foundation\n\nstruct Sample {\n}"), swiftCode1 = ref[0], setSwiftCode = ref[1];
+    var ref = (0,react.useState)("import Foundation\n\nstruct Sample {\n  static func build(args: [String], count: Int) {\n  }\n}"), swiftCode1 = ref[0], setSwiftCode = ref[1];
     var ref1 = (0,react.useState)("package com.example.test\n\nclass Sample() {\n}\n"), kotlinCode1 = ref1[0], setKotlinCode = ref1[1];
     var ref2 = (0,react.useState)("{}"), swiftTreeCode = ref2[0], setSwiftTreeCode = ref2[1];
     var ref3 = (0,react.useState)("{}"), kotlinTreeCode = ref3[0], setKotlinTreeCode = ref3[1];
