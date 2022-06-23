@@ -4,7 +4,7 @@ import {SwiftKotlinConverter} from "../SwiftKotlinConverter.ts";
 
 export function convert_declaration__declaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
   const array = input.flatMap(x => {
-    const [key, elements] = TreeWalk.getFirstOrNull(x);
+    const [key, elements] = TreeWalk.firstKeyValueOrNull(x);
     if (TreeWalk.isEmptyArray(elements)) return []
 
     switch (key) {

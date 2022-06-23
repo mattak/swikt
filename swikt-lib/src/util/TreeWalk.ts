@@ -13,6 +13,9 @@ export class TreeWalk {
     return typeof target === 'object' && key in target;
   }
 
+  // key: 'a'
+  // target: {a: [ {b: []} ]}
+  // output: {b: []}
   public static getArrayOrNull(key: string, target: TArrayElement): TArray | null {
     if (typeof target === 'object' && key in target) return target[key];
     return null
@@ -21,7 +24,7 @@ export class TreeWalk {
   // keys: ['a','b']
   // input: [ { a: [ { b: [ 'c' ] } ] } ]
   // return: ['c']
-  public static getArrayOrNullByKeys(keys: string[], input: TArray): TArray | null {
+  public static firstArrayOrNullByKeys(keys: string[], input: TArray): TArray | null {
     if (keys.length < 1) return input;
 
     const key = keys[0];
@@ -30,7 +33,7 @@ export class TreeWalk {
       const value = this.getArrayOrNull(key, input[i]);
       if (!value) continue;
 
-      const result = this.getArrayOrNullByKeys(keys.slice(1), value);
+      const result = this.firstArrayOrNullByKeys(keys.slice(1), value);
       if (result) return result;
     }
 
@@ -45,14 +48,16 @@ export class TreeWalk {
   //   ]
   // output: "ok"
   public static firstElementOrNullByKeys(keys: string[], input: TArray): TElement | null {
-    const array = this.getArrayOrNullByKeys(keys, input);
+    const array = this.firstArrayOrNullByKeys(keys, input);
     if (!array || array.length < 1) return null;
     const element = array[0];
     if (typeof element === 'string') return element;
     return null;
   }
 
-  public static getFirstOrNull(target: TArrayElement): [string | null, TArray] {
+  // target: {a: [], b: []}
+  // output: [a: []]
+  public static firstKeyValueOrNull(target: TArrayElement): [string | null, TArray] {
     if (typeof target === 'object') {
       const keys = Object.keys(target);
       if (keys.length < 1) return [null, []];

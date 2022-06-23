@@ -3,9 +3,9 @@ import {TreeWalk} from "../../util/TreeWalk.ts";
 import {SwiftKotlinConverter} from "../SwiftKotlinConverter.ts";
 
 export function convert_structDeclaration__objectDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-  const matched = TreeWalk.getArrayOrNullByKeys(['struct_name', 'identifier'], input);
+  const matched = TreeWalk.firstArrayOrNullByKeys(['struct_name', 'identifier'], input);
   const name = matched ? matched[0] : '';
-  const structBody = TreeWalk.getArrayOrNullByKeys(['struct_body'], input);
+  const structBody = TreeWalk.firstArrayOrNullByKeys(['struct_body'], input);
   return {
     objectDeclaration: [
       'object',
@@ -17,7 +17,7 @@ export function convert_structDeclaration__objectDeclaration(self: SwiftKotlinCo
 
 export function convert_structBody__classBody(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
   // convert to struct member
-  const structMembers = TreeWalk.getArrayOrNullByKeys(['struct_members'], input);
+  const structMembers = TreeWalk.firstArrayOrNullByKeys(['struct_members'], input);
   return {
     classBody: [
       '{',

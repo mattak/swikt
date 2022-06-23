@@ -8,7 +8,7 @@ export function convert_topLevel__kotlinFile(self: SwiftKotlinConverter, path: s
   const results: TArray = [];
   results.push(self.convert___packageHeader(self, path, input));
 
-  const statements = TreeWalk.getArrayOrNullByKeys(['statements'], input);
+  const statements = TreeWalk.firstArrayOrNullByKeys(['statements'], input);
   if (statements) {
     // imports
     const kotlinImportList = self.convert_statements__importList(self, [...path, 'statements'], statements);

@@ -3,7 +3,7 @@ import {TreeWalk} from "../../util/TreeWalk.ts";
 import {SwiftKotlinConverter} from "../SwiftKotlinConverter.ts";
 
 export function convert_statements__importList(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-  const importDeclaration = TreeWalk.getArrayOrNullByKeys(['statement', 'declaration', 'import_declaration'], input);
+  const importDeclaration = TreeWalk.firstArrayOrNullByKeys(['statement', 'declaration', 'import_declaration'], input);
   if (importDeclaration) {
     return self.convert__importList(self, [
       ...path, 'statement', 'declaration', 'import_declaration'
@@ -25,7 +25,7 @@ export function convert_statements__topLevelObjectList(self: SwiftKotlinConverte
 }
 
 export function convert_statement__topLevelObject(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-  const declaration = TreeWalk.getArrayOrNullByKeys(['declaration'], input);
+  const declaration = TreeWalk.firstArrayOrNullByKeys(['declaration'], input);
   if (!declaration) return {}
 
   const result = self.convert_declaration__declaration(self, [...path, 'declaration'], declaration)
