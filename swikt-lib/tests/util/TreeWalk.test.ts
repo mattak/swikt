@@ -8,74 +8,120 @@ Deno.test('TreeWalk.isEmptyArray', () => {
 })
 
 Deno.test('TreeWalk.isEmptyObject', () => {
-    assertEquals(TreeWalk.isEmptyObject({}), true);
-    assertEquals(TreeWalk.isEmptyObject({'a': []}), false);
-    assertEquals(TreeWalk.isEmptyObject({'a': [], 'b': []}), false);
+  assertEquals(TreeWalk.isEmptyObject({}), true);
+  assertEquals(TreeWalk.isEmptyObject({'a': []}), false);
+  assertEquals(TreeWalk.isEmptyObject({'a': [], 'b': []}), false);
 });
 Deno.test('TreeWalk.getArrayOrNull', () => {
-    assertEquals(TreeWalk.getArrayOrNull('a', {}),null);
-    assertEquals(TreeWalk.getArrayOrNull('a', {'a': [{'b': []}]}),[{'b': []}]);
+  assertEquals(TreeWalk.getArrayOrNull('a', {}), null);
+  assertEquals(TreeWalk.getArrayOrNull('a', {'a': [{'b': []}]}), [{'b': []}]);
 });
 Deno.test('TreeWalk.getArrayOrNullByKeys', () => {
-    assertEquals(TreeWalk.getArrayOrNullByKeys(['a'], []),null);
-    assertEquals(TreeWalk.getArrayOrNullByKeys(['a'], [{'a': []}]),[]);
-    assertEquals(TreeWalk.getArrayOrNullByKeys(['b'], [{'a': []}]),null);
-    assertEquals(TreeWalk.getArrayOrNullByKeys(['a', 'b'], [
+  assertEquals(TreeWalk.getArrayOrNullByKeys(['a'], []), null);
+  assertEquals(TreeWalk.getArrayOrNullByKeys(['a'], [{'a': []}]), []);
+  assertEquals(TreeWalk.getArrayOrNullByKeys(['b'], [{'a': []}]), null);
+  assertEquals(TreeWalk.getArrayOrNullByKeys(['a', 'b'], [
+    {
+      'a': [
+        {
+          'b': [
+            {
+              'c': [],
+            }
+          ]
+        }
+      ]
+    },
+  ]), [{'c': []}]);
+  assertEquals(TreeWalk.getArrayOrNullByKeys(['a3'], [
+    {'a1': []},
+    {'a2': []},
+  ]), null);
+  assertEquals(TreeWalk.getArrayOrNullByKeys(['a2'], [
+    {'a1': []},
+    {'a2': []},
+  ]), []);
+  assertEquals(TreeWalk.getArrayOrNullByKeys(['a', 'b2'], [
+    {
+      'a': [
+        {'b1': [{'c': []}]},
+        {'b2': [{'c': []}]},
+      ],
+    },
+  ]), [{'c': []}]);
+  assertEquals(TreeWalk.getArrayOrNullByKeys(['a', 'b2', 'c'], [
+    {
+      'a': [
+        {
+          'b1': [
+            {
+              'c': [
+                {'d1': []}
+              ],
+            }
+          ]
+        },
+        {
+          'b2': [
+            {
+              'c': [
+                {'d2': []}
+              ],
+            }
+          ]
+        }
+      ]
+    },
+  ]), [{'d2': []}]);
+});
+Deno.test('TreeWalk.getArrayFirstElementOrNullByKeys', () => {
+  assertEquals(TreeWalk.firstElementOrNullByKeys(['a', 'b'], [
       {
         'a': [
           {
-            'b': [
-              {
-                'c': [],
-              }
-            ]
+            'b':
+              [
+                'c'
+              ]
           }
         ]
-      },
-    ]),[{'c': []}]);
-    assertEquals(TreeWalk.getArrayOrNullByKeys(['a3'], [
-      {'a1': []},
-      {'a2': []},
-    ]),null);
-    assertEquals(TreeWalk.getArrayOrNullByKeys(['a2'], [
-      {'a1': []},
-      {'a2': []},
-    ]),[]);
-    assertEquals(TreeWalk.getArrayOrNullByKeys(['a', 'b2'], [
-      {
-        'a': [
-          {'b1': [{'c': []}]},
-          {'b2': [{'c': []}]},
-        ],
-      },
-    ]),[{'c': []}]);
-    assertEquals(TreeWalk.getArrayOrNullByKeys(['a', 'b2', 'c'], [
+      }
+    ]),
+    'c'
+  );
+  assertEquals(TreeWalk.firstElementOrNullByKeys(['a', 'd'], [
       {
         'a': [
           {
-            'b1': [
-              {
-                'c': [
-                  {'d1': []}
-                ],
-              }
-            ]
-          },
-          {
-            'b2': [
-              {
-                'c': [
-                  {'d2': []}
-                ],
-              }
-            ]
+            'b':
+              [
+                'c'
+              ]
           }
         ]
-      },
-    ]),[{'d2': []}]);
+      }
+    ]),
+    null
+  );
+  assertEquals(TreeWalk.firstElementOrNullByKeys(['a', 'b'], [
+      {
+        'a': [
+          {
+            'b':
+              [
+                {
+                  'c': []
+                }
+              ]
+          }
+        ]
+      }
+    ]),
+    null
+  );
 });
 Deno.test('TreeWalk.getFirstOrNull', () => {
-    assertEquals(TreeWalk.getFirstOrNull({}), [null, []]);
-    assertEquals(TreeWalk.getFirstOrNull({'a': []}), ['a', []]);
-    assertEquals(TreeWalk.getFirstOrNull({'a': [], 'b': []}), ['a', []]);
+  assertEquals(TreeWalk.getFirstOrNull({}), [null, []]);
+  assertEquals(TreeWalk.getFirstOrNull({'a': []}), ['a', []]);
+  assertEquals(TreeWalk.getFirstOrNull({'a': [], 'b': []}), ['a', []]);
 });

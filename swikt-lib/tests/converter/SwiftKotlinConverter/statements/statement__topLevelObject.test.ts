@@ -1,5 +1,5 @@
-import {SwiftKotlinConverter} from "../../../src/converter/SwiftKotlinConverter.ts";
-import {TObject} from "../../../src/util/Tree.ts";
+import {SwiftKotlinConverter} from "../../../../src/converter/SwiftKotlinConverter.ts";
+import {TObject} from "../../../../src/util/Tree.ts";
 import {assertEquals} from "https://deno.land/std@0.143.0/testing/asserts.ts";
 
 const converter = new SwiftKotlinConverter();

@@ -1,4 +1,4 @@
-import {TArray, TArrayElement, TObject} from "./Tree.ts";
+import {TArray, TArrayElement, TElement, TObject} from "./Tree.ts";
 
 export class TreeWalk {
   public static isEmptyObject(input: TObject): boolean {
@@ -34,6 +34,21 @@ export class TreeWalk {
       if (result) return result;
     }
 
+    return null;
+  }
+
+  // keys: [key1, key2]
+  // input:
+  //   [
+  //     { key1: [ {key2: "ok" } ] },
+  //     { key2: [ {b: 1 } ] },
+  //   ]
+  // output: "ok"
+  public static firstElementOrNullByKeys(keys: string[], input: TArray): TElement | null {
+    const array = this.getArrayOrNullByKeys(keys, input);
+    if (!array || array.length < 1) return null;
+    const element = array[0];
+    if (typeof element === 'string') return element;
     return null;
   }
 

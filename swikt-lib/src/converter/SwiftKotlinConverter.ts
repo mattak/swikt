@@ -18,6 +18,7 @@ import {
   convert__importList,
   convert_topLevel__kotlinFile
 } from "./declarations/topLevelDeclaration.ts";
+import {convert_functionDeclaration__functionDeclaration} from "./declarations/functionDeclaration.ts";
 
 export interface KotlinInfoTable {
   package: string, // e.g. com.example.sample
@@ -87,5 +88,9 @@ export class SwiftKotlinConverter extends AbstractConverter<Converter<SwiftKotli
 
   convert_structMember__classMemberDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
     return convert_structMember__classMemberDeclaration(self, path, input);
+  }
+
+  convert_functionDeclaration__functionDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
+    return convert_functionDeclaration__functionDeclaration(self, path, input);
   }
 }
