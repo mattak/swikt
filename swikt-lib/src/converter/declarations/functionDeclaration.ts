@@ -4,7 +4,7 @@ import {createSimpleIdentifier} from "../util/identifier.ts";
 import {TreeWalk} from "../../util/TreeWalk.ts";
 
 export function convert_functionDeclaration__functionDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-  const name = TreeWalk.firstElementOrNullByKeys(["function_declaration", "function_name", "identifier"], input);
+  const name = TreeWalk.firstElementOrNullByKeys(["function_name", "identifier"], input);
   const functionValueParameters = convert_functionSignature__functionValueParameter(self, path, input);
   const functionBody = convert_functionBody__functionBody(self, path, input);
 

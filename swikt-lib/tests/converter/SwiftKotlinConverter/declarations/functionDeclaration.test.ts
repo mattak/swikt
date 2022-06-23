@@ -10,39 +10,35 @@ const converter = new SwiftKotlinConverter();
 Deno.test('convert_functionDeclaration__functionDeclaration/simpleFunction', () => {
   const input: TArray = [
     {
-      "function_declaration": [
+      "function_head": [
+        "func"
+      ]
+    },
+    {
+      "function_name": [
         {
-          "function_head": [
-            "func"
+          "identifier": [
+            "build"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "function_signature": [
         {
-          "function_name": [
-            {
-              "identifier": [
-                "build"
-              ]
-            }
+          "parameter_clause": [
+            "(",
+            ")"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "function_body": [
         {
-          "function_signature": [
-            {
-              "parameter_clause": [
-                "(",
-                ")"
-              ]
-            }
-          ]
-        },
-        {
-          "function_body": [
-            {
-              "code_block": [
-                "{",
-                "}"
-              ]
-            }
+          "code_block": [
+            "{",
+            "}"
           ]
         }
       ]
