@@ -13961,21 +13961,25 @@ exports.convert_declaration__declaration = convert_declaration__declaration;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.convert_functionBody__functionBody = exports.convert_parameter__functionValueParameter = exports.convert_parameterClause__functionValueParameters = exports.convert_functionDeclaration__functionDeclaration = void 0;
+exports.convert_functionBody__functionBody = exports.convert_functionResult__type = exports.convert_parameter__functionValueParameter = exports.convert_parameterClause__functionValueParameters = exports.convert_functionDeclaration__functionDeclaration = void 0;
 const identifier_1 = __webpack_require__(1825);
 const TreeWalk_1 = __webpack_require__(2648);
 const parameter_1 = __webpack_require__(1903);
 const join_1 = __webpack_require__(3063);
+const type_1 = __webpack_require__(5393);
 function convert_functionDeclaration__functionDeclaration(self, path, input) {
-    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(["function_name", "identifier"], input);
-    const parameterClause = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['function_signature', 'parameter_clause'], input);
-    const functionValueParameters = parameterClause ? convert_parameterClause__functionValueParameters(self, [...path, 'function_signature', 'parameter_clause'], parameterClause) : {};
+    const _name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(["function_name", "identifier"], input);
+    const _parameterClause = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['function_signature', 'parameter_clause'], input);
+    const _functionResult = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['function_signature', 'function_result'], input);
+    const functionValueParameters = _parameterClause ? convert_parameterClause__functionValueParameters(self, [...path, 'function_signature', 'parameter_clause'], _parameterClause) : {};
     const functionBody = convert_functionBody__functionBody(self, path, input);
+    const functionResultType = _functionResult ? convert_functionResult__type(self, [...path, 'function_signature', 'function_result'], _functionResult) : {};
     return {
         "functionDeclaration": [
             "fun",
-            (0, identifier_1.createSimpleIdentifier)(name ?? ''),
+            (0, identifier_1.createSimpleIdentifier)(_name ?? ''),
             functionValueParameters,
+            ...(TreeWalk_1.TreeWalk.isEmptyObject(functionResultType) ? [] : [':', functionResultType]),
             functionBody,
         ]
     };
@@ -14014,6 +14018,13 @@ function convert_parameter__functionValueParameter(self, path, input) {
     };
 }
 exports.convert_parameter__functionValueParameter = convert_parameter__functionValueParameter;
+function convert_functionResult__type(self, path, input) {
+    const type = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['type'], input);
+    if (!type)
+        return {};
+    return (0, type_1.convert_type__type_)(self, [...path, 'type'], type);
+}
+exports.convert_functionResult__type = convert_functionResult__type;
 function convert_functionBody__functionBody(self, path, input) {
     return {
         "functionBody": [
