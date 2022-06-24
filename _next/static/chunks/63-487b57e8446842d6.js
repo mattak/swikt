@@ -14346,7 +14346,11 @@ exports.joinObjectsWithComma = joinObjectsWithComma;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createGenericUserType = exports.createPlainUserType = void 0;
 const identifier_1 = __webpack_require__(1825);
+const __typeConvertTable = {
+    "Bool": "Boolean",
+};
 function createPlainUserType(name) {
+    const convertedName = __typeConvertTable[name] ?? name;
     return {
         "type_": [
             {
@@ -14355,7 +14359,7 @@ function createPlainUserType(name) {
                         "userType": [
                             {
                                 "simpleUserType": [
-                                    (0, identifier_1.createSimpleIdentifier)(name),
+                                    (0, identifier_1.createSimpleIdentifier)(convertedName),
                                 ]
                             }
                         ]
