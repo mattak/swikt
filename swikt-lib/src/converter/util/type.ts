@@ -1,7 +1,12 @@
 import {TObject} from "../../util/Tree.ts";
 import {createSimpleIdentifier} from "./identifier.ts";
 
+const __typeConvertTable: { [key: string]: string } = {
+  "Bool": "Boolean",
+};
+
 export function createPlainUserType(name: string): TObject {
+  const convertedName = __typeConvertTable[name] ?? name;
   return {
     "type_": [
       {
@@ -10,7 +15,7 @@ export function createPlainUserType(name: string): TObject {
             "userType": [
               {
                 "simpleUserType": [
-                  createSimpleIdentifier(name),
+                  createSimpleIdentifier(convertedName),
                 ]
               }
             ]
