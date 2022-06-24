@@ -17,6 +17,7 @@ yarn clean && yarn install && yarn export && yarn open
 (
   cd ../swikt-lib/
   rm -rf out/
+  rm -rf dist/
 )
 
 yarn start
