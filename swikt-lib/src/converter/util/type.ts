@@ -1,5 +1,6 @@
 import {TObject} from "../../util/Tree.ts";
 import {createSimpleIdentifier} from "./identifier.ts";
+import {joinObjectsWithComma} from "./join.ts";
 
 const __typeConvertTable: { [key: string]: string } = {
   "Bool": "Boolean",
@@ -26,7 +27,14 @@ export function createPlainUserType(name: string): TObject {
   }
 }
 
-export function createGenericUserType(genericName: string, innerType: TObject): TObject {
+export function createGenericUserType(genericName: string, ...innerTypes: TObject[]): TObject {
+  const typeProjectionsWithComma = joinObjectsWithComma(innerTypes.map(x => {
+    return {
+      "typeProjection": [
+        x
+      ]
+    }
+  }));
   return {
     "type_": [
       {
@@ -43,11 +51,7 @@ export function createGenericUserType(genericName: string, innerType: TObject): 
                   {
                     "typeArguments": [
                       "<",
-                      {
-                        "typeProjection": [
-                          innerType,
-                        ]
-                      },
+                      ...typeProjectionsWithComma,
                       ">"
                     ]
                   }

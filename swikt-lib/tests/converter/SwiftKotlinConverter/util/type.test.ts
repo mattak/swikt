@@ -1,5 +1,5 @@
 import {assertEquals} from "https://deno.land/std@0.143.0/testing/asserts.ts";
-import {createPlainUserType} from "../../../../src/converter/util/type.ts";
+import {createGenericUserType, createPlainUserType} from "../../../../src/converter/util/type.ts";
 
 Deno.test('createPlainUserType', () => {
   assertEquals(createPlainUserType('String'), {
@@ -36,6 +36,87 @@ Deno.test('createPlainUserType', () => {
                     "simpleIdentifier": [
                       "Boolean",
                     ],
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  });
+});
+
+Deno.test('createGenericUserType', () => {
+  assertEquals(createGenericUserType('Single', createPlainUserType('Int'), createPlainUserType('Boolean')), {
+    "type_": [
+      {
+        "typeReference": [
+          {
+            "userType": [
+              {
+                "simpleUserType": [
+                  {
+                    "simpleIdentifier": [
+                      "Single"
+                    ]
+                  },
+                  {
+                    "typeArguments": [
+                      "<",
+                      {
+                        "typeProjection": [
+                          {
+                            "type_": [
+                              {
+                                "typeReference": [
+                                  {
+                                    "userType": [
+                                      {
+                                        "simpleUserType": [
+                                          {
+                                            "simpleIdentifier": [
+                                              "Int"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      ",",
+                      {
+                        "typeProjection": [
+                          {
+                            "type_": [
+                              {
+                                "typeReference": [
+                                  {
+                                    "userType": [
+                                      {
+                                        "simpleUserType": [
+                                          {
+                                            "simpleIdentifier": [
+                                              "Boolean"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      ">"
+                    ]
                   }
                 ]
               }
