@@ -10,6 +10,7 @@ import {
   convert_topLevel__kotlinFile
 } from "./declarations/topLevelDeclaration.ts";
 import {convert_functionDeclaration__functionDeclaration} from "./declarations/functionDeclaration.ts";
+import {convert_constantDeclaration__propertyDeclarations} from "./declarations/constantDeclaration.ts";
 import {TreeWalk} from "../util/TreeWalk.ts";
 
 export interface KotlinInfoTable {
@@ -84,5 +85,9 @@ export class SwiftKotlinConverter extends AbstractConverter<Converter<SwiftKotli
 
   convert_functionDeclaration__functionDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
     return convert_functionDeclaration__functionDeclaration(self, path, input);
+  }
+
+  convert_constantDeclaration__propertyDeclarations(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
+    return convert_constantDeclaration__propertyDeclarations(self, path, input);
   }
 }

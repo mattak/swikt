@@ -5,14 +5,16 @@ import {TreeWalk} from "../../util/TreeWalk.ts";
 import {convert_parameter_parameter} from "./parameter.ts";
 import {joinObjectsWithComma} from "../util/join.ts";
 import {convert_type__type_} from "../types/type.ts";
+import {convert_codeBlock__block} from "./codeBlock.ts";
 
 export function convert_functionDeclaration__functionDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
   const _name = TreeWalk.firstElementOrNullByKeys(["function_name", "identifier"], input);
   const _parameterClause = TreeWalk.firstArrayOrNullByKeys(['function_signature', 'parameter_clause'], input);
   const _functionResult = TreeWalk.firstArrayOrNullByKeys(['function_signature', 'function_result'], input);
+  const _functionBody = TreeWalk.firstArrayOrNullByKeys(['function_body'], input);
 
   const functionValueParameters = _parameterClause ? convert_parameterClause__functionValueParameters(self, [...path, 'function_signature', 'parameter_clause'], _parameterClause) : {};
-  const functionBody = convert_functionBody__functionBody(self, path, input);
+  const functionBody = _functionBody ? convert_functionBody__functionBody(self, [...path, 'function_body'], _functionBody) : {};
   const functionResultType: TObject = _functionResult ? convert_functionResult__type(self, [...path, 'function_signature', 'function_result'], _functionResult) : {};
 
   return {
@@ -66,18 +68,21 @@ export function convert_functionResult__type(self: SwiftKotlinConverter, path: s
 }
 
 export function convert_functionBody__functionBody(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-  return {
+  const codeBlock = TreeWalk.firstArrayOrNullByKeys(['code_block'], input);
+  if (!codeBlock) return {
     "functionBody": [
       {
         "block": [
           "{",
-          "",
-          {
-            "statements": []
-          },
-          "}"
+          "}",
         ]
       }
+    ]
+  };
+  const block = convert_codeBlock__block(self, [...path, 'code_block'], codeBlock);
+  return {
+    "functionBody": [
+      block
     ]
   };
 }

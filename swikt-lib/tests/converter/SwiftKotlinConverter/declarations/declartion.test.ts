@@ -74,10 +74,6 @@ Deno.test('convert_declaration__declaration/function_declaration', () => {
               {
                 "block": [
                   "{",
-                  "",
-                  {
-                    "statements": []
-                  },
                   "}"
                 ]
               }
@@ -89,7 +85,7 @@ Deno.test('convert_declaration__declaration/function_declaration', () => {
   }]);
 });
 
-Deno.test('SwiftConverter.convert_declaration__declaration/struct_declaration', () => {
+Deno.test('convert_declaration__declaration/struct_declaration', () => {
   const input: TArray = [
     {
       "struct_declaration": [
@@ -139,4 +135,160 @@ Deno.test('SwiftConverter.convert_declaration__declaration/struct_declaration', 
       }
     ]
   }]);
+});
+
+Deno.test('convert_declaration__declaration/propertyDeclaration', () => {
+  const input: TArray = [
+    {
+      "constant_declaration": [
+        "let",
+        {
+          "pattern_initializer_list": [
+            {
+              "pattern_initializer": [
+                {
+                  "pattern": [
+                    {
+                      "identifier_pattern": [
+                        {
+                          "identifier": [
+                            "a"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "initializer": [
+                    "=",
+                    {
+                      "expression": [
+                        {
+                          "prefix_expression": [
+                            {
+                              "postfix_expression": [
+                                {
+                                  "primary_expression": [
+                                    {
+                                      "literal_expression": [
+                                        {
+                                          "literal": [
+                                            {
+                                              "numeric_literal": [
+                                                {
+                                                  "integer_literal": [
+                                                    "1"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ];
+  const output = convert_declaration__declarations(converter, ['declaration'], input);
+  assertEquals(output, [
+    {
+      "declaration": [
+        {
+          "propertyDeclaration": [
+            "val",
+            {
+              "variableDeclaration": [
+                {
+                  "simpleIdentifier": [
+                    "a"
+                  ]
+                }
+              ]
+            },
+            "=",
+            {
+              "expression": [
+                {
+                  "disjunction": [
+                    {
+                      "conjunction": [
+                        {
+                          "equality": [
+                            {
+                              "comparison": [
+                                {
+                                  "infixOperation": [
+                                    {
+                                      "elvisExpression": [
+                                        {
+                                          "infixFunctionCall": [
+                                            {
+                                              "rangeExpression": [
+                                                {
+                                                  "additiveExpression": [
+                                                    {
+                                                      "multiplicativeExpression": [
+                                                        {
+                                                          "asExpression": [
+                                                            {
+                                                              "prefixUnaryExpression": [
+                                                                {
+                                                                  "postfixUnaryExpression": [
+                                                                    {
+                                                                      "primaryExpression": [
+                                                                        {
+                                                                          "literalConstant": [
+                                                                            "1"
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]);
 });

@@ -2,54 +2,47 @@ import {TArray} from "../../../../src/util/Tree.ts";
 import {assertEquals} from "https://deno.land/std@0.143.0/testing/asserts.ts";
 import {SwiftKotlinConverter} from "../../../../src/converter/SwiftKotlinConverter.ts";
 import {
-  convert_constantDeclaration__propertyDeclaration
+  convert_constantDeclaration__propertyDeclarations,
+  convert_patternInitializer__propertyDeclaration
 } from "../../../../src/converter/declarations/constantDeclaration.ts";
 
 const converter = new SwiftKotlinConverter();
-Deno.test('convert_propertyDeclaration__propertyDeclaration', () => {
+
+Deno.test('convert_patternInitializer__propertyDeclaration', () => {
   const input: TArray = [
-    "let",
     {
-      "pattern_initializer_list": [
+      "pattern": [
         {
-          "pattern_initializer": [
+          "identifier_pattern": [
             {
-              "pattern": [
-                {
-                  "identifier_pattern": [
-                    {
-                      "identifier": [
-                        "Sample"
-                      ]
-                    }
-                  ]
-                }
+              "identifier": [
+                "Sample"
               ]
-            },
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "initializer": [
+        "=",
+        {
+          "expression": [
             {
-              "initializer": [
-                "=",
+              "prefix_expression": [
                 {
-                  "expression": [
+                  "postfix_expression": [
                     {
-                      "prefix_expression": [
+                      "primary_expression": [
                         {
-                          "postfix_expression": [
+                          "literal_expression": [
                             {
-                              "primary_expression": [
+                              "literal": [
                                 {
-                                  "literal_expression": [
+                                  "numeric_literal": [
                                     {
-                                      "literal": [
-                                        {
-                                          "numeric_literal": [
-                                            {
-                                              "integer_literal": [
-                                                "1"
-                                              ]
-                                            }
-                                          ]
-                                        }
+                                      "integer_literal": [
+                                        "1"
                                       ]
                                     }
                                   ]
@@ -70,7 +63,7 @@ Deno.test('convert_propertyDeclaration__propertyDeclaration', () => {
     }
   ];
 
-  const output = convert_constantDeclaration__propertyDeclaration(converter, [], input);
+  const output = convert_patternInitializer__propertyDeclaration(converter, [], input);
   assertEquals(output, {
     "propertyDeclaration": [
       "val",
@@ -152,3 +145,289 @@ Deno.test('convert_propertyDeclaration__propertyDeclaration', () => {
     ]
   });
 });
+
+Deno.test('convert_constantDeclaration__propertyDeclarations', () => {
+  const input: TArray = [
+    "let",
+    {
+      "pattern_initializer_list": [
+        {
+          "pattern_initializer": [
+            {
+              "pattern": [
+                {
+                  "identifier_pattern": [
+                    {
+                      "identifier": [
+                        "a"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "initializer": [
+                "=",
+                {
+                  "expression": [
+                    {
+                      "prefix_expression": [
+                        {
+                          "postfix_expression": [
+                            {
+                              "primary_expression": [
+                                {
+                                  "literal_expression": [
+                                    {
+                                      "literal": [
+                                        {
+                                          "numeric_literal": [
+                                            {
+                                              "integer_literal": [
+                                                "1"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        ",",
+        {
+          "pattern_initializer": [
+            {
+              "pattern": [
+                {
+                  "identifier_pattern": [
+                    {
+                      "identifier": [
+                        "b"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "initializer": [
+                "=",
+                {
+                  "expression": [
+                    {
+                      "prefix_expression": [
+                        {
+                          "postfix_expression": [
+                            {
+                              "primary_expression": [
+                                {
+                                  "literal_expression": [
+                                    {
+                                      "literal": [
+                                        {
+                                          "numeric_literal": [
+                                            {
+                                              "integer_literal": [
+                                                "2"
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  const output = convert_constantDeclaration__propertyDeclarations(converter, [], input);
+  assertEquals(output, [
+    {
+      "propertyDeclaration": [
+        "val",
+        {
+          "variableDeclaration": [
+            {
+              "simpleIdentifier": [
+                "a"
+              ]
+            }
+          ]
+        },
+        "=",
+        {
+          "expression": [
+            {
+              "disjunction": [
+                {
+                  "conjunction": [
+                    {
+                      "equality": [
+                        {
+                          "comparison": [
+                            {
+                              "infixOperation": [
+                                {
+                                  "elvisExpression": [
+                                    {
+                                      "infixFunctionCall": [
+                                        {
+                                          "rangeExpression": [
+                                            {
+                                              "additiveExpression": [
+                                                {
+                                                  "multiplicativeExpression": [
+                                                    {
+                                                      "asExpression": [
+                                                        {
+                                                          "prefixUnaryExpression": [
+                                                            {
+                                                              "postfixUnaryExpression": [
+                                                                {
+                                                                  "primaryExpression": [
+                                                                    {
+                                                                      "literalConstant": [
+                                                                        "1"
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+      ]
+    },
+    {
+      "propertyDeclaration": [
+        "val",
+        {
+          "variableDeclaration": [
+            {
+              "simpleIdentifier": [
+                "b"
+              ]
+            }
+          ]
+        },
+        "=",
+        {
+          "expression": [
+            {
+              "disjunction": [
+                {
+                  "conjunction": [
+                    {
+                      "equality": [
+                        {
+                          "comparison": [
+                            {
+                              "infixOperation": [
+                                {
+                                  "elvisExpression": [
+                                    {
+                                      "infixFunctionCall": [
+                                        {
+                                          "rangeExpression": [
+                                            {
+                                              "additiveExpression": [
+                                                {
+                                                  "multiplicativeExpression": [
+                                                    {
+                                                      "asExpression": [
+                                                        {
+                                                          "prefixUnaryExpression": [
+                                                            {
+                                                              "postfixUnaryExpression": [
+                                                                {
+                                                                  "primaryExpression": [
+                                                                    {
+                                                                      "literalConstant": [
+                                                                        "2"
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+  ]);
+});
+

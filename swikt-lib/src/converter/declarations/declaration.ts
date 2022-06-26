@@ -18,6 +18,11 @@ export function convert_declaration__declarations(self: SwiftKotlinConverter, pa
         if (TreeWalk.isEmptyObject(result)) return []
         return [result];
       }
+      case 'constant_declaration': {
+        const result = self.convert_constantDeclaration__propertyDeclarations(self, [...path, 'constant_declaration'], elements);
+        if (TreeWalk.isEmptyArray(result)) return []
+        return result;
+      }
       default: {
         return []
       }

@@ -48,6 +48,20 @@ export function convert_statement__topLevelObject(self: SwiftKotlinConverter, pa
 }
 
 export function convert_statement__statements(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
-  // FIXME(mattak): implement
-  return []
+  return input.flatMap(x => {
+    const [key, elements] = TreeWalk.firstKeyValueOrNull(x);
+    if (!key) return [];
+    switch(key) {
+      case 'declaration': {
+        return self.convert_declaration__declarations(self, [...path, 'declaration'], elements);
+      }
+      default: {
+        return [];
+      }
+    }
+  }).map(x => {
+    return {
+      statement: [x]
+    }
+  });
 }

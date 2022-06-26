@@ -1,13 +1,22 @@
 import {SwiftKotlinConverter} from "../../../../src/converter/SwiftKotlinConverter.ts";
 import {assertEquals} from "https://deno.land/std@0.143.0/testing/asserts.ts";
-import {TArray} from "../../../../src/util/Tree.ts";
+import {TArray, TObject} from "../../../../src/util/Tree.ts";
 import {
+  convert_functionBody__functionBody,
   convert_functionDeclaration__functionDeclaration,
   convert_functionResult__type,
   convert_parameterClause__functionValueParameters
 } from "../../../../src/converter/declarations/functionDeclaration.ts";
 
-const converter = new SwiftKotlinConverter();
+const converter = new SwiftKotlinConverter({
+  statement(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
+    return [
+      {
+        'statement': []
+      }
+    ];
+  }
+});
 
 Deno.test('convert_functionDeclaration__functionDeclaration/simpleFunction', () => {
   const input: TArray = [
@@ -66,10 +75,6 @@ Deno.test('convert_functionDeclaration__functionDeclaration/simpleFunction', () 
           {
             "block": [
               "{",
-              "",
-              {
-                "statements": []
-              },
               "}"
             ]
           }
@@ -189,10 +194,6 @@ Deno.test('convert_functionDeclaration__functionDeclaration/simpleResult', () =>
           {
             "block": [
               "{",
-              "",
-              {
-                "statements": []
-              },
               "}"
             ]
           }
@@ -384,6 +385,42 @@ Deno.test('convert_parameterClause__functionValueParameters/multipleParams', () 
         ]
       },
       ")"
+    ]
+  });
+});
+
+Deno.test('convert_functionBody__functionBody', () => {
+  const input: TArray = [
+    {
+      "code_block": [
+        "{",
+        {
+          "statements": [
+            {
+              "statement": []
+            }
+          ]
+        },
+        "}"
+      ]
+    }
+  ];
+  const output = convert_functionBody__functionBody(converter, [], input);
+  assertEquals(output, {
+    "functionBody": [
+      {
+        "block": [
+          "{",
+          {
+            "statements": [
+              {
+                "statement": []
+              }
+            ]
+          },
+          "}"
+        ]
+      }
     ]
   });
 });
