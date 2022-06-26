@@ -5,7 +5,7 @@ import {convert_statement__topLevelObject} from "../../../../src/converter/state
 
 const converter = new SwiftKotlinConverter();
 
-Deno.test('statement/topLevelObject/empty', () => {
+Deno.test('convert_statement__topLevelObject/empty', () => {
   const input: TArray = [
     {
       declaration: [
