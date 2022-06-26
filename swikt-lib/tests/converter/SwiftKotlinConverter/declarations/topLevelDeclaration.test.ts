@@ -1,10 +1,10 @@
 import {SwiftKotlinConverter} from "../../../../src/converter/SwiftKotlinConverter.ts";
-import {TArray, TObject} from "../../../../src/util/Tree.ts";
+import {TObject} from "../../../../src/util/Tree.ts";
 import {assertEquals} from "https://deno.land/std@0.143.0/testing/asserts.ts";
-import {convert___packageHeader, convert__importList} from "../../../../src/converter/declarations/topLevelDeclaration.ts";
 
 const converter = new SwiftKotlinConverter();
 
+/*
 Deno.test('convert___packageHeader', () => {
   converter.kotlinTable = {
     package: 'com.example.test'
@@ -70,6 +70,7 @@ Deno.test('convert__importList', () => {
     ],
   });
 });
+*/
 
 Deno.test('top_level/overall', () => {
   converter.kotlinTable = {

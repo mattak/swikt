@@ -1,15 +1,16 @@
 import {AbstractConverter} from "./AbstractConverter.ts";
 import {Converter} from "./Converter.ts";
 import {TArray, TObject} from "../util/Tree.ts";
-import {convert_declaration__declaration} from "./declarations/declaration.ts";
+import {convert_declaration__declarations} from "./declarations/declaration.ts";
 import {convert_structDeclaration__objectDeclaration,} from "./declarations/structDeclaration.ts";
-import {convert_statement__statement,} from "./statements/statements.ts";
+import {convert_statement__statements} from "./statements/statements.ts";
 import {
   convert___packageHeader,
   convert__importList,
   convert_topLevel__kotlinFile
 } from "./declarations/topLevelDeclaration.ts";
 import {convert_functionDeclaration__functionDeclaration} from "./declarations/functionDeclaration.ts";
+import {TreeWalk} from "../util/TreeWalk.ts";
 
 export interface KotlinInfoTable {
   package: string, // e.g. com.example.sample
@@ -24,8 +25,8 @@ export interface SwiftKotlinConvertTable {
 export class SwiftKotlinConverter extends AbstractConverter<Converter<SwiftKotlinConverter>> {
   private swiftTable: { [key: string]: Converter<SwiftKotlinConverter> } = {
     top_level: this.convert_topLevel__kotlinFile,
-    declaration: this.convert_declaration__declaration,
-    statement: this.convert_statement__statement,
+    declaration: this.convert_declaration__declarations,
+    statement: this.convert_statement__statements,
   };
   private _kotlinTable: KotlinInfoTable = <KotlinInfoTable>{};
 
@@ -53,11 +54,12 @@ export class SwiftKotlinConverter extends AbstractConverter<Converter<SwiftKotli
   }
 
   convert(input: TObject): TObject {
-    return this.visitRoot('top_level', input);
+    const result: TObject[] = this.visitRoot('top_level', input);
+    return TreeWalk.firstObjectOrDefault(result, {});
   }
 
-  convert_topLevel__kotlinFile(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-    return convert_topLevel__kotlinFile(self, path, input);
+  convert_topLevel__kotlinFile(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
+    return [convert_topLevel__kotlinFile(self, path, input)];
   }
 
   convert___packageHeader(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
@@ -68,12 +70,12 @@ export class SwiftKotlinConverter extends AbstractConverter<Converter<SwiftKotli
     return convert__importList(self, path, input);
   }
 
-  convert_statement__statement(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-    return convert_statement__statement(self, path, input);
+  convert_statement__statements(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
+    return convert_statement__statements(self, path, input);
   }
 
-  convert_declaration__declaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-    return convert_declaration__declaration(self, path, input)
+  convert_declaration__declarations(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
+    return convert_declaration__declarations(self, path, input)
   }
 
   convert_structDeclaration__objectDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {

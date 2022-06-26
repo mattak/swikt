@@ -47,7 +47,7 @@ export function convert_structMembers__classMemberDeclarations(self: SwiftKotlin
 export function convert_structMember__classMemberDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
   const declarations: TObject[] = input.flatMap((x: TArrayElement) => {
     const array = TreeWalk.getArrayOrNull('declaration', x);
-    if (array) return [self.visit([...path, 'declaration'], array)];
+    if (array) return self.visit([...path, 'declaration'], array);
     return [];
   });
   return {

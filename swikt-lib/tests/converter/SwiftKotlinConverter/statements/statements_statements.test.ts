@@ -4,12 +4,23 @@ import {TArray, TObject} from "../../../../src/util/Tree.ts";
 import {assertEquals} from "https://deno.land/std@0.143.0/testing/asserts.ts";
 
 const converter = new SwiftKotlinConverter({
-  statement(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-    return {statement: []};
+  statement(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
+    return [
+      {statement: []},
+      {statement: []},
+    ];
   }
 });
 
-Deno.test('convert_statements__statements', () => {
+Deno.test('convert_statements__statements/empty', () => {
+  const input: TArray = [];
+  const output = convert_statements__statements(converter, [], input);
+  assertEquals(output, {
+    "statements": []
+  });
+});
+
+Deno.test('convert_statements__statements/multiple', () => {
   const input: TArray = [
     {
       "statement": [
@@ -22,7 +33,10 @@ Deno.test('convert_statements__statements', () => {
     "statements": [
       {
         "statement": []
-      }
+      },
+      {
+        "statement": []
+      },
     ]
   });
 });

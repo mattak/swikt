@@ -1,16 +1,17 @@
 import {SwiftKotlinConverter} from "../../../../src/converter/SwiftKotlinConverter.ts";
 import {TArray} from "../../../../src/util/Tree.ts";
 import {assertEquals} from "https://deno.land/std@0.143.0/testing/asserts.ts";
+import {convert_declaration__declarations} from "../../../../src/converter/declarations/declaration.ts";
 
 const converter = new SwiftKotlinConverter();
 
-Deno.test('SwiftConverter.convert_declaration__declaration/default', () => {
+Deno.test('convert_declaration__declaration/default', () => {
   const input: TArray = [];
-  const output = converter.convert_declaration__declaration(converter, [], input);
-  assertEquals(output, {});
+  const output = convert_declaration__declarations(converter, [], input);
+  assertEquals(output, []);
 });
 
-Deno.test('SwiftConverter.convert_declaration__declaration/function_declaration', () => {
+Deno.test('convert_declaration__declaration/function_declaration', () => {
   const input: TArray = [
     {
       "function_declaration": [
@@ -51,8 +52,8 @@ Deno.test('SwiftConverter.convert_declaration__declaration/function_declaration'
       ]
     }
   ];
-  const output = converter.convert_declaration__declaration(converter, ['declaration'], input);
-  assertEquals(output, {
+  const output = convert_declaration__declarations(converter, ['declaration'], input);
+  assertEquals(output, [{
     "declaration": [
       {
         "functionDeclaration": [
@@ -85,7 +86,7 @@ Deno.test('SwiftConverter.convert_declaration__declaration/function_declaration'
         ]
       }
     ]
-  });
+  }]);
 });
 
 Deno.test('SwiftConverter.convert_declaration__declaration/struct_declaration', () => {
@@ -114,8 +115,8 @@ Deno.test('SwiftConverter.convert_declaration__declaration/struct_declaration', 
       ]
     }
   ];
-  const output = converter.convert_declaration__declaration(converter, ['declaration'], input);
-  assertEquals(output, {
+  const output = convert_declaration__declarations(converter, ['declaration'], input);
+  assertEquals(output, [{
     "declaration": [
       {
         "objectDeclaration": [
@@ -137,5 +138,5 @@ Deno.test('SwiftConverter.convert_declaration__declaration/struct_declaration', 
         ]
       }
     ]
-  });
+  }]);
 });

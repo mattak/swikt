@@ -6,7 +6,7 @@ export function convert_statements__statements(self: SwiftKotlinConverter, path:
   const statements = input.flatMap(x => {
     const statement = TreeWalk.getArrayOrNull('statement', x);
     if (!statement) return [];
-    return [self.visit([...path, 'statement'], statement)];
+    return self.visit([...path, 'statement'], statement);
   });
   return {
     statements: statements,
@@ -39,16 +39,15 @@ export function convert_statement__topLevelObject(self: SwiftKotlinConverter, pa
   const declaration = TreeWalk.firstArrayOrNullByKeys(['declaration'], input);
   if (!declaration) return {}
 
-  const result = self.convert_declaration__declaration(self, [...path, 'declaration'], declaration)
-  if (TreeWalk.isEmptyObject(result)) return {};
+  const result = self.convert_declaration__declarations(self, [...path, 'declaration'], declaration)
+  if (TreeWalk.isEmptyArray(result)) return {};
 
   return {
-    topLevelObject: [
-      result
-    ]
+    topLevelObject: result
   }
 }
 
-export function convert_statement__statement(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
-  return {}
+export function convert_statement__statements(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
+  // FIXME(mattak): implement
+  return []
 }

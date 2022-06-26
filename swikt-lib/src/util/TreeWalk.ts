@@ -21,6 +21,11 @@ export class TreeWalk {
     return null
   }
 
+  public static firstObjectOrDefault(target: TObject[], defaultObject: TObject): TObject {
+    if (this.isEmptyArray(target)) return defaultObject;
+    return target[0];
+  }
+
   // keys: ['a','b']
   // input: [ { a: [ { b: [ 'c' ] } ] } ]
   // return: ['c']

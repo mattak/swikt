@@ -8,8 +8,8 @@ import {
 } from "../../../../src/converter/declarations/structDeclaration.ts";
 
 const converter = new SwiftKotlinConverter({
-  declaration(self, tree, input): TObject {
-    return {declaration: ['OK']}
+  declaration(self, tree, input): TObject[] {
+    return [{declaration: ['OK']}]
   }
 });
 

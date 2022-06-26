@@ -2,7 +2,7 @@ import {TArray, TObject} from "../../util/Tree.ts";
 import {TreeWalk} from "../../util/TreeWalk.ts";
 import {SwiftKotlinConverter} from "../SwiftKotlinConverter.ts";
 
-export function convert_declaration__declaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
+export function convert_declaration__declarations(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
   const array: TObject[] = input.flatMap(x => {
     const [key, elements] = TreeWalk.firstKeyValueOrNull(x);
     if (TreeWalk.isEmptyArray(elements)) return []
@@ -22,10 +22,12 @@ export function convert_declaration__declaration(self: SwiftKotlinConverter, pat
         return []
       }
     }
+  }).map((x: TObject) => {
+    return {
+      declaration: [x]
+    }
   });
-  if (TreeWalk.isEmptyArray(array)) return {}
+  if (TreeWalk.isEmptyArray(array)) return array;
 
-  return {
-    declaration: array
-  };
+  return array;
 }
