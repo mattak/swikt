@@ -13773,65 +13773,31 @@ module.exports = __webpack_require__(3121)
 /***/ }),
 
 /***/ 7412:
-/***/ (function(__unused_webpack_module, exports) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.AbstractConverter = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
 class AbstractConverter {
     getConverter(key) {
         return null;
     }
     visit(path, input) {
         if (path.length <= 0)
-            return {};
+            return [];
         const key = path[path.length - 1];
         const converter = this.getConverter(key);
         if (!converter)
-            return {};
+            return [];
         return converter(this, path, input);
     }
-    visitObject(path, input) {
-        let result = {};
-        for (let key of Object.keys(input)) {
-            path.push(key);
-            const element = input[key];
-            if (Array.isArray(element)) {
-                const converter = this.getConverter(key);
-                if (converter) {
-                    result = {
-                        ...result,
-                        ...converter(this, path, element),
-                    };
-                }
-                else {
-                    result = {
-                        ...result,
-                        ...this.visitArray(path, element),
-                    };
-                }
-            }
-            path.pop();
-        }
-        return result;
-    }
-    visitArray(path, input) {
-        if (path.length < 1)
-            return {};
-        const key = path[path.length - 1];
-        const result = [];
-        for (let element of input) {
-            if (typeof element === "string") {
-                result.push(element);
-            }
-            else if (typeof element === 'object') {
-                result.push(this.visitObject(path, element));
-            }
-        }
-        const obj = {};
-        obj[key] = result;
-        return obj;
+    visitRoot(rootKey, input) {
+        const array = TreeWalk_1.TreeWalk.getArrayOrNull(rootKey, input);
+        if (!array)
+            return [];
+        return this.visit([rootKey], array);
     }
 }
 exports.AbstractConverter = AbstractConverter;
@@ -13852,12 +13818,13 @@ const structDeclaration_1 = __webpack_require__(7475);
 const statements_1 = __webpack_require__(9740);
 const topLevelDeclaration_1 = __webpack_require__(1500);
 const functionDeclaration_1 = __webpack_require__(1403);
+const constantDeclaration_1 = __webpack_require__(9796);
+const TreeWalk_1 = __webpack_require__(2648);
 class SwiftKotlinConverter extends AbstractConverter_1.AbstractConverter {
     swiftTable = {
-        'top_level': this.convert_topLevel__kotlinFile,
-        'struct_declaration': this.convert_structDeclaration__objectDeclaration,
-        'statement': this.convert_statement__topLevelObject,
-        'declaration': this.convert_declaration__declaration,
+        top_level: this.convert_topLevel__kotlinFile,
+        declaration: this.convert_declaration__declarations,
+        statement: this.convert_statement__statements,
     };
     _kotlinTable = {};
     constructor(convertTable) {
@@ -13880,8 +13847,12 @@ class SwiftKotlinConverter extends AbstractConverter_1.AbstractConverter {
             return this.swiftTable[key];
         return super.getConverter(key);
     }
+    convert(input) {
+        const result = this.visitRoot('top_level', input);
+        return TreeWalk_1.TreeWalk.firstObjectOrDefault(result, {});
+    }
     convert_topLevel__kotlinFile(self, path, input) {
-        return (0, topLevelDeclaration_1.convert_topLevel__kotlinFile)(self, path, input);
+        return [(0, topLevelDeclaration_1.convert_topLevel__kotlinFile)(self, path, input)];
     }
     convert___packageHeader(self, path, input) {
         return (0, topLevelDeclaration_1.convert___packageHeader)(self, path, input);
@@ -13889,17 +13860,11 @@ class SwiftKotlinConverter extends AbstractConverter_1.AbstractConverter {
     convert__importList(self, path, input) {
         return (0, topLevelDeclaration_1.convert__importList)(self, path, input);
     }
-    convert_statements__importList(self, path, input) {
-        return (0, statements_1.convert_statements__importList)(self, path, input);
+    convert_statement__statements(self, path, input) {
+        return (0, statements_1.convert_statement__statements)(self, path, input);
     }
-    convert_statements__topLevelObjectList(self, path, input) {
-        return (0, statements_1.convert_statements__topLevelObjectList)(self, path, input);
-    }
-    convert_statement__topLevelObject(self, path, input) {
-        return (0, statements_1.convert_statement__topLevelObject)(self, path, input);
-    }
-    convert_declaration__declaration(self, path, input) {
-        return (0, declaration_1.convert_declaration__declaration)(self, path, input);
+    convert_declaration__declarations(self, path, input) {
+        return (0, declaration_1.convert_declaration__declarations)(self, path, input);
     }
     convert_structDeclaration__objectDeclaration(self, path, input) {
         return (0, structDeclaration_1.convert_structDeclaration__objectDeclaration)(self, path, input);
@@ -13907,9 +13872,160 @@ class SwiftKotlinConverter extends AbstractConverter_1.AbstractConverter {
     convert_functionDeclaration__functionDeclaration(self, path, input) {
         return (0, functionDeclaration_1.convert_functionDeclaration__functionDeclaration)(self, path, input);
     }
+    convert_constantDeclaration__propertyDeclarations(self, path, input) {
+        return (0, constantDeclaration_1.convert_constantDeclaration__propertyDeclarations)(self, path, input);
+    }
 }
 exports.SwiftKotlinConverter = SwiftKotlinConverter;
 //# sourceMappingURL=SwiftKotlinConverter.js.map
+
+/***/ }),
+
+/***/ 4473:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_codeBlock__block = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+const statements_1 = __webpack_require__(9740);
+function convert_codeBlock__block(self, path, input) {
+    const statements = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['statements'], input);
+    if (!statements)
+        return {
+            "block": [
+                "{",
+                "}",
+            ],
+        };
+    const result = (0, statements_1.convert_statements__statements)(self, [...path, 'statements'], statements);
+    if (TreeWalk_1.TreeWalk.isEmptyObject(result))
+        return {
+            "block": [
+                "{",
+                "}",
+            ]
+        };
+    return {
+        "block": [
+            "{",
+            result,
+            "}",
+        ]
+    };
+}
+exports.convert_codeBlock__block = convert_codeBlock__block;
+//# sourceMappingURL=codeBlock.js.map
+
+/***/ }),
+
+/***/ 9796:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_patternInitializer__propertyDeclaration = exports.convert_constantDeclaration__propertyDeclarations = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+function convert_constantDeclaration__propertyDeclarations(self, path, input) {
+    const initializerList = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['pattern_initializer_list'], input);
+    if (!initializerList)
+        return [];
+    return initializerList.flatMap((x) => {
+        const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(x);
+        if (!key)
+            return [];
+        return [convert_patternInitializer__propertyDeclaration(self, [...path, 'pattern_initializer'], elements)];
+    });
+}
+exports.convert_constantDeclaration__propertyDeclarations = convert_constantDeclaration__propertyDeclarations;
+function convert_patternInitializer__propertyDeclaration(self, path, input) {
+    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['pattern', 'identifier_pattern', 'identifier'], input) ?? '';
+    const value = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['initializer', 'expression', 'prefix_expression', 'postfix_expression', 'primary_expression', 'literal_expression', 'literal', 'numeric_literal', 'integer_literal'], input) ?? '';
+    return {
+        "propertyDeclaration": [
+            "val",
+            {
+                "variableDeclaration": [
+                    {
+                        "simpleIdentifier": [
+                            name
+                        ]
+                    }
+                ]
+            },
+            "=",
+            {
+                "expression": [
+                    {
+                        "disjunction": [
+                            {
+                                "conjunction": [
+                                    {
+                                        "equality": [
+                                            {
+                                                "comparison": [
+                                                    {
+                                                        "infixOperation": [
+                                                            {
+                                                                "elvisExpression": [
+                                                                    {
+                                                                        "infixFunctionCall": [
+                                                                            {
+                                                                                "rangeExpression": [
+                                                                                    {
+                                                                                        "additiveExpression": [
+                                                                                            {
+                                                                                                "multiplicativeExpression": [
+                                                                                                    {
+                                                                                                        "asExpression": [
+                                                                                                            {
+                                                                                                                "prefixUnaryExpression": [
+                                                                                                                    {
+                                                                                                                        "postfixUnaryExpression": [
+                                                                                                                            {
+                                                                                                                                "primaryExpression": [
+                                                                                                                                    {
+                                                                                                                                        "literalConstant": [
+                                                                                                                                            value,
+                                                                                                                                        ]
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+        ]
+    };
+}
+exports.convert_patternInitializer__propertyDeclaration = convert_patternInitializer__propertyDeclaration;
+//# sourceMappingURL=constantDeclaration.js.map
 
 /***/ }),
 
@@ -13919,9 +14035,9 @@ exports.SwiftKotlinConverter = SwiftKotlinConverter;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.convert_declaration__declaration = void 0;
+exports.convert_declaration__declarations = void 0;
 const TreeWalk_1 = __webpack_require__(2648);
-function convert_declaration__declaration(self, path, input) {
+function convert_declaration__declarations(self, path, input) {
     const array = input.flatMap(x => {
         const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(x);
         if (TreeWalk_1.TreeWalk.isEmptyArray(elements))
@@ -13939,18 +14055,26 @@ function convert_declaration__declaration(self, path, input) {
                     return [];
                 return [result];
             }
+            case 'constant_declaration': {
+                const result = self.convert_constantDeclaration__propertyDeclarations(self, [...path, 'constant_declaration'], elements);
+                if (TreeWalk_1.TreeWalk.isEmptyArray(result))
+                    return [];
+                return result;
+            }
             default: {
                 return [];
             }
         }
+    }).map((x) => {
+        return {
+            declaration: [x]
+        };
     });
     if (TreeWalk_1.TreeWalk.isEmptyArray(array))
-        return {};
-    return {
-        declaration: array
-    };
+        return array;
+    return array;
 }
-exports.convert_declaration__declaration = convert_declaration__declaration;
+exports.convert_declaration__declarations = convert_declaration__declarations;
 //# sourceMappingURL=declaration.js.map
 
 /***/ }),
@@ -13967,12 +14091,14 @@ const TreeWalk_1 = __webpack_require__(2648);
 const parameter_1 = __webpack_require__(1903);
 const join_1 = __webpack_require__(3063);
 const type_1 = __webpack_require__(5393);
+const codeBlock_1 = __webpack_require__(4473);
 function convert_functionDeclaration__functionDeclaration(self, path, input) {
     const _name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(["function_name", "identifier"], input);
     const _parameterClause = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['function_signature', 'parameter_clause'], input);
     const _functionResult = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['function_signature', 'function_result'], input);
+    const _functionBody = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['function_body'], input);
     const functionValueParameters = _parameterClause ? convert_parameterClause__functionValueParameters(self, [...path, 'function_signature', 'parameter_clause'], _parameterClause) : {};
-    const functionBody = convert_functionBody__functionBody(self, path, input);
+    const functionBody = _functionBody ? convert_functionBody__functionBody(self, [...path, 'function_body'], _functionBody) : {};
     const functionResultType = _functionResult ? convert_functionResult__type(self, [...path, 'function_signature', 'function_result'], _functionResult) : {};
     return {
         "functionDeclaration": [
@@ -14026,18 +14152,22 @@ function convert_functionResult__type(self, path, input) {
 }
 exports.convert_functionResult__type = convert_functionResult__type;
 function convert_functionBody__functionBody(self, path, input) {
+    const codeBlock = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['code_block'], input);
+    if (!codeBlock)
+        return {
+            "functionBody": [
+                {
+                    "block": [
+                        "{",
+                        "}",
+                    ]
+                }
+            ]
+        };
+    const block = (0, codeBlock_1.convert_codeBlock__block)(self, [...path, 'code_block'], codeBlock);
     return {
         "functionBody": [
-            {
-                "block": [
-                    "{",
-                    "",
-                    {
-                        "statements": []
-                    },
-                    "}"
-                ]
-            }
+            block
         ]
     };
 }
@@ -14125,7 +14255,7 @@ function convert_structMember__classMemberDeclaration(self, path, input) {
     const declarations = input.flatMap((x) => {
         const array = TreeWalk_1.TreeWalk.getArrayOrNull('declaration', x);
         if (array)
-            return [self.visit([...path, 'declaration'], array)];
+            return self.visit([...path, 'declaration'], array);
         return [];
     });
     return {
@@ -14148,6 +14278,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.convert__importList = exports.convert___packageHeader = exports.convert_topLevel__kotlinFile = void 0;
 const TreeWalk_1 = __webpack_require__(2648);
 const identifier_1 = __webpack_require__(1825);
+const statements_1 = __webpack_require__(9740);
 function convert_topLevel__kotlinFile(self, path, input) {
     // package
     const results = [];
@@ -14155,12 +14286,12 @@ function convert_topLevel__kotlinFile(self, path, input) {
     const statements = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['statements'], input);
     if (statements) {
         // imports
-        const kotlinImportList = self.convert_statements__importList(self, [...path, 'statements'], statements);
+        const kotlinImportList = (0, statements_1.convert_statements__importList)(self, [...path, 'statements'], statements);
         if (Object.keys(kotlinImportList).length > 0) {
             results.push(kotlinImportList);
         }
         // topLevelObjects
-        const topLevelObjects = self.convert_statements__topLevelObjectList(self, [...path, 'statements'], statements);
+        const topLevelObjects = (0, statements_1.convert_statements__topLevelObjectList)(self, [...path, 'statements'], statements);
         results.push(...topLevelObjects);
     }
     return {
@@ -14196,8 +14327,20 @@ exports.convert__importList = convert__importList;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-exports.convert_statement__topLevelObject = exports.convert_statements__topLevelObjectList = exports.convert_statements__importList = void 0;
+exports.convert_statement__statements = exports.convert_statement__topLevelObject = exports.convert_statements__topLevelObjectList = exports.convert_statements__importList = exports.convert_statements__statements = void 0;
 const TreeWalk_1 = __webpack_require__(2648);
+function convert_statements__statements(self, path, input) {
+    const statements = input.flatMap(x => {
+        const statement = TreeWalk_1.TreeWalk.getArrayOrNull('statement', x);
+        if (!statement)
+            return [];
+        return self.visit([...path, 'statement'], statement);
+    });
+    return {
+        statements: statements,
+    };
+}
+exports.convert_statements__statements = convert_statements__statements;
 function convert_statements__importList(self, path, input) {
     const importDeclaration = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['statement', 'declaration', 'import_declaration'], input);
     if (importDeclaration) {
@@ -14215,7 +14358,7 @@ function convert_statements__topLevelObjectList(self, path, input) {
         const statement = TreeWalk_1.TreeWalk.getArrayOrNull('statement', x);
         if (!statement)
             return [];
-        const result = self.convert_statement__topLevelObject(self, [...path, 'statement'], statement);
+        const result = convert_statement__topLevelObject(self, [...path, 'statement'], statement);
         if (TreeWalk_1.TreeWalk.isEmptyObject(result))
             return [];
         return [result];
@@ -14226,16 +14369,34 @@ function convert_statement__topLevelObject(self, path, input) {
     const declaration = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['declaration'], input);
     if (!declaration)
         return {};
-    const result = self.convert_declaration__declaration(self, [...path, 'declaration'], declaration);
-    if (TreeWalk_1.TreeWalk.isEmptyObject(result))
+    const result = self.convert_declaration__declarations(self, [...path, 'declaration'], declaration);
+    if (TreeWalk_1.TreeWalk.isEmptyArray(result))
         return {};
     return {
-        topLevelObject: [
-            result
-        ]
+        topLevelObject: result
     };
 }
 exports.convert_statement__topLevelObject = convert_statement__topLevelObject;
+function convert_statement__statements(self, path, input) {
+    return input.flatMap(x => {
+        const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(x);
+        if (!key)
+            return [];
+        switch (key) {
+            case 'declaration': {
+                return self.convert_declaration__declarations(self, [...path, 'declaration'], elements);
+            }
+            default: {
+                return [];
+            }
+        }
+    }).map(x => {
+        return {
+            statement: [x]
+        };
+    });
+}
+exports.convert_statement__statements = convert_statement__statements;
 //# sourceMappingURL=statements.js.map
 
 /***/ }),
@@ -14268,8 +14429,21 @@ function convert_type__type_(self, path, input) {
 }
 exports.convert_type__type_ = convert_type__type_;
 function convert_protocolCompositionType__type_(self, path, input) {
-    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['type_identifier', 'type_name', 'identifier'], input);
-    return (0, type_1.createPlainUserType)(name ?? '__UNDEFINED__');
+    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['type_identifier', 'type_name', 'identifier'], input) ?? '__UNDEFINED__';
+    const genericArguments = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['type_identifier', 'generic_argument_clause', 'generic_argument_list'], input);
+    // non generic argument
+    if (!genericArguments)
+        return (0, type_1.createPlainUserType)(name);
+    // generic arguments
+    const innerTypes = genericArguments.flatMap((x) => {
+        if (typeof x === 'string')
+            return [];
+        const element = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['generic_argument', 'type'], [x]);
+        if (element)
+            return [convert_type__type_(self, [...path, 'type_identifier', 'generic_argument_clause', 'generic_argument_list', 'generic_argument', 'type'], element)];
+        return [];
+    });
+    return (0, type_1.createGenericUserType)(name, ...innerTypes);
 }
 exports.convert_protocolCompositionType__type_ = convert_protocolCompositionType__type_;
 function convert_arrayType__type_(self, path, input) {
@@ -14346,6 +14520,7 @@ exports.joinObjectsWithComma = joinObjectsWithComma;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createGenericUserType = exports.createPlainUserType = void 0;
 const identifier_1 = __webpack_require__(1825);
+const join_1 = __webpack_require__(3063);
 const __typeConvertTable = {
     "Bool": "Boolean",
 };
@@ -14370,7 +14545,14 @@ function createPlainUserType(name) {
     };
 }
 exports.createPlainUserType = createPlainUserType;
-function createGenericUserType(genericName, innerType) {
+function createGenericUserType(genericName, ...innerTypes) {
+    const typeProjectionsWithComma = (0, join_1.joinObjectsWithComma)(innerTypes.map(x => {
+        return {
+            "typeProjection": [
+                x
+            ]
+        };
+    }));
     return {
         "type_": [
             {
@@ -14387,11 +14569,7 @@ function createGenericUserType(genericName, innerType) {
                                     {
                                         "typeArguments": [
                                             "<",
-                                            {
-                                                "typeProjection": [
-                                                    innerType,
-                                                ]
-                                            },
+                                            ...typeProjectionsWithComma,
                                             ">"
                                         ]
                                     }
@@ -23489,7 +23667,7 @@ exports.printKotlin = printKotlin;
 function convertSwiftTreeToKotlinTree(swiftTree, info) {
     const converter = new SwiftKotlinConverter_1.SwiftKotlinConverter();
     converter.kotlinTable = info;
-    return converter.visitObject([], swiftTree);
+    return converter.convert(swiftTree);
 }
 exports.convertSwiftTreeToKotlinTree = convertSwiftTreeToKotlinTree;
 // preprocessor
@@ -24072,6 +24250,11 @@ class TreeWalk {
         if (typeof target === 'object' && key in target)
             return target[key];
         return null;
+    }
+    static firstObjectOrDefault(target, defaultObject) {
+        if (this.isEmptyArray(target))
+            return defaultObject;
+        return target[0];
     }
     // keys: ['a','b']
     // input: [ { a: [ { b: [ 'c' ] } ] } ]
