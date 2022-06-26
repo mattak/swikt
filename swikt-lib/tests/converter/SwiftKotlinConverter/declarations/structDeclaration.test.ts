@@ -2,6 +2,8 @@ import {SwiftKotlinConverter} from "../../../../src/converter/SwiftKotlinConvert
 import {TArray, TObject} from "../../../../src/util/Tree.ts";
 import {assertEquals} from "https://deno.land/std@0.143.0/testing/asserts.ts";
 import {
+  convert_structDeclaration__objectDeclaration,
+  convert_structMember__classMemberDeclaration,
   convert_structMembers__classMemberDeclarations
 } from "../../../../src/converter/declarations/structDeclaration.ts";
 
@@ -12,21 +14,19 @@ const converter = new SwiftKotlinConverter({
 });
 
 Deno.test('convert_struct_declaration__objectDeclaration/empty', () => {
-  const input: TObject = {
-    struct_declaration: [
-      'struct',
-      {
-        struct_name: [{identifier: ['Sample']}]
-      },
-      {
-        struct_body: [
-          '{',
-          '}'
-        ]
-      }
-    ]
-  };
-  const result: TObject = converter.visitObject([], input);
+  const input: TArray = [
+    'struct',
+    {
+      struct_name: [{identifier: ['Sample']}]
+    },
+    {
+      struct_body: [
+        '{',
+        '}'
+      ]
+    }
+  ];
+  const result: TObject = convert_structDeclaration__objectDeclaration(converter, [], input);
   assertEquals(result, {
     objectDeclaration: [
       'object',
@@ -42,24 +42,22 @@ Deno.test('convert_struct_declaration__objectDeclaration/empty', () => {
 });
 
 Deno.test('convert_struct_declaration__objectDeclaration/struct member', () => {
-  const input: TObject = {
-    struct_declaration: [
-      'struct',
-      {
-        struct_name: [{identifier: ['Sample']}]
-      },
-      {
-        struct_body: [
-          '{',
-          {
-            struct_members: []
-          },
-          '}'
-        ]
-      }
-    ]
-  };
-  const result: TObject = converter.visitObject([], input);
+  const input: TArray = [
+    'struct',
+    {
+      struct_name: [{identifier: ['Sample']}]
+    },
+    {
+      struct_body: [
+        '{',
+        {
+          struct_members: []
+        },
+        '}'
+      ]
+    }
+  ];
+  const result: TObject = convert_structDeclaration__objectDeclaration(converter, [], input);
   assertEquals(result, {
     objectDeclaration: [
       'object',
@@ -100,15 +98,21 @@ Deno.test('convert_structMembers__classMemberDeclarations', () => {
 });
 
 Deno.test('convert_structMember__classMemberDeclaration', () => {
-  const input: TObject = {
-    "declaration": [
+  const input: TArray = [
+    {
+      "declaration": [
+        {
+          "function_declaration": []
+        }
+      ]
+    }
+  ];
+  const result: TObject = convert_structMember__classMemberDeclaration(converter, [], input);
+  assertEquals(result, {
+    'classMemberDeclaration': [
       {
-        "function_declaration": []
+        'declaration': ["OK"]
       }
     ]
-  };
-  const result: TObject = converter.visitObject([], input);
-  assertEquals(result, {
-    'declaration': ["OK"]
   });
 });

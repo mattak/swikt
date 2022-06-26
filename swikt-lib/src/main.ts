@@ -41,7 +41,7 @@ export function printKotlin(tree: TObject): string {
 export function convertSwiftTreeToKotlinTree(swiftTree: TObject, info: KotlinInfoTable): TObject {
   const converter = new SwiftKotlinConverter();
   converter.kotlinTable = info;
-  return converter.visitObject([], swiftTree);
+  return converter.convert(swiftTree);
 }
 
 // preprocessor

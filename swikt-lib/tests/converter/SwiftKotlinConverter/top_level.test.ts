@@ -1,113 +1,77 @@
 import {SwiftKotlinConverter} from "../../../src/converter/SwiftKotlinConverter.ts";
+import {TArray, TObject} from "../../../src/util/Tree.ts";
 import {assertEquals} from "https://deno.land/std@0.143.0/testing/asserts.ts";
-import {TObject} from "../../../src/util/Tree.ts";
+import {convert___packageHeader, convert__importList} from "../../../src/converter/declarations/topLevelDeclaration.ts";
 
 const converter = new SwiftKotlinConverter();
 
-Deno.test('SwiftKotlinConverter.top_level/packageHeader', () => {
+Deno.test('convert___packageHeader', () => {
   converter.kotlinTable = {
     package: 'com.example.test'
   };
-  const input = {
-    top_level: []
-  }
-  const tree: string[] = [];
-  const output = converter.visitObject(tree, input);
-  assertEquals(output, {
-    kotlinFile: [
-      {
-        packageHeader: [
-          'package',
-          {
-            "identifier": [
-              {
-                "simpleIdentifier": [
-                  "com",
-                ],
-              },
-              ".",
-              {
-                "simpleIdentifier": [
-                  "example",
-                ],
-              },
-              ".",
-              {
-                "simpleIdentifier": [
-                  "test",
-                ],
-              },
-            ],
-          },
-        ]
-      }
-    ]
-  });
+  const input: TArray = [];
+  const output = convert___packageHeader(converter, [], input);
+  assertEquals(output,
+    {
+      packageHeader: [
+        'package',
+        {
+          "identifier": [
+            {
+              "simpleIdentifier": [
+                "com",
+              ],
+            },
+            ".",
+            {
+              "simpleIdentifier": [
+                "example",
+              ],
+            },
+            ".",
+            {
+              "simpleIdentifier": [
+                "test",
+              ],
+            },
+          ],
+        },
+      ]
+    });
 });
 
-Deno.test('SwiftKotlinConverter.top_level/imports', () => {
+Deno.test('convert__importList', () => {
   converter.kotlinTable = {
     package: 'com.example.test',
     importList: ['com.example.Test'],
   };
-  const input = {
-    top_level: [
-      {statements: []}
-    ]
-  }
+  const input: TArray = [
+    {statements: []}
+  ];
+
   const tree: string[] = [];
-  const output = converter.visitObject(tree, input);
+  const output = convert__importList(converter, tree, input);
   assertEquals(output, {
-    kotlinFile: [
+    importList: [
       {
-        packageHeader: [
-          'package',
+        importHeader: [
+          'import',
           {
-            "identifier": [
-              {
-                "simpleIdentifier": [
-                  "com",
-                ],
-              },
-              ".",
-              {
-                "simpleIdentifier": [
-                  "example",
-                ],
-              },
-              ".",
-              {
-                "simpleIdentifier": [
-                  "test",
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        importList: [
-          {
-            importHeader: [
-              'import',
-              {
-                identifier: [
-                  {simpleIdentifier: ['com']},
-                  '.',
-                  {simpleIdentifier: ['example']},
-                  '.',
-                  {simpleIdentifier: ['Test']},
-                ]
-              },
+            identifier: [
+              {simpleIdentifier: ['com']},
+              '.',
+              {simpleIdentifier: ['example']},
+              '.',
+              {simpleIdentifier: ['Test']},
             ]
           },
-        ],
-      }
-    ]
+        ]
+      },
+    ],
   });
 });
 
-Deno.test('SwiftKotlinConverter.top_level/overall', () => {
+Deno.test('top_level/overall', () => {
   converter.kotlinTable = {
     package: 'com.example.test',
     importList: ['io.reactivex.Single'],
@@ -163,8 +127,7 @@ Deno.test('SwiftKotlinConverter.top_level/overall', () => {
       '<EOF>'
     ]
   };
-  const tree: string[] = [];
-  const output = converter.visitObject(tree, input);
+  const output = converter.convert(input);
   assertEquals(output, {
     kotlinFile: [
       {

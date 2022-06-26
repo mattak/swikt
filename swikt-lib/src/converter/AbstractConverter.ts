@@ -1,5 +1,6 @@
 import {Converter} from "./Converter.ts";
 import {TArray, TObject} from "../util/Tree.ts";
+import {TreeWalk} from "../util/TreeWalk.ts";
 
 export class AbstractConverter<TConverter extends Converter<any>> {
   getConverter(key: string): TConverter | null {
@@ -14,6 +15,13 @@ export class AbstractConverter<TConverter extends Converter<any>> {
     return converter(this, path, input);
   }
 
+  visitRoot(rootKey: string, input: TObject): TObject {
+    const array = TreeWalk.getArrayOrNull(rootKey, input);
+    if (!array) return {};
+    return this.visit([rootKey], array);
+  }
+
+  // deprecated
   visitObject(path: string[], input: TObject): TObject {
     let result: TObject = {};
     for (let key of Object.keys(input)) {
@@ -38,6 +46,7 @@ export class AbstractConverter<TConverter extends Converter<any>> {
     return result;
   }
 
+  // deprecated
   visitArray(path: string[], input: TArray): TObject {
     if (path.length < 1) return {}
     const key = path[path.length - 1];
