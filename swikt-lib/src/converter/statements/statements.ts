@@ -55,6 +55,9 @@ export function convert_statement__statements(self: SwiftKotlinConverter, path: 
       case 'declaration': {
         return self.convert_declaration__declarations(self, [...path, 'declaration'], elements);
       }
+      // case 'control_transfer_statement': {
+      //   return convert_controlTransferStatement__statements(self, [...path, 'control_transfer_statement'], elements);
+      // }
       default: {
         return [];
       }
