@@ -1110,7 +1110,7 @@ export default class Swift5ParserVisitor extends antlr4.tree.ParseTreeVisitor {
 	}
 
 
-	// Visit a parse tree produced by Swift5Parser#pattern.
+	// Visit a parse tree produced by Swift5Parser#patterns.
 	visitPattern(ctx) {
 	  return this.visitChildren(ctx);
 	}

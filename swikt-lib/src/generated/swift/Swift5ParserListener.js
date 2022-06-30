@@ -1661,11 +1661,11 @@ export default class Swift5ParserListener extends antlr4.tree.ParseTreeListener 
 	}
 
 
-	// Enter a parse tree produced by Swift5Parser#pattern.
+	// Enter a parse tree produced by Swift5Parser#patterns.
 	enterPattern(ctx) {
 	}
 
-	// Exit a parse tree produced by Swift5Parser#pattern.
+	// Exit a parse tree produced by Swift5Parser#patterns.
 	exitPattern(ctx) {
 	}
 
