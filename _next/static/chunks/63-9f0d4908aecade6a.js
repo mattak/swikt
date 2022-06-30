@@ -13928,6 +13928,7 @@ exports.convert_codeBlock__block = convert_codeBlock__block;
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.convert_patternInitializer__propertyDeclaration = exports.convert_constantDeclaration__propertyDeclarations = void 0;
 const TreeWalk_1 = __webpack_require__(2648);
+const expresssion_1 = __webpack_require__(4969);
 function convert_constantDeclaration__propertyDeclarations(self, path, input) {
     const initializerList = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['pattern_initializer_list'], input);
     if (!initializerList)
@@ -13942,7 +13943,10 @@ function convert_constantDeclaration__propertyDeclarations(self, path, input) {
 exports.convert_constantDeclaration__propertyDeclarations = convert_constantDeclaration__propertyDeclarations;
 function convert_patternInitializer__propertyDeclaration(self, path, input) {
     const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['pattern', 'identifier_pattern', 'identifier'], input) ?? '';
-    const value = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['initializer', 'expression', 'prefix_expression', 'postfix_expression', 'primary_expression', 'literal_expression', 'literal', 'numeric_literal', 'integer_literal'], input) ?? '';
+    const expression = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['initializer', 'expression'], input);
+    if (!expression)
+        return {};
+    const resultExpression = (0, expresssion_1.convert_expression__expression)(self, [...path, 'initializer', 'expression'], expression);
     return {
         "propertyDeclaration": [
             "val",
@@ -13956,71 +13960,7 @@ function convert_patternInitializer__propertyDeclaration(self, path, input) {
                 ]
             },
             "=",
-            {
-                "expression": [
-                    {
-                        "disjunction": [
-                            {
-                                "conjunction": [
-                                    {
-                                        "equality": [
-                                            {
-                                                "comparison": [
-                                                    {
-                                                        "infixOperation": [
-                                                            {
-                                                                "elvisExpression": [
-                                                                    {
-                                                                        "infixFunctionCall": [
-                                                                            {
-                                                                                "rangeExpression": [
-                                                                                    {
-                                                                                        "additiveExpression": [
-                                                                                            {
-                                                                                                "multiplicativeExpression": [
-                                                                                                    {
-                                                                                                        "asExpression": [
-                                                                                                            {
-                                                                                                                "prefixUnaryExpression": [
-                                                                                                                    {
-                                                                                                                        "postfixUnaryExpression": [
-                                                                                                                            {
-                                                                                                                                "primaryExpression": [
-                                                                                                                                    {
-                                                                                                                                        "literalConstant": [
-                                                                                                                                            value,
-                                                                                                                                        ]
-                                                                                                                                    }
-                                                                                                                                ]
-                                                                                                                            }
-                                                                                                                        ]
-                                                                                                                    }
-                                                                                                                ]
-                                                                                                            }
-                                                                                                        ]
-                                                                                                    }
-                                                                                                ]
-                                                                                            }
-                                                                                        ]
-                                                                                    }
-                                                                                ]
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                ]
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            },
+            resultExpression,
         ]
     };
 }
@@ -14321,6 +14261,251 @@ exports.convert__importList = convert__importList;
 
 /***/ }),
 
+/***/ 4969:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_expression__expression = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+const postfixExpression_1 = __webpack_require__(506);
+function convert_expression__expression(self, path, input) {
+    // try-operator? await-operator? prefix-expression infix-expressions?
+    const prefixExpression = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys([
+        "prefix_expression",
+        "postfix_expression",
+    ], input);
+    if (!prefixExpression)
+        return {};
+    return (0, postfixExpression_1.convert_postfixExpression__expression)(self, [
+        ...path,
+        "prefix_expression",
+        "postfix_expression",
+    ], prefixExpression);
+}
+exports.convert_expression__expression = convert_expression__expression;
+//# sourceMappingURL=expresssion.js.map
+
+/***/ }),
+
+/***/ 1784:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_stringLiteral__primaryExpression = exports.convert_numericLiteral__primaryExpression = exports.convert_booleanLiteral__primaryExpression = exports.convert_literal__primaryExpression = void 0;
+const Tree_1 = __webpack_require__(4065);
+const TreeWalk_1 = __webpack_require__(2648);
+const expression_1 = __webpack_require__(8083);
+function convert_literal__primaryExpression(self, path, input) {
+    if (TreeWalk_1.TreeWalk.isEmptyArray(input))
+        return {};
+    if (!(0, Tree_1.isTObject)(input[0]))
+        return {};
+    const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(input[0]);
+    if (!key)
+        return {};
+    switch (key) {
+        case 'numeric_literal': {
+            return convert_numericLiteral__primaryExpression(self, [...path, key], elements);
+        }
+        case 'string_literal': {
+            return convert_stringLiteral__primaryExpression(self, [...path, key], elements);
+        }
+        // case 'regular_expression_literal': {
+        //   return {}
+        // }
+        case 'boolean_literal': {
+            return convert_booleanLiteral__primaryExpression(self, path, elements);
+        }
+        case 'nil_literal': {
+            return (0, expression_1.createPrimaryExpression_LiteralConstant)("null");
+        }
+        default: {
+            return {};
+        }
+    }
+}
+exports.convert_literal__primaryExpression = convert_literal__primaryExpression;
+function convert_booleanLiteral__primaryExpression(self, path, input) {
+    if (TreeWalk_1.TreeWalk.isEmptyArray(input))
+        return {};
+    if ((0, Tree_1.isTObject)(input[0]))
+        return {};
+    const value = input[0];
+    return (0, expression_1.createPrimaryExpression_LiteralConstant)(value);
+}
+exports.convert_booleanLiteral__primaryExpression = convert_booleanLiteral__primaryExpression;
+function convert_numericLiteral__primaryExpression(self, path, input) {
+    if (TreeWalk_1.TreeWalk.isEmptyArray(input))
+        return {};
+    if (typeof input[0] === 'string')
+        return (0, expression_1.createPrimaryExpression_LiteralConstant)(input[0]);
+    if (!(0, Tree_1.isTObject)(input[0]))
+        return {};
+    const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(input[0]);
+    if (!key)
+        return {};
+    switch (key) {
+        case 'integer_literal': {
+            if (typeof elements[0] === 'string') {
+                return (0, expression_1.createPrimaryExpression_LiteralConstant)(elements[0]);
+            }
+            break;
+        }
+        case 'float_literal': {
+            if (typeof elements[0] === 'string') {
+                return (0, expression_1.createPrimaryExpression_LiteralConstant)(elements[0]);
+            }
+            break;
+        }
+    }
+    return {};
+}
+exports.convert_numericLiteral__primaryExpression = convert_numericLiteral__primaryExpression;
+function convert_stringLiteral__primaryExpression(self, path, input) {
+    const array = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['interpolated_string_literal'], input);
+    if (!array || array.length < 3)
+        return {};
+    const message = array[1];
+    if (typeof message === "string")
+        return (0, expression_1.createPrimaryExpression_lineStringContent)(message);
+    return {};
+}
+exports.convert_stringLiteral__primaryExpression = convert_stringLiteral__primaryExpression;
+//# sourceMappingURL=literal.js.map
+
+/***/ }),
+
+/***/ 260:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_literalExpression__primaryExpression = void 0;
+const literal_1 = __webpack_require__(1784);
+const Tree_1 = __webpack_require__(4065);
+const TreeWalk_1 = __webpack_require__(2648);
+function convert_literalExpression__primaryExpression(self, path, input) {
+    if (TreeWalk_1.TreeWalk.isEmptyArray(input))
+        return {};
+    if (!(0, Tree_1.isTObject)(input[0]))
+        return {};
+    const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(input[0]);
+    if (!key)
+        return {};
+    switch (key) {
+        case 'literal': {
+            return (0, literal_1.convert_literal__primaryExpression)(self, [...path, key], elements);
+        }
+        // case 'array_literal': {
+        //
+        // }
+        // case 'dictionary_literal': {
+        //
+        // }
+        // case 'playground_literal': {
+        //
+        // }
+        default: {
+            return {};
+        }
+    }
+}
+exports.convert_literalExpression__primaryExpression = convert_literalExpression__primaryExpression;
+//# sourceMappingURL=literalExpression.js.map
+
+/***/ }),
+
+/***/ 506:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_postfixExpression__expression = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+const primaryExpression_1 = __webpack_require__(8890);
+const expression_1 = __webpack_require__(8083);
+function convert_postfixExpression__expression(self, path, input) {
+    if (TreeWalk_1.TreeWalk.isEmptyArray(input))
+        return {};
+    if (typeof input[0] === "string")
+        return {};
+    const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(input[0]);
+    if (!key)
+        return {};
+    switch (key) {
+        case "primary_expression": {
+            const primaryExpression = (0, primaryExpression_1.convert_primaryExpression__primaryExpression)(self, [...path, key], elements);
+            return (0, expression_1.createExpressionByPrimaryExpression)(primaryExpression);
+        }
+        // case 'function_call_expression': {
+        //
+        // }
+        // case 'initializer_expression': {
+        //
+        // }
+        // case 'explicit_member_expression': {
+        //
+        // }
+        // case 'postfix_self_expression': {
+        //
+        // }
+        // case 'subscript_expression': {
+        //
+        // }
+        // case 'forced_value_expression': {
+        //
+        // }
+        // case 'optional_chaining_expression': {
+        //
+        // }
+        default: {
+            return {};
+        }
+    }
+}
+exports.convert_postfixExpression__expression = convert_postfixExpression__expression;
+//# sourceMappingURL=postfixExpression.js.map
+
+/***/ }),
+
+/***/ 8890:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_primaryExpression__primaryExpression = void 0;
+const Tree_1 = __webpack_require__(4065);
+const TreeWalk_1 = __webpack_require__(2648);
+const literalExpression_1 = __webpack_require__(260);
+function convert_primaryExpression__primaryExpression(self, path, input) {
+    if (TreeWalk_1.TreeWalk.isEmptyArray(input))
+        return {};
+    if (!(0, Tree_1.isTObject)(input[0]))
+        return {};
+    const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(input[0]);
+    if (!key)
+        return {};
+    switch (key) {
+        case "literal_expression": {
+            return (0, literalExpression_1.convert_literalExpression__primaryExpression)(self, [...path, key], elements);
+        }
+        default: {
+            return {};
+        }
+    }
+}
+exports.convert_primaryExpression__primaryExpression = convert_primaryExpression__primaryExpression;
+//# sourceMappingURL=primaryExpression.js.map
+
+/***/ }),
+
 /***/ 9740:
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
@@ -14455,6 +14640,97 @@ function convert_arrayType__type_(self, path, input) {
 }
 exports.convert_arrayType__type_ = convert_arrayType__type_;
 //# sourceMappingURL=type.js.map
+
+/***/ }),
+
+/***/ 8083:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createPrimaryExpression_lineStringContent = exports.createPrimaryExpression_LiteralConstant = exports.createExpressionByPrimaryExpression = exports.createJumpReturnExpression = exports.createLiteralConstantExpression = void 0;
+const Tree_1 = __webpack_require__(4065);
+function createLiteralConstantExpression(value) {
+    return (0, Tree_1.createTObject)([
+        "expression",
+        "disjunction",
+        "conjunction",
+        "equality",
+        "comparison",
+        "infixOperation",
+        "elvisExpression",
+        "infixFunctionCall",
+        "rangeExpression",
+        "additiveExpression",
+        "multiplicativeExpression",
+        "asExpression",
+        "prefixUnaryExpression",
+        "postfixUnaryExpression",
+        "primaryExpression",
+        "literalConstant",
+    ], [value]);
+}
+exports.createLiteralConstantExpression = createLiteralConstantExpression;
+function createJumpReturnExpression(expression) {
+    return (0, Tree_1.createTObject)([
+        "expression",
+        "disjunction",
+        "conjunction",
+        "equality",
+        "comparison",
+        "infixOperation",
+        "elvisExpression",
+        "infixFunctionCall",
+        "rangeExpression",
+        "additiveExpression",
+        "multiplicativeExpression",
+        "asExpression",
+        "prefixUnaryExpression",
+        "postfixUnaryExpression",
+        "primaryExpression",
+        "jumpExpression",
+    ], [
+        "return",
+        expression,
+    ]);
+}
+exports.createJumpReturnExpression = createJumpReturnExpression;
+function createExpressionByPrimaryExpression(primaryExpression) {
+    return (0, Tree_1.createTObject)([
+        "expression",
+        "disjunction",
+        "conjunction",
+        "equality",
+        "comparison",
+        "infixOperation",
+        "elvisExpression",
+        "infixFunctionCall",
+        "rangeExpression",
+        "additiveExpression",
+        "multiplicativeExpression",
+        "asExpression",
+        "prefixUnaryExpression",
+        "postfixUnaryExpression",
+    ], [
+        primaryExpression,
+    ]);
+}
+exports.createExpressionByPrimaryExpression = createExpressionByPrimaryExpression;
+function createPrimaryExpression_LiteralConstant(value) {
+    return (0, Tree_1.createTObject)(["primaryExpression", "literalConstant"], [value]);
+}
+exports.createPrimaryExpression_LiteralConstant = createPrimaryExpression_LiteralConstant;
+function createPrimaryExpression_lineStringContent(value) {
+    const lineStringContent = (0, Tree_1.createTObject)(["lineStringContent"], [value]);
+    return (0, Tree_1.createTObject)([
+        "primaryExpression",
+        "stringLiteral",
+        "lineStringLiteral",
+    ], ['"', lineStringContent, '"']);
+}
+exports.createPrimaryExpression_lineStringContent = createPrimaryExpression_lineStringContent;
+//# sourceMappingURL=expression.js.map
 
 /***/ }),
 
@@ -24226,6 +24502,41 @@ class KotlinPrinter extends AbstractPrinter_1.AbstractPrinter {
 }
 exports.KotlinPrinter = KotlinPrinter;
 //# sourceMappingURL=KotlinPrinter.js.map
+
+/***/ }),
+
+/***/ 4065:
+/***/ (function(__unused_webpack_module, exports) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.createTObject = exports.isTObject = void 0;
+const isTObject = (x) => {
+    if (x === null)
+        return false;
+    if (typeof x !== 'object')
+        return false;
+    if (Array.isArray(x))
+        return false;
+    return true;
+};
+exports.isTObject = isTObject;
+function createTObject(keys, innerArray) {
+    if (keys.length === 0)
+        throw new Error('ERROR: createTObject failed with keys.length === 0');
+    let result = {};
+    result[keys[keys.length - 1]] = innerArray;
+    for (let i = keys.length - 2; i >= 0; i--) {
+        const key = keys[i];
+        const newResult = {};
+        newResult[key] = [result];
+        result = newResult;
+    }
+    return result;
+}
+exports.createTObject = createTObject;
+//# sourceMappingURL=Tree.js.map
 
 /***/ }),
 
