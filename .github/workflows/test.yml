@@ -12,9 +12,5 @@ jobs:
       - uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-      - name: setup container
-        run: |
-          docker-compose build
-          docker-compose up -d
       - name: test swikt-lib
         run: cd swikt-lib && deno test tests/
