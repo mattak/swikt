@@ -1,5 +1,8 @@
 # Swikt
 
+![test status](https://github.com/mattak/swikt/actions/workflows/test.yml/badge.svg?branch=main) ![github pages status](https://github.com/mattak/swikt/actions/workflows/gh-pages.yml/badge.svg?branch=main)
+
+
 Swift to kotlin transpiler
 
 web
