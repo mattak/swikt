@@ -13929,39 +13929,54 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.convert_patternInitializer__propertyDeclaration = exports.convert_constantDeclaration__propertyDeclarations = void 0;
 const TreeWalk_1 = __webpack_require__(2648);
 const expresssion_1 = __webpack_require__(4969);
+const pattern_1 = __webpack_require__(1741);
 function convert_constantDeclaration__propertyDeclarations(self, path, input) {
-    const initializerList = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['pattern_initializer_list'], input);
+    const initializerList = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys([
+        "pattern_initializer_list",
+    ], input);
     if (!initializerList)
         return [];
     return initializerList.flatMap((x) => {
         const [key, elements] = TreeWalk_1.TreeWalk.firstKeyValueOrNull(x);
         if (!key)
             return [];
-        return [convert_patternInitializer__propertyDeclaration(self, [...path, 'pattern_initializer'], elements)];
+        return [
+            convert_patternInitializer__propertyDeclaration(self, [
+                ...path,
+                "pattern_initializer",
+            ], elements),
+        ];
     });
 }
 exports.convert_constantDeclaration__propertyDeclarations = convert_constantDeclaration__propertyDeclarations;
 function convert_patternInitializer__propertyDeclaration(self, path, input) {
-    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['pattern', 'identifier_pattern', 'identifier'], input) ?? '';
-    const expression = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['initializer', 'expression'], input);
+    const pattern = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(["pattern"], input);
+    if (!pattern)
+        return {};
+    const variableDeclaration = (0, pattern_1.convert_pattern__variableDeclaration)(self, [
+        ...path,
+        "pattern",
+    ], pattern);
+    if (!variableDeclaration)
+        return {};
+    const expression = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys([
+        "initializer",
+        "expression",
+    ], input);
     if (!expression)
         return {};
-    const resultExpression = (0, expresssion_1.convert_expression__expression)(self, [...path, 'initializer', 'expression'], expression);
+    const resultExpression = (0, expresssion_1.convert_expression__expression)(self, [
+        ...path,
+        "initializer",
+        "expression",
+    ], expression);
     return {
         "propertyDeclaration": [
             "val",
-            {
-                "variableDeclaration": [
-                    {
-                        "simpleIdentifier": [
-                            name
-                        ]
-                    }
-                ]
-            },
+            variableDeclaration,
             "=",
             resultExpression,
-        ]
+        ],
     };
 }
 exports.convert_patternInitializer__propertyDeclaration = convert_patternInitializer__propertyDeclaration;
@@ -14503,6 +14518,44 @@ function convert_primaryExpression__primaryExpression(self, path, input) {
 }
 exports.convert_primaryExpression__primaryExpression = convert_primaryExpression__primaryExpression;
 //# sourceMappingURL=primaryExpression.js.map
+
+/***/ }),
+
+/***/ 1741:
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.convert_pattern__variableDeclaration = void 0;
+const TreeWalk_1 = __webpack_require__(2648);
+const identifier_1 = __webpack_require__(1825);
+const type_1 = __webpack_require__(5393);
+function convert_pattern__variableDeclaration(self, path, input) {
+    const name = TreeWalk_1.TreeWalk.firstElementOrNullByKeys(['identifier_pattern', 'identifier'], input);
+    const type = TreeWalk_1.TreeWalk.firstArrayOrNullByKeys(['type_annotation', 'type'], input);
+    if (!name)
+        return {};
+    if (!type) {
+        return {
+            "variableDeclaration": [
+                (0, identifier_1.createSimpleIdentifier)(name),
+            ]
+        };
+    }
+    else {
+        const resultType = (0, type_1.convert_type__type_)(self, [...path, 'type_annotation', 'type'], type);
+        return {
+            "variableDeclaration": [
+                (0, identifier_1.createSimpleIdentifier)(name),
+                ":",
+                resultType,
+            ]
+        };
+    }
+}
+exports.convert_pattern__variableDeclaration = convert_pattern__variableDeclaration;
+//# sourceMappingURL=pattern.js.map
 
 /***/ }),
 
@@ -20623,10 +20676,10 @@ class Swift5ParserListener extends antlr4_1.default.tree.ParseTreeListener {
     // Exit a parse tree produced by Swift5Parser#mutation_modifier.
     exitMutation_modifier(ctx) {
     }
-    // Enter a parse tree produced by Swift5Parser#pattern.
+    // Enter a parse tree produced by Swift5Parser#patterns.
     enterPattern(ctx) {
     }
-    // Exit a parse tree produced by Swift5Parser#pattern.
+    // Exit a parse tree produced by Swift5Parser#patterns.
     exitPattern(ctx) {
     }
     // Enter a parse tree produced by Swift5Parser#wildcard_pattern.
@@ -22189,7 +22242,7 @@ class Swift5ParserVisitor extends antlr4_1.default.tree.ParseTreeVisitor {
     visitMutation_modifier(ctx) {
         return this.visitChildren(ctx);
     }
-    // Visit a parse tree produced by Swift5Parser#pattern.
+    // Visit a parse tree produced by Swift5Parser#patterns.
     visitPattern(ctx) {
         return this.visitChildren(ctx);
     }
