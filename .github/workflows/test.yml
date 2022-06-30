@@ -1,0 +1,20 @@
+name: deno-test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+      - name: setup container
+        run: |
+          docker-compose build
+          docker-compose up -d
+      - name: test swikt-lib
+        run: cd swikt-lib && deno test tests/
