@@ -1,6 +1,7 @@
 import {TArray, TArrayElement, TObject} from "../../util/Tree.ts";
 import {SwiftKotlinConverter} from "../SwiftKotlinConverter.ts";
 import {TreeWalk} from "../../util/TreeWalk.ts";
+import {convert_expression__expression} from "../expressions/expresssion.ts";
 
 export function convert_constantDeclaration__propertyDeclarations(self: SwiftKotlinConverter, path: string[], input: TArray): TObject[] {
   const initializerList = TreeWalk.firstArrayOrNullByKeys(['pattern_initializer_list'], input);
@@ -14,7 +15,10 @@ export function convert_constantDeclaration__propertyDeclarations(self: SwiftKot
 
 export function convert_patternInitializer__propertyDeclaration(self: SwiftKotlinConverter, path: string[], input: TArray): TObject {
   const name = TreeWalk.firstElementOrNullByKeys(['pattern', 'identifier_pattern', 'identifier'], input) ?? '';
-  const value = TreeWalk.firstElementOrNullByKeys(['initializer', 'expression', 'prefix_expression', 'postfix_expression', 'primary_expression', 'literal_expression', 'literal', 'numeric_literal', 'integer_literal'], input) ?? '';
+  const expression = TreeWalk.firstArrayOrNullByKeys(['initializer', 'expression'], input);
+  if (!expression) return {};
+
+  const resultExpression = convert_expression__expression(self, [...path, 'initializer', 'expression'], expression);
   return {
     "propertyDeclaration": [
       "val",
@@ -28,71 +32,7 @@ export function convert_patternInitializer__propertyDeclaration(self: SwiftKotli
         ]
       },
       "=",
-      {
-        "expression": [
-          {
-            "disjunction": [
-              {
-                "conjunction": [
-                  {
-                    "equality": [
-                      {
-                        "comparison": [
-                          {
-                            "infixOperation": [
-                              {
-                                "elvisExpression": [
-                                  {
-                                    "infixFunctionCall": [
-                                      {
-                                        "rangeExpression": [
-                                          {
-                                            "additiveExpression": [
-                                              {
-                                                "multiplicativeExpression": [
-                                                  {
-                                                    "asExpression": [
-                                                      {
-                                                        "prefixUnaryExpression": [
-                                                          {
-                                                            "postfixUnaryExpression": [
-                                                              {
-                                                                "primaryExpression": [
-                                                                  {
-                                                                    "literalConstant": [
-                                                                      value,
-                                                                    ]
-                                                                  }
-                                                                ]
-                                                              }
-                                                            ]
-                                                          }
-                                                        ]
-                                                      }
-                                                    ]
-                                                  }
-                                                ]
-                                              }
-                                            ]
-                                          }
-                                        ]
-                                      }
-                                    ]
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
+      resultExpression,
     ]
   };
 }
